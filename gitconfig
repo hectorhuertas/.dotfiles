@@ -1,0 +1,6 @@
+[user]
+	name = Hector Huertas
+	email = hectorhuertas@gmail.com
+
+[alias]
+	hist = log --pretty=format:'%h %ad %ae | %s%d [%an]' --graph --date=short
