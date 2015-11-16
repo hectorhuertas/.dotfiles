@@ -7,6 +7,7 @@ alias ls='ls -GFhA' # -A -> Show hidden files/folders
 alias tu='cd ~/turing/1module'
 alias tw='cd ~/turing/warmups'
 alias tp='cd ~/turing/1module/projects'
+alias td='cd ~/turing/DSA/projects'
 alias tree='tree -FCh' # -a Hidden files: -L 3 ->Show only 3 levels deep
 alias gs='git status'
 alias ga='git add .'
