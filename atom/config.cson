@@ -16,3 +16,5 @@
   zentabs:
     neverCloseDirty: true
     neverCloseNew: true
+  "seeing-is-believing":
+    'ruby-command': '/Users/hectorhuertas/.rvm/bin/sib_ruby'
