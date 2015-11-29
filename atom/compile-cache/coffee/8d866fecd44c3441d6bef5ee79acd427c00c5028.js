@@ -1,0 +1,170 @@
+(function() {
+  var $, Disposable, View, ZentabsController, _ref,
+    __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  Disposable = require('atom').Disposable;
+
+  _ref = require('atom-space-pen-views'), $ = _ref.$, View = _ref.View;
+
+  ZentabsController = require('../lib/zentabs-controller');
+
+  describe("Zentabs", function() {
+    var TestView, item1, item2, item3, item4, pane, workspaceElement, _ref1;
+    _ref1 = [], workspaceElement = _ref1[0], item1 = _ref1[1], item2 = _ref1[2], item3 = _ref1[3], item4 = _ref1[4], pane = _ref1[5];
+    TestView = (function(_super) {
+      __extends(TestView, _super);
+
+      function TestView() {
+        return TestView.__super__.constructor.apply(this, arguments);
+      }
+
+      TestView.deserialize = function(_arg) {
+        var longTitle, title;
+        title = _arg.title, longTitle = _arg.longTitle;
+        return new TestView(title, longTitle);
+      };
+
+      TestView.content = function(title) {
+        return this.div(title);
+      };
+
+      TestView.prototype.initialize = function(title, longTitle) {
+        this.title = title;
+        this.longTitle = longTitle;
+      };
+
+      TestView.prototype.getTitle = function() {
+        return this.title;
+      };
+
+      TestView.prototype.getLongTitle = function() {
+        return this.longTitle;
+      };
+
+      TestView.prototype.serialize = function() {
+        return {
+          deserializer: 'TestView',
+          title: this.title,
+          longTitle: this.longTitle
+        };
+      };
+
+      TestView.prototype.onDidChangeTitle = function() {
+        return new Disposable;
+      };
+
+      TestView.prototype.onDidChangeModified = function() {
+        return new Disposable;
+      };
+
+      return TestView;
+
+    })(View);
+    beforeEach(function() {
+      workspaceElement = atom.views.getView(atom.workspace);
+      item1 = new TestView('Item 1');
+      item2 = new TestView('Item 2');
+      pane = atom.workspace.getActivePane();
+      pane.addItem(item1, 0);
+      pane.addItem(item2, 2);
+      pane.activateItem(item2);
+      return waitsForPromise(function() {
+        return atom.packages.activatePackage("zentabs");
+      });
+    });
+    describe("When a maximum tab limit is set", function() {
+      beforeEach(function() {
+        atom.config.set('zentabs.maximumOpenedTabs', 4);
+        item3 = new TestView('Item 3');
+        item4 = new TestView('Item 4');
+        pane.addItem(item3, 0);
+        return pane.addItem(item4, 0);
+      });
+      afterEach(function() {
+        return atom.config.set('zentabs.maximumOpenedTabs', null);
+      });
+      it("limits the number of opened tabs", function() {
+        var item5;
+        expect(pane.getItems().length).toEqual(4);
+        item5 = new TestView('Item 5');
+        pane.addItem(item5, 0);
+        advanceClock();
+        return expect(pane.getItems().length).toEqual(4);
+      });
+      it("it removed the oldest active tab", function() {
+        var item5;
+        pane.activateItem(item2);
+        pane.activateItem(item1);
+        pane.activateItem(item3);
+        pane.activateItem(item4);
+        item5 = new TestView('Item 5');
+        pane.addItem(item5, 0);
+        advanceClock();
+        return expect(pane.getItems().indexOf(item2)).toEqual(-1);
+      });
+      return describe("When it creates new pane to the right of active pane", function() {
+        return it("also limits the number of opened tabs", function() {
+          var i, item, newPane, _i;
+          newPane = atom.workspace.getActivePane().splitRight();
+          for (i = _i = 1; _i <= 5; i = ++_i) {
+            item = new TestView("Item " + i);
+            newPane.addItem(item, 0);
+          }
+          advanceClock();
+          return expect(newPane.getItems().length).toEqual(4);
+        });
+      });
+    });
+    describe("When manual mode is enabled", function() {
+      beforeEach(function() {
+        atom.config.set('zentabs.manualMode', true);
+        atom.config.set('zentabs.maximumOpenedTabs', 4);
+        item3 = new TestView('Item 3');
+        item4 = new TestView('Item 4');
+        pane.addItem(item3, 0);
+        return pane.addItem(item4, 0);
+      });
+      afterEach(function() {
+        atom.config.set('zentabs.manualMode', false);
+        return atom.config.set('zentabs.maximumOpenedTabs', null);
+      });
+      return it("does not limits the number of opened tabs", function() {
+        var item5;
+        expect(pane.getItems().length).toEqual(4);
+        item5 = new TestView('Item 5');
+        pane.addItem(item5, 0);
+        advanceClock();
+        return expect(pane.getItems().length).toEqual(5);
+      });
+    });
+    return describe("When zentabs:cleanup is fired", function() {
+      beforeEach(function() {
+        var item5;
+        atom.config.set('zentabs.manualMode', true);
+        atom.config.set('zentabs.maximumOpenedTabs', 4);
+        item3 = new TestView('Item 3');
+        item4 = new TestView('Item 4');
+        item5 = new TestView('Item 5');
+        pane.addItem(item3, 0);
+        pane.addItem(item4, 0);
+        return pane.addItem(item5, 0);
+      });
+      afterEach(function() {
+        atom.config.set('zentabs.manualMode', false);
+        return atom.config.set('zentabs.maximumOpenedTabs', null);
+      });
+      return it("trigger a cleanup", function() {
+        expect(pane.getItems().length).toEqual(5);
+        atom.commands.dispatch(workspaceElement, 'zentabs:cleanup');
+        advanceClock();
+        return expect(pane.getItems().length).toEqual(4);
+      });
+    });
+  });
+
+}).call(this);
+
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAiZmlsZSI6ICIiLAogICJzb3VyY2VSb290IjogIiIsCiAgInNvdXJjZXMiOiBbCiAgICAiL1VzZXJzL2hlY3Rvcmh1ZXJ0YXMvLmF0b20vcGFja2FnZXMvemVudGFicy9zcGVjL3plbnRhYnMtc3BlYy5jb2ZmZWUiCiAgXSwKICAibmFtZXMiOiBbXSwKICAibWFwcGluZ3MiOiAiQUFBQTtBQUFBLE1BQUEsNENBQUE7SUFBQTttU0FBQTs7QUFBQSxFQUFDLGFBQWMsT0FBQSxDQUFRLE1BQVIsRUFBZCxVQUFELENBQUE7O0FBQUEsRUFDQSxPQUFXLE9BQUEsQ0FBUSxzQkFBUixDQUFYLEVBQUMsU0FBQSxDQUFELEVBQUcsWUFBQSxJQURILENBQUE7O0FBQUEsRUFFQSxpQkFBQSxHQUFvQixPQUFBLENBQVEsMkJBQVIsQ0FGcEIsQ0FBQTs7QUFBQSxFQUlBLFFBQUEsQ0FBUyxTQUFULEVBQW9CLFNBQUEsR0FBQTtBQUNsQixRQUFBLG1FQUFBO0FBQUEsSUFBQSxRQUF1RCxFQUF2RCxFQUFDLDJCQUFELEVBQW1CLGdCQUFuQixFQUEwQixnQkFBMUIsRUFBaUMsZ0JBQWpDLEVBQXdDLGdCQUF4QyxFQUErQyxlQUEvQyxDQUFBO0FBQUEsSUFFTTtBQUNKLGlDQUFBLENBQUE7Ozs7T0FBQTs7QUFBQSxNQUFBLFFBQUMsQ0FBQSxXQUFELEdBQWMsU0FBQyxJQUFELEdBQUE7QUFBd0IsWUFBQSxnQkFBQTtBQUFBLFFBQXRCLGFBQUEsT0FBTyxpQkFBQSxTQUFlLENBQUE7ZUFBSSxJQUFBLFFBQUEsQ0FBUyxLQUFULEVBQWdCLFNBQWhCLEVBQTVCO01BQUEsQ0FBZCxDQUFBOztBQUFBLE1BQ0EsUUFBQyxDQUFBLE9BQUQsR0FBVSxTQUFDLEtBQUQsR0FBQTtlQUFXLElBQUMsQ0FBQSxHQUFELENBQUssS0FBTCxFQUFYO01BQUEsQ0FEVixDQUFBOztBQUFBLHlCQUVBLFVBQUEsR0FBWSxTQUFFLEtBQUYsRUFBVSxTQUFWLEdBQUE7QUFBc0IsUUFBckIsSUFBQyxDQUFBLFFBQUEs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
+
+//# sourceURL=/Users/hectorhuertas/.atom/packages/zentabs/spec/zentabs-spec.coffee

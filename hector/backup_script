@@ -1,0 +1,8 @@
+#!/bin/bash
+
+source=~/turing
+destination=~/Dropbox/turing_backup/`date +%A`
+
+mkdir -p $destination
+
+rsync -a --delete $source $destination/

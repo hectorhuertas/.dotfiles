@@ -12,3 +12,5 @@ alias tree='tree -FCh' # -a Hidden files: -L 3 ->Show only 3 levels deep
 alias gs='git status'
 alias ga='git add .'
 alias gc='git commit -m'
+
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin

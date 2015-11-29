@@ -1,0 +1,1 @@
+{"atom-text-editor[data-grammar~=\"ruby\"]:not([mini])":{"ctrl-g b":"ruby-block:go-to-matching-line"}}

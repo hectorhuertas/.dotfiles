@@ -5,3 +5,6 @@
     ~/.gitconfig: gitconfig
     ~/.rspec: rspec
     ~/.exercism.json: exercism.json
+    ~/.hector: hector/
+    ~/.config: config/
+    ~/.atom: atom/

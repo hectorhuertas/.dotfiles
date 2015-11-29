@@ -1,0 +1,21 @@
+# set bash as the default shell for cron commands
+SHELL=/bin/bash
+
+# run rsync at 23.55hrs every day
+45 * * * * ~/.hector/backup_script
+
+# backup crontab contents
+* * * * * crontab -l > ~/.hector/crontab
+
+# backup aplications
+* * * * * ls /Applications > ~/.hector/applications
+
+# backup brew leaves and list
+* * * * * /usr/local/bin/brew leaves > ~/.hector/brew_leaves
+* * * * * /usr/local/bin/brew list > ~/.hector/brew_list
+
+# list of installed gems
+* * * * * /Users/hectorhuertas/.rvm/rubies/ruby-2.2.3/bin/gem list > ~/.hector/gem_list
+* * * * * which gem > ~/.hector/test
+* * * * * gem list > ~/.hector/list1
+* * * * * /Users/hectorhuertas/.rvm/rubies/ruby-2.2.3/bin/gem list > ~/.hector/list2
