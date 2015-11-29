@@ -25,11 +25,11 @@ dotfile/dotfolder. Update install.conf.yaml.
 
 ## Ignore
 * .dotfiles
-* All history filesÂ
+* All history files
 * .CFUserTextEncoding (text encoding for user)
 * .Trash/ (recycle bin)
 * .dropbox (isn't user config)
 * .gem (isn't user config)
 * .rvm (isn't user config)
 * .ssh (sensitive user data)
-* .viminfo
+* .viminfo (isn't user config)
