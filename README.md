@@ -1,27 +1,19 @@
 # Hector Huertas' .dotfiles
-https://github.com/hectorhuertas/.dotfiles
 
-Using dotbot to backup dotfiles
+Custom dotfiles system. The goal is to keep my dotfiles organized and version controlled while doing as much
+as possible myself.
 
-## Set up
+The dotfiles_old folder holds the old system that used Dotbot.
 
-Clone the repo in ~/.dotfiles
+## To Do
+* Create script to automate files copied
+* Guide to making changes in dotfiles
+* Small guide to follow after fresh install
 
-    hub clone hectorhuertas/.dotfiles ~/.dotfiles
-
-Execute the install script
-
-    ~/.dotfiles/install
-
-## Dotbot update
-
-To update dotbot execute the following script on my dotfiles repo
-
-    git submodule update --remote dotbot
-
-## Adding files to track
-Copy the dotfile or dotfolder to ~/.dotfiles. Remove the dot from the
-dotfile/dotfolder. Update install.conf.yaml.
+## Topics to be added
+* Brewfile
+* gitconfig and gitignore_global
+* macos
 
 ## Ignore
 * .dotfiles
@@ -33,3 +25,13 @@ dotfile/dotfolder. Update install.conf.yaml.
 * .rvm (isn't user config)
 * .ssh (sensitive user data)
 * .viminfo (isn't user config)
+
+## Fresh install setup guide (WIP)
+
+Install xcode and manually accept agreement
+Install cli tools
+
+brew + brewbundle
+
+SSH keys (lastpass?)
+macos
