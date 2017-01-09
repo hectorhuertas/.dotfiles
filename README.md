@@ -14,6 +14,7 @@ The dotfiles_old folder holds the old system that used Dotbot.
 * Brewfile
 * gitconfig and gitignore_global
 * macos
+* iterm2
 
 ## Ignore
 * .dotfiles
