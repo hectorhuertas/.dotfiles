@@ -36,3 +36,7 @@ brew + brewbundle
 
 SSH keys (lastpass?)
 macos
+
+## How To
+Copiar el repositorio en ~ (de forma que este readme quede en ~/.dotfiles/README.md)
+Ejecutar install
