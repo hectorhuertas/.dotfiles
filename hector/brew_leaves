@@ -2,11 +2,10 @@ elixir
 erlang
 exercism
 git
-graphviz
 hub
-libksba
-libyaml
-readline
-the_silver_searcher
+mongodb
+redis
+tmux
 trash
 tree
+unrar

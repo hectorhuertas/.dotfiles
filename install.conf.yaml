@@ -7,3 +7,4 @@
     ~/.exercism.json: exercism.json
     ~/.hector: hector/
     ~/.config: config/
+    ~/.tmux.conf: exercism.json
