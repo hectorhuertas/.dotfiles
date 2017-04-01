@@ -1,14 +1,12 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-set -e
+echo "Setting up your dotfiles..."
 
-CONFIG="install.conf.yaml"
-DOTBOT_DIR="dotbot"
+BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-DOTBOT_BIN="bin/dotbot"
-BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+rm ~/.gitconfig
+ln -s ~/.dotfiles/dotfiles/git/.gitconfig ~/.gitconfig
 
-cd "${BASEDIR}"
-git submodule update --init --recursive "${DOTBOT_DIR}"
-
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+# if [[ $? > 0 ]]; then
+#   echo 'Error while creating symlink'
+# fi

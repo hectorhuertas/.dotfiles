@@ -4,9 +4,6 @@
 
 [alias]
 	hist = log --pretty=format:'%h %ad %ae | %s%d [%an]' --graph --date=short
+
 [color]
 	ui = true
-[filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
