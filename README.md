@@ -6,6 +6,7 @@ as possible myself.
 The dotfiles_old folder holds the old system that used Dotbot.
 
 ## To Do
+* Add sudo powers to brew script?
 * Create script to automate files copied
 * Guide to making changes in dotfiles
 * Small guide to follow after fresh install
