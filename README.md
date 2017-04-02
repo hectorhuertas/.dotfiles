@@ -29,8 +29,14 @@ The dotfiles_old folder holds the old system that used Dotbot.
 
 ## Fresh install setup guide (WIP)
 
-Install xcode and manually accept agreement
-Install cli tools
+* Install every system update
+* Install 'Command Line Tools' with:
+  * ```$ xcode-select --install```
+* Install brew with:
+  * ```$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+ ```
+
+
 
 brew + brewbundle
 
