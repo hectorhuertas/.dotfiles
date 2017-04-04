@@ -13,6 +13,8 @@ brew cask install steam
 brew cask install evernote
 brew cask install slack
 brew cask install iterm2
+brew cask install dropbox
+brew cask install skype
 
 brew cleanup
 brew cask cleanup
