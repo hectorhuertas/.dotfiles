@@ -11,6 +11,10 @@ echo ""
 
 echo "Symlinking config files..."
 
+rm ~/.bash_profile
+ln -s ~/.dotfiles/dotfiles/.bash_profile ~/.bash_profile
+echo "... .bash_profile"
+
 rm ~/.gitconfig
 ln -s ~/.dotfiles/dotfiles/.gitconfig ~/.gitconfig
 echo "... .gitconfig"
