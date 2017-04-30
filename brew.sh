@@ -11,6 +11,7 @@ brew install trash
 brew install tree
 brew install unrar
 brew install vim
+brew install wget
 brew install zsh
 
 brew tap caskroom/cask
