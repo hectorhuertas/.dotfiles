@@ -65,4 +65,4 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
 ### Ongoing work info
 * Tons of bookmarks
 * Tmux book page 47
-* Currently using downloaded zsh gmrl config
+* Currently using downloaded zsh gmrl config and using .zshrc.local as my .zshrc
