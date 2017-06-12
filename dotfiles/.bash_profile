@@ -33,3 +33,4 @@ export NVM_DIR="/Users/hectorhuertas/.nvm"
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
