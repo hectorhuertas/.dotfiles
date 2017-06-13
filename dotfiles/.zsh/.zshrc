@@ -61,5 +61,11 @@ unsetopt nohup
 # 5 seconds
 REPORTTIME=5
 
+## Better keybindings
+bindkey -M viins '^K' history-substring-search-up
+bindkey -M viins '^J' history-substring-search-down
+bindkey -M viins '^L' vi-forward-char
+bindkey -M viins '^C' clear-screen
+
 # Load Zplugins last, to allow syntax highlighter to apply everywhere
 source $ZDOTDIR/.zplug
