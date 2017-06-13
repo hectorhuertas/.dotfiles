@@ -41,3 +41,14 @@ hex() {
         return 1
     fi
 }
+
+q () {git
+  git add .;
+  git commit -m "$1";
+  git push
+}
+gc () {
+  git commit -m "$1";
+}
+
+alias gs='git status'
