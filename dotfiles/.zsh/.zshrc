@@ -19,12 +19,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-
-# Created by newuser for 5.3.1
-# source $ZDOTDIR/.ztesting
-source $ZDOTDIR/.zplug
-# source $ZDOTDIR/.grml-zsh
-
 source <(kubectl completion zsh)  # setup autocomplete in zsh
 source <(kops completion zsh)
 reload() {
@@ -57,3 +51,6 @@ alias gc='git commit -m'
 alias gpo='git push origin'
 alias gco='git checkout'
 alias gd='git diff'
+
+# Load Zplugins last, to allow syntax highlighter to apply everywhere
+source $ZDOTDIR/.zplug

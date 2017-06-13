@@ -10,14 +10,14 @@ else
 fi
 ## END - Using zplug from homebrew
 
-
-
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "zsh-users/zsh-history-substring-search"
-zplug "zsh-users/zsh-autosuggestions"
+## Zplug theme
 zplug "themes/pygmalion", from:oh-my-zsh
 
-
+## Zplug plugins
+zplug "zsh-users/zsh-autosuggestions"
+# Load syntax highlighter after everyting but BEFORE the search
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-history-substring-search"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
