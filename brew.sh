@@ -12,6 +12,7 @@ brew install tree
 brew install unrar
 brew install vim
 brew install wget
+brew install zplug
 brew install zsh
 
 brew tap caskroom/cask

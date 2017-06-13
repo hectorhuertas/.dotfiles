@@ -1,0 +1,30 @@
+## BEGIN - Using zplug from homebrew
+export ZPLUG_HOME=/usr/local/opt/zplug
+
+if test -e $ZPLUG_HOME; then
+  source $ZPLUG_HOME/init.zsh
+else
+  echo "Brew's Zplug not found, please install with 'brew install zplug'"
+  # Stop execution of this source file
+  return
+fi
+## END - Using zplug from homebrew
+
+
+
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-autosuggestions"
+
+
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# Then, source plugins and add commands to $PATH
+zplug load

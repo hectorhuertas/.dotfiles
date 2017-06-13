@@ -23,6 +23,17 @@ rm ~/.tmux.conf
 ln -s ~/.dotfiles/dotfiles/.tmux.conf ~/.tmux.conf
 echo "... .tmux.conf"
 
+rm ~/.zshenv
+ln -s ~/.dotfiles/dotfiles/.zshenv ~/.zshenv
+mkdir -p ~/.zsh
+rm ~/.zsh/.zshrc
+ln -s ~/.dotfiles/dotfiles/.zsh/.zshrc ~/.zsh/.zshrc
+rm ~/.zsh/.zplug
+ln -s ~/.dotfiles/dotfiles/.zsh/.zplug ~/.zsh/.zplug
+rm ~/.zsh/.grml-zsh
+ln -s ~/.dotfiles/dotfiles/.zsh/.grml-zsh ~/.zsh/.grml-zsh
+echo "... .zsh"
+
 echo "DONE!!"
 
 # if [[ $? > 0 ]]; then
