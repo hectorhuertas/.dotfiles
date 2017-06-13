@@ -26,7 +26,7 @@ source $ZDOTDIR/.zplug
 # source $ZDOTDIR/.grml-zsh
 
 source <(kubectl completion zsh)  # setup autocomplete in zsh
-
+source <(kops completion zsh)
 reload() {
   source $ZDOTDIR/.zshrc
   printf "Zsh reloaded!\n"
@@ -47,8 +47,13 @@ q () {git
   git commit -m "$1";
   git push
 }
-gc () {
-  git commit -m "$1";
-}
 
+alias ls='ls -GA'
+alias ll='ls -GAlh' # List with permits and size
+alias lo='ls -GAlhS' # List ordered by size
 alias gs='git status'
+alias ga='git add -A'
+alias gc='git commit -m'
+alias gpo='git push origin'
+alias gco='git checkout'
+alias gd='git diff'
