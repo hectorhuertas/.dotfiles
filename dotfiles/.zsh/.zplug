@@ -15,6 +15,7 @@ fi
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-autosuggestions"
+zplug "themes/pygmalion", from:oh-my-zsh
 
 
 
