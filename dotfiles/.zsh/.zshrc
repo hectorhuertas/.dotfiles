@@ -52,5 +52,14 @@ alias gpo='git push origin'
 alias gco='git checkout'
 alias gd='git diff'
 
+# Don't save duplicates in history
+setopt histignorealldups
+# Don't send SIGHUP (similar to SIGKILL) to background processes when the shell exits.
+unsetopt nohup
+
+# report about cpu-/system-/user-time of command if running longer than
+# 5 seconds
+REPORTTIME=5
+
 # Load Zplugins last, to allow syntax highlighter to apply everywhere
 source $ZDOTDIR/.zplug
