@@ -32,6 +32,8 @@ rm ~/.zsh/.zplug
 ln -s ~/.dotfiles/dotfiles/.zsh/.zplug ~/.zsh/.zplug
 rm ~/.zsh/.aliases
 ln -s ~/.dotfiles/dotfiles/.zsh/.aliases ~/.zsh/.aliases
+rm ~/.zsh/.keybindings
+ln -s ~/.dotfiles/dotfiles/.zsh/.keybindings ~/.zsh/.keybindings
 echo "... .zsh"
 
 echo "DONE!!"

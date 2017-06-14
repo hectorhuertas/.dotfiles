@@ -8,8 +8,6 @@ SAVEHIST=5000
 setopt autocd extendedglob nomatch notify
 unsetopt appendhistory beep
 
-# Set edit mode (e for emacs, v for vim)
-bindkey -v
 # End of lines configured by zsh-newuser-install
 
 # The following lines were added by compinstall
@@ -60,12 +58,7 @@ unsetopt nohup
 # 5 seconds
 REPORTTIME=5
 
-## Better keybindings
-bindkey -M viins '^K' history-substring-search-up
-bindkey -M viins '^J' history-substring-search-down
-bindkey -M viins '^L' vi-forward-char
-bindkey -M viins '^C' clear-screen
-
+source $ZDOTDIR/.keybindings
 # Load aliases after functions, so I can alias them
 source $ZDOTDIR/.aliases
 # Load Zplugins last, to allow syntax highlighter to apply everywhere
