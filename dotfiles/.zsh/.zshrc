@@ -19,35 +19,6 @@ compinit
 
 source <(kubectl completion zsh)  # setup autocomplete in zsh
 source <(kops completion zsh)
-reload() {
-  source $ZDOTDIR/.zshrc
-  printf "Zsh reloaded!\n"
-}
-
-## print hex value of a number
-hex() {
-    if [[ -n "$1" ]]; then
-        printf "%x\n" $1
-    else
-        print 'Usage: hex <number-to-convert>'
-        return 1
-    fi
-}
-
-q () {
-  current=$(git rev-parse --abbrev-ref HEAD);
-  git add .;
-  git commit -m "$1";
-  git push --set-upstream origin "$current"
-}
-
-mm() {
-  current=$(git rev-parse --abbrev-ref HEAD);
-  git checkout master;
-  git pull;
-  git checkout "$current"
-  git merge master
-}
 
 # Don't save duplicates in history
 setopt histignorealldups
