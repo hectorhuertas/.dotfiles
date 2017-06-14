@@ -37,9 +37,10 @@ hex() {
 }
 
 q () {
+  current=$(git rev-parse --abbrev-ref HEAD);
   git add .;
   git commit -m "$1";
-  git push
+  git push --set-upstream origin "$current"
 }
 
 mm() {
