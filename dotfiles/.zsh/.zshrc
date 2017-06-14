@@ -26,6 +26,7 @@ source <(kops completion zsh)
 
 ## Source other files
 source $ZDOTDIR/.keybindings
+source $ZDOTDIR/.functions
 # Load aliases after functions, so I can alias them
 source $ZDOTDIR/.aliases
 # Load Zplugins last, to allow syntax highlighter to apply everywhere
