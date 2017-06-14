@@ -51,17 +51,6 @@ mm() {
   git merge master
 }
 
-alias ls='ls -GA'
-alias ll='ls -GAlh' # List with permits and size
-alias lo='ls -GAlhS' # List ordered by size
-alias gs='git status'
-alias ga='git add -A'
-alias gc='git commit -m'
-alias gpo='git push origin'
-alias gco='git checkout'
-alias gd='git diff'
-alias e='env | grep'
-
 # Don't save duplicates in history
 setopt histignorealldups
 # Don't send SIGHUP (similar to SIGKILL) to background processes when the shell exits.
@@ -77,5 +66,7 @@ bindkey -M viins '^J' history-substring-search-down
 bindkey -M viins '^L' vi-forward-char
 bindkey -M viins '^C' clear-screen
 
+# Load aliases after functions, so I can alias them
+source $ZDOTDIR/.aliases
 # Load Zplugins last, to allow syntax highlighter to apply everywhere
 source $ZDOTDIR/.zplug

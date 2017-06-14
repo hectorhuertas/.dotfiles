@@ -1,0 +1,10 @@
+alias ls='ls -GA'
+alias ll='ls -GAlh' # List with permits and size
+alias lo='ls -GAlhS' # List ordered by size
+alias gs='git status'
+alias ga='git add -A'
+alias gc='git commit -m'
+alias gpo='git push origin'
+alias gco='git checkout'
+alias gd='git diff'
+alias e='env | grep'

@@ -30,8 +30,8 @@ rm ~/.zsh/.zshrc
 ln -s ~/.dotfiles/dotfiles/.zsh/.zshrc ~/.zsh/.zshrc
 rm ~/.zsh/.zplug
 ln -s ~/.dotfiles/dotfiles/.zsh/.zplug ~/.zsh/.zplug
-rm ~/.zsh/.grml-zsh
-ln -s ~/.dotfiles/dotfiles/.zsh/.grml-zsh ~/.zsh/.grml-zsh
+rm ~/.zsh/.aliases
+ln -s ~/.dotfiles/dotfiles/.zsh/.aliases ~/.zsh/.aliases
 echo "... .zsh"
 
 echo "DONE!!"
