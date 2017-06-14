@@ -1,4 +1,7 @@
 alias gs='git status'
+alias gst='git stash'
+alias gsl='git stash list'
+alias gsp='git stash pop'
 alias ga='git add -A'
 alias gpl='git pull'
 alias gp='git push'
