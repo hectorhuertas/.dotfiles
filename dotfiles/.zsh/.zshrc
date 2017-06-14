@@ -36,10 +36,18 @@ hex() {
     fi
 }
 
-q () {git
+q () {
   git add .;
   git commit -m "$1";
   git push
+}
+
+mm() {
+  current=$(git rev-parse --abbrev-ref HEAD);
+  git checkout master;
+  git pull;
+  git checkout "$current"
+  git merge master
 }
 
 alias ls='ls -GA'
@@ -51,6 +59,7 @@ alias gc='git commit -m'
 alias gpo='git push origin'
 alias gco='git checkout'
 alias gd='git diff'
+alias e='env | grep'
 
 # Don't save duplicates in history
 setopt histignorealldups
