@@ -34,6 +34,8 @@ rm ~/.zsh/.aliases
 ln -s ~/.dotfiles/dotfiles/.zsh/.aliases ~/.zsh/.aliases
 rm ~/.zsh/.keybindings
 ln -s ~/.dotfiles/dotfiles/.zsh/.keybindings ~/.zsh/.keybindings
+rm ~/.zsh/.functions
+ln -s ~/.dotfiles/dotfiles/.zsh/.functions ~/.zsh/.functions
 echo "... .zsh"
 
 echo "DONE!!"
