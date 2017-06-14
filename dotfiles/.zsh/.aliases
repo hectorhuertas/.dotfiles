@@ -1,20 +1,28 @@
-alias ls='ls -GA'
-alias ll='ls -GAlh' # List with permits and size
-alias lo='ls -GAlhS' # List ordered by size
 alias gs='git status'
 alias ga='git add -A'
+alias gpl='git pull'
+alias gp='git push'
 alias gc='git commit -m'
-alias gpo='git push origin'
 alias gco='git checkout'
-alias gcr='git checkout -b repositive'
-alias gch='git checkout -b home'
-alias gkr='git checkout -D repositive' # git kill repositive
-alias gkh='git checkout -D home'
+alias gcm='git checkout master'
+alias gch='git checkout home'
+alias gcr='git checkout repositive'
+alias gb='git branch'
+alias gbh='git branch home'
+alias gbr='git branch repositive'
+alias gbd='git branch -D'
+alias gkh='git branch -D home' # git kill home
+alias gkr='git branch -D repositive'
 alias gd='git diff'
-alias e='env | grep'
-alias r='reload_config'
-alias mm='git_merge_master'
-alias q='git_quick_push'
 alias gl='git log --graph --pretty=format:"%Cred%h %Creset- %s%C(yellow)%d %Cgreen(%cd) %C(bold blue)<%an>" --date=relative -5'
 alias gll='git log --graph --pretty=format:"%Cred%h %Creset- %s%C(yellow)%d %Cgreen(%cd) %C(bold blue)<%an>" --date=short'
 alias glf='git log --pretty=format:"%Cred%h %Creset- %s%C(yellow)%d %Cgreen(%cd) %C(bold blue)<%an>" --date=short --numstat -5'
+alias gmm='git_merge_master'
+alias q='git_quick_push'
+
+alias e='env | grep'
+alias r='reload_config'
+
+alias ls='ls -GA'
+alias ll='ls -GAlh' # List with permits and size
+alias lo='ls -GAlhS' # List ordered by size
