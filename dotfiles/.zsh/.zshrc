@@ -1,34 +1,30 @@
-
-# Lines configured by zsh-newuser-install
+## History
 HISTFILE=$ZDOTDIR/.history
 HISTSIZE=5000
 SAVEHIST=5000
 
-# Set or unset basic options
+## Set or unset basic options
 setopt autocd extendedglob nomatch notify
 unsetopt appendhistory beep
-
-# End of lines configured by zsh-newuser-install
-
-# The following lines were added by compinstall
-zstyle :compinstall filename '$ZDOTDIR/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-
-source <(kubectl completion zsh)  # setup autocomplete in zsh
-source <(kops completion zsh)
-
 # Don't save duplicates in history
 setopt histignorealldups
-# Don't send SIGHUP (similar to SIGKILL) to background processes when the shell exits.
+# DEACTIVATED - Don't send SIGHUP (similar to SIGKILL) to background processes when the shell exits.
 unsetopt nohup
 
-# report about cpu-/system-/user-time of command if running longer than
-# 5 seconds
-REPORTTIME=5
+## BEGIN - Lines were added by compinstall
+zstyle :compinstall filename '$ZDOTDIR/.zshrc'
+autoload -Uz compinit
+compinit
+## END - Lines were added by compinstall
 
+## Execute '$ time' if ongoing command lasts more than this value
+REPORTTIME=1
+
+## Autocompletions
+source <(kubectl completion zsh)
+source <(kops completion zsh)
+
+## Source other files
 source $ZDOTDIR/.keybindings
 # Load aliases after functions, so I can alias them
 source $ZDOTDIR/.aliases
