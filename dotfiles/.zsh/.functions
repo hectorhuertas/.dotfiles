@@ -1,3 +1,26 @@
+git_current_branch() {
+  echo $(git rev-parse --abbrev-ref HEAD)
+}
+
+git_quick_push() {
+  git add .;
+  git commit -m "$1";
+  git push --set-upstream origin "$(git_current_branch)";
+}
+
+git_merge_master() {
+  current=$(git_current_branch);
+  git checkout master;
+  git pull;
+  git checkout "$current";
+  git merge master;
+}
+
+reload_config() {
+  source $ZDOTDIR/.zshrc;
+  echo "Zsh reloaded!";
+}
+
 ## print hex value of a number
 hex() {
     if [[ -n "$1" ]]; then
@@ -6,24 +29,4 @@ hex() {
         print 'Usage: hex <number-to-convert>'
         return 1
     fi
-}
-
-q () {
-  current=$(git rev-parse --abbrev-ref HEAD);
-  git add .;
-  git commit -m "$1";
-  git push --set-upstream origin "$current"
-}
-
-mm() {
-  current=$(git rev-parse --abbrev-ref HEAD);
-  git checkout master;
-  git pull;
-  git checkout "$current"
-  git merge master
-}
-
-reload() {
-  source $ZDOTDIR/.zshrc
-  printf "Zsh reloaded!\n"
 }
