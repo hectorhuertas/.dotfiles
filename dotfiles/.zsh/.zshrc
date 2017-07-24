@@ -20,6 +20,10 @@ compinit
 ## Execute '$ time' if ongoing command lasts more than this value
 REPORTTIME=1
 
+## Setup nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 ## Autocompletions
 source <(kubectl completion zsh)
 source <(kops completion zsh)
