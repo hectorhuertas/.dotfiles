@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 echo ""
 echo "------------------"
@@ -21,21 +22,8 @@ echo "... .tmux.conf"
 
 rm ~/.zshenv
 ln -s ~/.dotfiles/dotfiles/.zshenv ~/.zshenv
-mkdir -p ~/.zsh
-rm ~/.zsh/.zshrc
-ln -s ~/.dotfiles/dotfiles/.zsh/.zshrc ~/.zsh/.zshrc
-rm ~/.zsh/.zplug
-ln -s ~/.dotfiles/dotfiles/.zsh/.zplug ~/.zsh/.zplug
-rm ~/.zsh/.aliases
-ln -s ~/.dotfiles/dotfiles/.zsh/.aliases ~/.zsh/.aliases
-rm ~/.zsh/.keybindings
-ln -s ~/.dotfiles/dotfiles/.zsh/.keybindings ~/.zsh/.keybindings
-rm ~/.zsh/.functions
-ln -s ~/.dotfiles/dotfiles/.zsh/.functions ~/.zsh/.functions
+rm ~/.zsh
+ln -s ~/.dotfiles/dotfiles/.zsh ~/.zsh
 echo "... .zsh"
 
 echo "DONE!!"
-
-# if [[ $? > 0 ]]; then
-#   echo 'Error while creating symlink'
-# fi
