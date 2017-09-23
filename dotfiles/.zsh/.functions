@@ -2,6 +2,10 @@ git_current_branch() {
   echo $(git rev-parse --abbrev-ref HEAD)
 }
 
+git_push_origin() {
+  git push --set-upstream origin "$(git_current_branch)";
+}
+
 git_quick_push() {
   git add .;
   git commit -m "$1";
