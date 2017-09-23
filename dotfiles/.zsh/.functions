@@ -16,6 +16,14 @@ git_merge_master() {
   git merge master;
 }
 
+git_rebase_master() {
+  current=$(git_current_branch);
+  git checkout master;
+  git pull;
+  git checkout "$current";
+  git rebase master;
+}
+
 reload_config() {
   source $ZDOTDIR/.zshrc;
   echo "Zsh reloaded!";
