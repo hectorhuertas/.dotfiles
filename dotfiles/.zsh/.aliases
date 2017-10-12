@@ -26,6 +26,7 @@ alias gmm='git_merge_master'
 alias grm='git_rebase_master'
 alias q='git_quick_push'
 
+alias k='kubectl'
 alias ke='kubectl config current-context'
 alias kes='kubectl config use-context k8s-staging.repositive.io'
 alias kep='kubectl config use-context k8s-production.repositive.io'
