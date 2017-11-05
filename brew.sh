@@ -18,12 +18,17 @@ brew install zsh
 brew tap caskroom/cask
 
 brew cask install atom
+brew cask install battle-net
 brew cask install docker
 brew cask install dropbox
 brew cask install evernote
+brew cask install flux
+brew cask install gog-galaxy
 brew cask install google-chrome
 brew cask install iterm2
+brew cask install karabiner-elements
 brew cask install keepingyouawake
+brew cask install keybase
 brew cask install skype
 brew cask install slack
 brew cask install spectacle
