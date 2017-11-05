@@ -22,8 +22,15 @@ echo "... .tmux.conf"
 
 rm ~/.zshenv
 ln -s ~/.dotfiles/dotfiles/.zshenv ~/.zshenv
-rm ~/.zsh
+rm -rf ~/.zsh
 ln -s ~/.dotfiles/dotfiles/.zsh ~/.zsh
 echo "... .zsh"
+
+mkdir -p ~/.config
+echo "Inside ~/.config folder..."
+
+rm -rf ~/.config/karabiner
+ln -s ~/.dotfiles/dotfiles/.config/karabiner ~/.config/karabiner
+echo "... karabiner"
 
 echo "DONE!!"
