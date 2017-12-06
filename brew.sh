@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if ! command -v brew $1>/dev/null; then
+  echo "ERROR: This script requires having 'Homebrew' installed"
+  exit
+fi
+
 brew update
 
 brew upgrade
