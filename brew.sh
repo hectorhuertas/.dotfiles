@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if ! command -v brew $1>/dev/null; then
+if ! command -v brew > /dev/null; then
   echo "ERROR: This script requires having 'Homebrew' installed"
   exit
 fi
