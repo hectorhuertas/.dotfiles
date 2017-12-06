@@ -36,6 +36,7 @@ This project involves the management of the dotfiles and the utilities used to i
 
 ### To Do
 * Add sudo powers to brew script?
+* Colorize output & errors?
 
 ## #2 Personal configurations for utilities
 
@@ -50,6 +51,7 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
 
 
 ### To Do
+* Check all the bookmarks
 * Tmux (`Prefix ?` to show predefined comands)o
   * Persistent tmux sessions
   * Nice, useful theme/status bar
@@ -70,13 +72,10 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
   * Basic config to implement quick alias
   * auto-suggestions
   * Nice, useful theme
+  * Reorganize the way elements are sourced (maybe source a folder and put alike things inside? Like an aliases folder and inside different files for different programs?)
+  * Check that a program is installed before sourcing/autocompleting related things
 * Desired additions
   * Vim
   * Iterm2
 * macOs
   * Create shortcuts to bring to the front the browser, tmux, browser and atom (maybe slack and evernote?)
-
-### Ongoing work info
-* Tons of bookmarks
-* Tmux book page 47
-* Currently using downloaded zsh gmrl config and using .zshrc.local as my .zshrc
