@@ -79,3 +79,7 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
   * Iterm2
 * macOs
   * Create shortcuts to bring to the front the browser, tmux, browser and atom (maybe slack and evernote?)
+* Git
+  * Script for easier dotfiles collaboration:
+    * Easily pull from master, create home or repositive branch from master (not from remote) and checkout there
+    * Easily push the branch (somehow merge it?), checkout to master, pull the new changes and delete the branch
