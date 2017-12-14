@@ -83,3 +83,9 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
   * Script for easier dotfiles collaboration:
     * Easily pull from master, create home or repositive branch from master (not from remote) and checkout there
     * Easily push the branch (somehow merge it?), checkout to master, pull the new changes and delete the branch
+* AWS
+  * How to create keypair locally and upload them and get the fingerprints
+  * Create the keypair using `ssh-keygen -t rsa -b 2048 -C "peter@jander.io"`. It's also possible using openssl, but then i need to find which formats the output should be. If using ssh-keygen, explore how to pass all the options (no passphrase and set output files path and names)
+  * Get the AWS fingerprints using `openssl pkey -in /path/to/key -pubout -outform DER | openssl md5 -c`
+  * Check https://serverfault.com/questions/603982/why-does-my-openssh-key-fingerprint-not-match-the-aws-ec2-console-keypair-finger
+  * Include aws cli command to upload the public key to amazon, and afterwards check the fingerprint is correct
