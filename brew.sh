@@ -9,11 +9,13 @@ brew update
 
 brew upgrade
 
+brew install exercism
 brew install hub
+brew install jq
+brew install nmap
 brew install node
 brew install tmux
 brew install trash
-brew install tree
 brew install unrar
 brew install vim
 brew install wget
