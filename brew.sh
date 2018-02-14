@@ -30,16 +30,20 @@ brew cask install evernote
 brew cask install flux
 brew cask install gog-galaxy
 brew cask install google-chrome
+brew cask install intel-power-gadget
 brew cask install iterm2
 brew cask install karabiner-elements
 brew cask install keepingyouawake
 brew cask install keybase
+brew cask install macs-fan-control
+brew cask install qbittorrent
 brew cask install skype
 brew cask install slack
 brew cask install spectacle
 brew cask install steam
 brew cask install tomighty
 brew cask install vlc
+brew cask install yujitach-menumeters
 
 brew cleanup
 brew cask cleanup
