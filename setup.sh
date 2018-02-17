@@ -39,4 +39,8 @@ rm -rf ~/.config/karabiner
 ln -s ~/.dotfiles/dotfiles/.config/karabiner ~/.config/karabiner
 echo "... karabiner"
 
+rm -rf ~/.config/alacritty
+ln -s ~/.dotfiles/dotfiles/.config/alacritty ~/.config/alacritty
+echo "... alacritty"
+
 echo "DONE!!"
