@@ -32,6 +32,10 @@ rm -rf ~/.zsh
 ln -s ~/.dotfiles/dotfiles/.zsh ~/.zsh
 echo "... .zsh"
 
+rm -rf ~/.hammerspoon
+ln -s ~/.dotfiles/dotfiles/.hammerspoon ~/.hammerspoon
+echo "... .hammerspoon"
+
 mkdir -p ~/.config
 echo "Inside ~/.config folder..."
 

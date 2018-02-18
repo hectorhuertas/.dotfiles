@@ -89,3 +89,27 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
   * Get the AWS fingerprints using `openssl pkey -in /path/to/key -pubout -outform DER | openssl md5 -c`
   * Check https://serverfault.com/questions/603982/why-does-my-openssh-key-fingerprint-not-match-the-aws-ec2-console-keypair-finger
   * Include aws cli command to upload the public key to amazon, and afterwards check the fingerprint is correct
+
+#### Shortcuts system
+* Types of shortcuts
+  * Desktop and window management (mission control and spectacle)
+  * Global shortcuts (copy, paste, select all, undo...)
+  * Set focus on specific application (and cycle thought windows?)
+  * Move between panes of application
+  * Tmux actions
+  * Graphical application shortcuts
+  * Terminal applications shortcuts
+* Style of shortcut
+  * Key combination
+  * Prefix + Key
+* Shortcut combinations (avoiding big hand movement)
+  * Avoid Ctrl + Shift
+  * Avoid option/alt
+
+#### Implemented shortcuts outside of this dotfiles
+* MacOs: (Cmd + Ctrl)
+  * D: Show Desktop
+* Spectacle: (Cmd + Ctrl)
+  * Vim keys: resize to proper side
+  * F: Fullscreen
+  * C: Center (has weird side effect, press ESC to exit it)
