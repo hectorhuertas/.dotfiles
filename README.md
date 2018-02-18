@@ -79,6 +79,7 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
   * Iterm2
 * macOs
   * Create shortcuts to bring to the front the browser, tmux, browser and atom (maybe slack and evernote?)
+* Use hamerspoon scripts to implement spectacle's functionality
 * Git
   * Script for easier dotfiles collaboration:
     * Easily pull from master, create home or repositive branch from master (not from remote) and checkout there
