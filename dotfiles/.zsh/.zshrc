@@ -26,7 +26,6 @@ export NVM_DIR="$HOME/.nvm"
 
 ## Autocompletions
 source <(kubectl completion zsh)
-source <(kops completion zsh)
 
 ## Source other files
 source $ZDOTDIR/.keybindings
