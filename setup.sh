@@ -18,15 +18,15 @@ fi
 
 echo "Symlinking config files..."
 
-rm ~/.gitconfig
+rm -f ~/.gitconfig
 ln -s ~/.dotfiles/dotfiles/.gitconfig ~/.gitconfig
 echo "... .gitconfig"
 
-rm ~/.tmux.conf
+rm -f ~/.tmux.conf
 ln -s ~/.dotfiles/dotfiles/.tmux.conf ~/.tmux.conf
 echo "... .tmux.conf"
 
-rm ~/.zshenv
+rm -f ~/.zshenv
 ln -s ~/.dotfiles/dotfiles/.zshenv ~/.zshenv
 rm -rf ~/.zsh
 ln -s ~/.dotfiles/dotfiles/.zsh ~/.zsh
