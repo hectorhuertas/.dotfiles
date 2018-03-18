@@ -44,6 +44,15 @@ reload_config() {
   echo "Zsh reloaded!";
 }
 
+my_nvim() {
+  if [ "$1" != "" ]
+  then
+    nvim $1
+  else
+    nvim .
+  fi
+}
+
 ## print hex value of a number
 hex() {
     if [[ -n "$1" ]]; then
