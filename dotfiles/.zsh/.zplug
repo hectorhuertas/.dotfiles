@@ -15,6 +15,7 @@ zplug "themes/pygmalion", from:oh-my-zsh
 
 ## Zplug plugins
 zplug "zsh-users/zsh-autosuggestions"
+zplug "rupa/z", use:z.sh
 # Load syntax highlighter after everyting but BEFORE the search
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search"
