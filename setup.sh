@@ -47,4 +47,8 @@ rm -rf ~/.config/alacritty
 ln -s ~/.dotfiles/dotfiles/.config/alacritty ~/.config/alacritty
 echo "... alacritty"
 
+rm -rf ~/.config/nvim
+ln -s ~/.dotfiles/dotfiles/.config/nvim ~/.config/nvim
+echo "... nvim"
+
 echo "DONE!!"
