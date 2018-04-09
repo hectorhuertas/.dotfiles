@@ -9,11 +9,13 @@ brew update
 
 brew upgrade
 
+brew install colordiff
 brew install exercism
 #brew install fasd
 brew install fd
 brew install fzf
 brew install hub
+brew install icdiff
 brew install jq
 brew install neovim
 #brew install nmap
@@ -22,7 +24,9 @@ brew install ripgrep
 brew install shellcheck
 brew install tmux
 brew install trash
+brew install tree
 brew install unrar
+brew install watch
 brew install wget
 brew install zplug
 brew install zsh
@@ -31,6 +35,7 @@ brew tap caskroom/cask
 
 brew cask install atom
 #brew cask install battle-net
+brew cask install dash
 brew cask install docker
 brew cask install dropbox
 brew cask install evernote
