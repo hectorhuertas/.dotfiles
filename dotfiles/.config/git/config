@@ -3,6 +3,7 @@
 	email = hectorhuertas@gmail.com
 
 [core]
+	excludesfile = ~/.config/git/ignore
 	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [color]
