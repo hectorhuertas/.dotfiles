@@ -18,10 +18,6 @@ fi
 
 echo "Symlinking config files..."
 
-rm -f ~/.gitconfig
-ln -s ~/.dotfiles/dotfiles/.gitconfig ~/.gitconfig
-echo "... .gitconfig"
-
 rm -f ~/.tmux.conf
 ln -s ~/.dotfiles/dotfiles/.tmux.conf ~/.tmux.conf
 echo "... .tmux.conf"
@@ -46,6 +42,10 @@ echo "... karabiner"
 rm -rf ~/.config/alacritty
 ln -s ~/.dotfiles/dotfiles/.config/alacritty ~/.config/alacritty
 echo "... alacritty"
+
+rm -rf ~/.config/git
+ln -s ~/.dotfiles/dotfiles/.config/git ~/.config/git
+echo "... git"
 
 rm -rf ~/.config/nvim
 ln -s ~/.dotfiles/dotfiles/.config/nvim ~/.config/nvim
