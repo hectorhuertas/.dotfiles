@@ -24,3 +24,12 @@
 
 [diff-so-fancy]
 	markEmptyLines = false
+
+# Strongbox integration for UW
+[diff "strongbox"]
+	textconv = strongbox -diff
+
+[filter "strongbox"]
+	clean = strongbox -clean %f
+	smudge = strongbox -smudge %f
+	required = true
