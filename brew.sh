@@ -10,6 +10,7 @@ brew update
 brew upgrade
 
 brew install colordiff
+brew install diff-so-fancy
 brew install exercism
 #brew install fasd
 brew install fd
