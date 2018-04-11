@@ -51,6 +51,11 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
 
 
 ### To Do
+* Autostart tmux session with same window group
+* Improve dein install:
+  * Remove bad setup in zsh folder
+  * Cleanup install script in setup.sh
+  * Remove the crappy working folder (.vim/dein...) for something better like "~/.local/share.../nvim??)
 * Check all the bookmarks
 * Tmux (`Prefix ?` to show predefined comands)
   * Persistent tmux sessions
