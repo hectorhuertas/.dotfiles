@@ -51,4 +51,12 @@ rm -rf ~/.config/nvim
 ln -s ~/.dotfiles/dotfiles/.config/nvim ~/.config/nvim
 echo "... nvim"
 
+echo "Setting up dein for (n)vim package management..."
+dein_home="$HOME/.vim/dein/repos/github.com/Shougo/dein.vim"
+rm -rf ${dein_home}
+mkdir -p ${dein_home}
+git clone https://github.com/Shougo/dein.vim.git ${dein_home} --quiet
+echo "... installed!"
+echo "Do not forget to install the plugins inside (n)vim with ':call dein#install()'"
+
 echo "DONE!!"
