@@ -20,6 +20,9 @@ let g:go_highlight_types = 1
 let g:go_auto_sameids = 1
 let g:go_fmt_command = "goimports"
 
+" Vim-Terraform settings
+let g:terraform_fmt_on_save = 1
+
 " Dein plugin manager setup
 set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim " path to dein.vim
 
