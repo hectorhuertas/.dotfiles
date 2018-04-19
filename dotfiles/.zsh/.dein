@@ -1,3 +1,0 @@
-dein_home="~/.vim/dein/repos/github.com/Shougo/dein.vim"
-mkdir -p ${dein_home}
-git clone https://github.com/Shougo/dein.vim.git ${dein_home}
