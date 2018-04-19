@@ -37,8 +37,4 @@ alias kdps='k8s_delete_pods_by_app_selector' # K8s Delete PodS
 alias e='env | grep'
 alias r='reload_config'
 
-alias ls='ls -GA'
-alias ll='ls -GAlh' # List with permits and size
-alias lo='ls -GAlhS' # List ordered by size
-
 alias v='my_nvim'

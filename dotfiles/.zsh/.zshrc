@@ -32,5 +32,9 @@ source $ZDOTDIR/.keybindings
 source $ZDOTDIR/.functions
 # Load aliases after functions, so I can alias them
 source $ZDOTDIR/.aliases
+# New organization method by functionality instead of by type
+for file in $ZDOTDIR/my_plugins/*; do
+  source "$file"
+done
 # Load Zplugins last, to allow syntax highlighter to apply everywhere
 source $ZDOTDIR/.zplug
