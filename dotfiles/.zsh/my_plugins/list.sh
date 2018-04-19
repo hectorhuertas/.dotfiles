@@ -1,11 +1,11 @@
 function list {
-  rm -f .DS_Store && ls -Ap
+  rm -f .DS_Store && ls -AF $1
 }
 
 alias l=list
 
 function list_long {
-  rm -f .DS_Store && ls -Aplh
+  rm -f .DS_Store && ls -AGlh $1
 }
 
 alias ll=list_long
