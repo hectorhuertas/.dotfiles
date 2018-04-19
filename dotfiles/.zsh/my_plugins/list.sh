@@ -5,6 +5,7 @@ function list {
 alias l=list
 
 function list_long {
+  # Only valid for BSD 'ls'. GNU 'ls' has different meaning for '-G' flag
   rm -f .DS_Store && ls -AGlh $1
 }
 
