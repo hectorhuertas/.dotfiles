@@ -49,7 +49,6 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
 * Understand every line, using comments, don't copy blindly!
 * Use only what I need, KISS
 
-
 ### To Do
 * Autostart tmux session with same window group
 * Improve dein install:
@@ -81,9 +80,7 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
   * powerlevel9k theme for zsh?
 * Use hamerspoon scripts to implement spectacle's functionality
 * Git
-  * Script for easier dotfiles collaboration:
-    * Easily pull from master, create home or repositive branch from master (not from remote) and checkout there
-    * Easily push the branch (somehow merge it?), checkout to master, pull the new changes and delete the branch
+  * Create a prompt indication to let me know when I'm in a dirty master
 * AWS
   * How to create keypair locally and upload them and get the fingerprints
   * Create the keypair using `ssh-keygen -t rsa -b 2048 -C "peter@jander.io"`. It's also possible using openssl, but then i need to find which formats the output should be. If using ssh-keygen, explore how to pass all the options (no passphrase and set output files path and names)
