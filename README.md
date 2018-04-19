@@ -1,8 +1,8 @@
 # Hector Huertas' .dotfiles
 
-This are my personal configurations and the scripts to easily install them.
+These are my personal configurations and the scripts to easily install them.
 
-This are two projects in one: the management of the dotfiles themselves and the configuration of my environment.
+There are two projects in one: the management of the dotfiles themselves and the configuration of my environment.
 
 **NOTE:** This project must be cloned so this README lives at ~/.dotfiles/README.md
 
@@ -19,14 +19,14 @@ This project involves the management of the dotfiles and the utilities used to i
 
 ### Prerequisites
 * Install every system update
-* Install 'Command Line Tools' with: ```$ xcode-select --install```
+* Install 'Command Line Tools' with: `$ xcode-select --install`
 * Install brew from https://brew.sh/
 * Make sure the project is cloned so this README lives at ~/.dotfiles/README.md
 
 ### Usage
 * Installing or updating configs:
-  * Run brew.sh to install basic utilities in macOs
-  * Run setup.sh to install personal configurations
+  * Run `bin/brew.sh` to install basic utilities in macOs
+  * Run `bin/setup.sh` to install personal configurations
 * Making changes to exiting configs:
   * Modify the desired file under ~/.dotfiles/dotfiles
   * Commit the changes to the github repository
