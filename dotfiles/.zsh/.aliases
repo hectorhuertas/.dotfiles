@@ -33,6 +33,7 @@ alias kes='kubectl config use-context k8s-staging.repositive.io'
 alias kep='kubectl config use-context k8s-production.repositive.io'
 alias ket='kubectl config use-context k8s-test.repositive.io'
 alias kdps='k8s_delete_pods_by_app_selector' # K8s Delete PodS
+alias -g A='--all-namepsaces'
 
 alias e='env | grep'
 alias r='reload_config'
