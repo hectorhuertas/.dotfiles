@@ -74,6 +74,9 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
   * Nice, useful theme
   * Reorganize the way elements are sourced (maybe source a folder and put alike things inside? Like an aliases folder and inside different files for different programs?)
   * Check that a program is installed before sourcing/autocompleting related things
+  * Review shell options (http://zsh.sourceforge.net/Doc/Release/Options.html). Reviewed up to including `16.2.4 History`
+  * Try to implement XDG variables to move most of the configurations to .config folder
+  * Improve the keybindigs, specially for going to the beginning and end of line. Like: `[[ -z "$terminfo[khome]" ]] || bindkey -M emacs "$terminfo[khome]" beginning-of-line`
 * Desired additions
   * Vim/NeoVim
   * fzf
