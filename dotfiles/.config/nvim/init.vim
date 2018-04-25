@@ -47,3 +47,6 @@ endif
 
 filetype plugin indent on
 syntax enable
+
+" Uses the system clipboard instead of the default '""' one
+:set clipboard^=unnamed
