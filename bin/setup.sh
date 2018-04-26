@@ -24,9 +24,7 @@ echo "... .tmux.conf"
 
 rm -f ~/.zshenv
 ln -s ~/.dotfiles/dotfiles/.zshenv ~/.zshenv
-rm -rf ~/.zsh
-ln -s ~/.dotfiles/dotfiles/.zsh ~/.zsh
-echo "... .zsh"
+echo "... .zshenv"
 
 rm -rf ~/.hammerspoon
 ln -s ~/.dotfiles/dotfiles/.hammerspoon ~/.hammerspoon
@@ -50,6 +48,10 @@ echo "... git"
 rm -rf ~/.config/nvim
 ln -s ~/.dotfiles/dotfiles/.config/nvim ~/.config/nvim
 echo "... nvim"
+
+rm -rf ~/.config/zsh
+ln -s ~/.dotfiles/dotfiles/.config/zsh ~/.config/zsh
+echo "... zsh"
 
 echo "Setting up dein for (n)vim package management..."
 dein_home="$HOME/.vim/dein/repos/github.com/Shougo/dein.vim"
