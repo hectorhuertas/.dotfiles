@@ -68,6 +68,7 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
   * Find out when in vi-mode some keys throw a weird output (like C-b or C-t, but not C-r or C-l)
   * Figure out how to copy and paste from the copy mode and vim
 * Zsh
+  * Explore using CDPATH
   * Basic config to implement quick alias
   * auto-suggestions
   * Nice, useful theme
