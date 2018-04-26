@@ -64,7 +64,6 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
     * Go to start/end of line
     * Move one work back /forth
   * Different background colors for different machines / kube environments, ...
-  * Find out if C-f x2 works in applications like vim, htop or others (this is testing sending the prefix)
   * Find out why selecting with double click or with drag selection acts weird/doesnt work with mouse mode on
   * Find out when in vi-mode some keys throw a weird output (like C-b or C-t, but not C-r or C-l)
   * Figure out how to copy and paste from the copy mode and vim
