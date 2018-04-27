@@ -5,7 +5,7 @@ echo "--------------------"
 echo "-- Dotfiles setup --"
 echo "--------------------"
 
-if [ ! -x "$HOME/.dotfiles/setup.sh" ]; then
+if [ ! -x "$HOME/.dotfiles/bin/setup.sh" ]; then
   echo "ERROR: The dotfiles repository should be cloned at '~/.dotfiles',"
   echo "       so this script should be at '~/.dotfiles/setup.sh'"
   exit
