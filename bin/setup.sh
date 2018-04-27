@@ -54,7 +54,7 @@ ln -s ~/.dotfiles/dotfiles/.config/zsh ~/.config/zsh
 echo "... zsh"
 
 echo "Setting up dein for (n)vim package management..."
-dein_home="$HOME/.vim/dein/repos/github.com/Shougo/dein.vim"
+dein_home="$HOME/.cache/vim/dein/repos/github.com/Shougo/dein.vim"
 rm -rf ${dein_home}
 mkdir -p ${dein_home}
 git clone https://github.com/Shougo/dein.vim.git ${dein_home} --quiet

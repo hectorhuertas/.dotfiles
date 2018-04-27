@@ -23,11 +23,14 @@ let g:go_fmt_command = "goimports"
 " Vim-Terraform settings
 let g:terraform_fmt_on_save = 1
 
-" Dein plugin manager setup
-set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim " path to dein.vim
+" Location of explorer history
+let g:netrw_home="~/.cache/vim"
 
-if dein#load_state(expand('~/.vim/dein'))
-  call dein#begin(expand('~/.vim/dein'))
+" Dein plugin manager setup
+set runtimepath+=~/.cache/vim/dein/repos/github.com/Shougo/dein.vim " path to dein.vim
+
+if dein#load_state(expand('~/.cache/vim/dein'))
+  call dein#begin(expand('~/.cache/vim/dein'))
   call dein#add('Shougo/dein.vim')
 
   call dein#add('fatih/vim-go')
