@@ -26,10 +26,6 @@ rm -f ~/.zshenv
 ln -s ~/.dotfiles/dotfiles/.zshenv ~/.zshenv
 echo "... .zshenv"
 
-rm -rf ~/.hammerspoon
-ln -s ~/.dotfiles/dotfiles/.hammerspoon ~/.hammerspoon
-echo "... .hammerspoon"
-
 mkdir -p ~/.config
 echo "Inside ~/.config folder..."
 
@@ -44,6 +40,10 @@ echo "... alacritty"
 rm -rf ~/.config/git
 ln -s ~/.dotfiles/dotfiles/.config/git ~/.config/git
 echo "... git"
+
+rm -rf ~/.config/hammerspoon
+ln -s ~/.dotfiles/dotfiles/.config/hammerspoon ~/.config/hammerspoon
+echo "... hammerspoon"
 
 rm -rf ~/.config/nvim
 ln -s ~/.dotfiles/dotfiles/.config/nvim ~/.config/nvim

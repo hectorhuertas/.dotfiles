@@ -44,6 +44,7 @@ brew cask install flux
 #brew cask install gog-galaxy
 brew cask install google-chrome
 brew cask install hammerspoon
+defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
 #brew cask install intel-power-gadget
 brew cask install iterm2
 brew cask install karabiner-elements
