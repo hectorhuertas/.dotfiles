@@ -50,12 +50,8 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
 * Use only what I need, KISS
 
 ### To Do
-* Autostart tmux session with same window group
-* Improve dein install:
-  * Remove bad setup in zsh folder
-  * Cleanup install script in setup.sh
-  * Remove the crappy working folder (.vim/dein...) for something better like "~/.local/share.../nvim??)
 * Check all the bookmarks
+* Autostart tmux session with same window group
 * Tmux (`Prefix ?` to show predefined comands)
   * Persistent tmux sessions
   * Nice, useful theme/status bar
@@ -78,7 +74,6 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
   * Try to implement XDG variables to move most of the configurations to .config folder
   * Improve the keybindigs, specially for going to the beginning and end of line. Like: `[[ -z "$terminfo[khome]" ]] || bindkey -M emacs "$terminfo[khome]" beginning-of-line`
 * Desired additions
-  * Vim/NeoVim
   * fzf
   * powerlevel9k theme for zsh?
 * Use hamerspoon scripts to implement spectacle's functionality
