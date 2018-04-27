@@ -52,6 +52,6 @@ filetype plugin indent on
 syntax enable
 
 " Uses the system clipboard instead of the default '""' one
-:set clipboard^=unnamed
+set clipboard^=unnamed
 " Remap x to yank to the _ register instead of the default one
 noremap x "_x
