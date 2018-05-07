@@ -7,20 +7,11 @@ echo "--------------------"
 
 if [ ! -x "$HOME/.dotfiles/bin/setup.sh" ]; then
   echo "ERROR: The dotfiles repository should be cloned at '~/.dotfiles',"
-  echo "       so this script should be at '~/.dotfiles/setup.sh'"
-  exit
-fi
-
-if [ "$(pwd)" != "$HOME/.dotfiles" ]; then
-  echo "ERROR: This script must be run from $HOME/.dotfiles"
+  echo "       so this script should be at '~/.dotfiles/bin/setup.sh'"
   exit
 fi
 
 echo "Symlinking config files..."
-
-rm -f ~/.tmux.conf
-ln -s ~/.dotfiles/dotfiles/.tmux.conf ~/.tmux.conf
-echo "... .tmux.conf"
 
 rm -f ~/.zshenv
 ln -s ~/.dotfiles/dotfiles/.zshenv ~/.zshenv
@@ -48,6 +39,11 @@ echo "... hammerspoon"
 rm -rf ~/.config/nvim
 ln -s ~/.dotfiles/dotfiles/.config/nvim ~/.config/nvim
 echo "... nvim"
+
+
+rm -f ~/.config/tmux
+ln -s ~/.dotfiles/dotfiles/.config/tmux ~/.config/tmux
+echo "... tmux"
 
 rm -rf ~/.config/zsh
 ln -s ~/.dotfiles/dotfiles/.config/zsh ~/.config/zsh
