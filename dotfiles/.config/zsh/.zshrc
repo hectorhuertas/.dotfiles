@@ -7,9 +7,10 @@ SAVEHIST=10000
 setopt noautocd appendhistory nobeep extendedglob globdots histignorealldups histignorespace
 setopt histreduceblanks incappendhistory nomatch notify
 
-# Define compinit as a shell function instead of an external command (man zshbuiltins)
+## ZSH "new" completion system
+# Define compinit as zsh function instead of external command (man zshbuiltins)
 autoload -Uz compinit
-# Start "new" zsh completion system
+# Use .cache for the dumped completion configuration
 mkdir -p ~/.cache/zsh
 compinit -d ~/.cache/zsh/zcompdump
 
