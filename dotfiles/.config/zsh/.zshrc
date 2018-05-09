@@ -9,11 +9,10 @@ setopt histreduceblanks incappendhistory nomatch notify
 # DEACTIVATED - Don't send SIGHUP (similar to SIGKILL) to background processes when the shell exits.
 # unsetopt nohup  ## Deactivate temporally to understand behaviour. Why `unset nohup`? Shouldn't it be `set nohup`?
 
-## BEGIN - Lines were added by compinstall
-zstyle :compinstall filename '$ZDOTDIR/.zshrc'
+# Define compinit as a shell function instead of an external command (man zshbuiltins)
 autoload -Uz compinit
-compinit
-## END - Lines were added by compinstall
+# Start "new" zsh completion system
+compinit -d ~/.cache/zsh/zcompdump
 
 ## Setup nvm
 export NVM_DIR="$HOME/.nvm"
