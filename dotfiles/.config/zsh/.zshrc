@@ -10,6 +10,7 @@ setopt histreduceblanks incappendhistory nomatch notify
 # Define compinit as a shell function instead of an external command (man zshbuiltins)
 autoload -Uz compinit
 # Start "new" zsh completion system
+mkdir -p ~/.cache/zsh
 compinit -d ~/.cache/zsh/zcompdump
 
 ## Setup nvm
