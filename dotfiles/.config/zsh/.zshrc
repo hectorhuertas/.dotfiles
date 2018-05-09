@@ -6,8 +6,6 @@ SAVEHIST=10000
 ## Set or unset basic options
 setopt noautocd appendhistory nobeep extendedglob globdots histignorealldups histignorespace
 setopt histreduceblanks incappendhistory nomatch notify
-# DEACTIVATED - Don't send SIGHUP (similar to SIGKILL) to background processes when the shell exits.
-# unsetopt nohup  ## Deactivate temporally to understand behaviour. Why `unset nohup`? Shouldn't it be `set nohup`?
 
 # Define compinit as a shell function instead of an external command (man zshbuiltins)
 autoload -Uz compinit
