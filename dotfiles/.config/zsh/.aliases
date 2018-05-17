@@ -1,4 +1,3 @@
 alias e='env | grep'
-alias r='reload_config'
 
 alias v='my_nvim'

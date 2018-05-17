@@ -14,6 +14,22 @@ autoload -Uz compinit
 mkdir -p ~/.cache/zsh
 compinit -d ~/.cache/zsh/zcompdump
 
+# Set edit mode (e for emacs, v for vim)
+bindkey -v
+
+## Better keybindings
+bindkey -M viins '^K' history-substring-search-up
+bindkey -M viins '^J' history-substring-search-down
+bindkey -M viins '^L' vi-forward-char
+bindkey -M viins '^C' clear-screen
+
+# Quick reload util
+reload_config() {
+  source $ZDOTDIR/.zshrc;
+  echo "Zsh reloaded!";
+}
+alias r='reload_config'
+
 ## Source other files
 source $ZDOTDIR/.keybindings
 source $ZDOTDIR/.functions
