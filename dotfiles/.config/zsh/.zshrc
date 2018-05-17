@@ -14,10 +14,6 @@ autoload -Uz compinit
 mkdir -p ~/.cache/zsh
 compinit -d ~/.cache/zsh/zcompdump
 
-## Setup nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
 ## Autocompletions
 source <(kubectl completion zsh)
 
