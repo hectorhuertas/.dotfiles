@@ -14,9 +14,6 @@ autoload -Uz compinit
 mkdir -p ~/.cache/zsh
 compinit -d ~/.cache/zsh/zcompdump
 
-## Autocompletions
-source <(kubectl completion zsh)
-
 ## Source other files
 source $ZDOTDIR/.keybindings
 source $ZDOTDIR/.functions

@@ -28,17 +28,6 @@ git_rebase_master() {
   git rebase master;
 }
 
-k8s_delete_pods_by_app_selector() {
-  if [ -z "$1" ] ; then
-      echo 'Usage: provide selector for the app label to delete matching pods'
-      exit 1
-  fi
-
-  kubectl get po \
-  -o jsonpath='{.items[?(@.metadata.labels.app=="'"$1"'")].metadata.name}' \
-  | xargs kubectl delete pod
-}
-
 reload_config() {
   source $ZDOTDIR/.zshrc;
   echo "Zsh reloaded!";
