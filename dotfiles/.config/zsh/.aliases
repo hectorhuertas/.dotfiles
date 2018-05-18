@@ -1,3 +1,1 @@
 alias e='env | grep'
-
-alias v='my_nvim'
