@@ -14,30 +14,26 @@ autoload -Uz compinit
 mkdir -p ~/.cache/zsh
 compinit -d ~/.cache/zsh/zcompdump
 
+## Keybindings
 # Set edit mode (e for emacs, v for vim)
 bindkey -v
-
-## Better keybindings
+# Better keybindings
 bindkey -M viins '^K' history-substring-search-up
 bindkey -M viins '^J' history-substring-search-down
 bindkey -M viins '^L' vi-forward-char
 bindkey -M viins '^C' clear-screen
 
-# Quick reload util
+## Quick reload util
 reload_config() {
   source $ZDOTDIR/.zshrc;
   echo "Zsh reloaded!";
 }
 alias r='reload_config'
 
-## Source other files
-source $ZDOTDIR/.keybindings
-source $ZDOTDIR/.functions
-# Load aliases after functions, so I can alias them
-source $ZDOTDIR/.aliases
-# New organization method by functionality instead of by type
-for file in $ZDOTDIR/my_plugins/*; do
-  source "$file"
+## Load custom modules and Zplugins
+# Load all custom modules
+for module in $ZDOTDIR/modules/*; do
+  source "$module"
 done
 # Load Zplugins last, to allow syntax highlighter to apply everywhere
 source $ZDOTDIR/.zplug
