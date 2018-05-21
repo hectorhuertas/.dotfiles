@@ -9,6 +9,7 @@ brew update
 
 brew upgrade
 
+brew install bat
 brew install colordiff
 brew install diff-so-fancy
 brew install exercism
