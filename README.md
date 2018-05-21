@@ -79,6 +79,7 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
 * Use hamerspoon scripts to implement spectacle's functionality
 * Git
   * Create a prompt indication to let me know when I'm in a dirty master
+  * Explore `git difftool --tool-help`
 * AWS
   * How to create keypair locally and upload them and get the fingerprints
   * Create the keypair using `ssh-keygen -t rsa -b 2048 -C "peter@jander.io"`. It's also possible using openssl, but then i need to find which formats the output should be. If using ssh-keygen, explore how to pass all the options (no passphrase and set output files path and names)
