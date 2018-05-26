@@ -2,6 +2,12 @@ set number
 set nolist " waiting for a proper color theme to set to 'list'
 set listchars=tab:>·,eol:¬
 
+" Default indentation
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+
 " Go files
 autocmd FileType go set noexpandtab
 autocmd FileType go set shiftwidth=4
