@@ -61,3 +61,5 @@ syntax enable
 set clipboard^=unnamed
 " Remap x to yank to the _ register instead of the default one
 noremap x "_x
+" Remap C-p to fzf
+noremap <C-p> :Files<CR>
