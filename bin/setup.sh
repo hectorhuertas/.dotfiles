@@ -17,6 +17,11 @@ rm -f ~/.zshenv
 ln -s ~/.dotfiles/dotfiles/.zshenv ~/.zshenv
 echo "... .zshenv"
 
+mkdir -p ~/.ssh
+rm -f ~/.ssh/config
+ln -s ~/.dotfiles/dotfiles/.ssh/config ~/.ssh/config
+echo "... .ssh/config"
+
 mkdir -p ~/.config
 echo "Inside ~/.config folder..."
 
@@ -41,7 +46,7 @@ ln -s ~/.dotfiles/dotfiles/.config/nvim ~/.config/nvim
 echo "... nvim"
 
 
-rm -f ~/.config/tmux
+rm -rf ~/.config/tmux
 ln -s ~/.dotfiles/dotfiles/.config/tmux ~/.config/tmux
 echo "... tmux"
 
