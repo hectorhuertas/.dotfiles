@@ -63,6 +63,10 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
   * Find out why selecting with double click or with drag selection acts weird/doesnt work with mouse mode on
   * Find out when in vi-mode some keys throw a weird output (like C-b or C-t, but not C-r or C-l)
   * Figure out how to copy and paste from the copy mode and vim
+  * Make it easy to open panes in same path
+    * Open panes in the same path (e.g. `bind % split-window -h -c "#{pane_current_path}"`)
+    * Make it super easy to copy the current path (shorcut for `pwd | tr -d '\n' | pbcopy`)
+    * A combination of both, maybe running the shorcut command each time I split panes, so I can quickly cd into it if I want
 * Zsh
   * Explore using CDPATH
   * Basic config to implement quick alias
