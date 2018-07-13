@@ -90,6 +90,8 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
   * Get the AWS fingerprints using `openssl pkey -in /path/to/key -pubout -outform DER | openssl md5 -c`
   * Check https://serverfault.com/questions/603982/why-does-my-openssh-key-fingerprint-not-match-the-aws-ec2-console-keypair-finger
   * Include aws cli command to upload the public key to amazon, and afterwards check the fingerprint is correct
+* Other
+  * Create a good setup with `oathtool`. Check lastapss for sumologic
 
 #### Shortcuts system
 * Types of shortcuts
