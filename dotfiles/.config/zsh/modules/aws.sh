@@ -1,4 +1,7 @@
 if command -v aws > /dev/null; then
+  export AWS_SHARED_CREDENTIALS_FILE="$HOME/.config/aws/credentials"
+  export AWS_CONFIG_FILE="$HOME/.config/aws/config"
+
   function export_aws_credentials() {
     export AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id --profile="$1")
     export AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key --profile="$1")
