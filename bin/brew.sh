@@ -16,6 +16,7 @@ brew install exercism
 #brew install fasd
 brew install fd
 brew install fzf
+brew install gnupg
 brew install hub
 brew install icdiff
 brew install jq
