@@ -22,7 +22,13 @@ rm -f ~/.ssh/config
 ln -s ~/.dotfiles/dotfiles/.ssh/config ~/.ssh/config
 echo "... .ssh/config"
 
+rm -f ~/.gitignore
+ln -s ~/.dotfiles/dotfiles/.gitignore@home ~/.gitignore
+echo "... .gitignore"
+
+
 mkdir -p ~/.config
+touch ~/.config/.gitkeep
 echo "Inside ~/.config folder..."
 
 rm -rf ~/.config/karabiner

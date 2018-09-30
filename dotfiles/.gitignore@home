@@ -1,0 +1,34 @@
+# Ignored Files and Folders
+
+.CFUserTextEncoding
+.Trash
+.aws
+.cache
+.cockroach
+.dropbox
+.exercism.json
+.gnupg
+.kube
+.lesshst
+.local
+Applications
+Dropbox
+Library
+Music
+
+# Ignored configs
+.config/gcloud
+.config/hub
+
+# Files tracked in .dotfiles
+.gitignore
+.dotfiles
+.config/alacritty
+.config/git
+.config/hammerspoon
+.config/karabiner
+.config/nvim
+.config/tmux
+.config/zsh
+.ssh
+.zshenv
