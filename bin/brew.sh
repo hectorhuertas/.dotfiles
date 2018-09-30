@@ -63,4 +63,3 @@ brew cask install vlc
 brew cask install yujitach-menumeters
 
 brew cleanup
-brew cask cleanup
