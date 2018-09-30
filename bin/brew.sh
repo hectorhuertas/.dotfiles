@@ -36,7 +36,7 @@ brew install zsh
 
 brew tap caskroom/cask
 
-brew cask install atom
+#brew cask install atom
 #brew cask install battle-net
 brew cask install dash
 brew cask install docker
