@@ -35,10 +35,6 @@ This project involves the management of the dotfiles and the utilities used to i
   * Copy the new configuration file/s into ~/.dotfiles/dotfiles
   * Update setup.sh with the installation process
 
-### To Do
-* Add sudo powers to brew script?
-* Colorize output & errors?
-
 ## #2 Personal configurations for utilities
 
 This project involves setting up an awesome personal system environment by building awesome configurations for awesome UNIX utilities.
