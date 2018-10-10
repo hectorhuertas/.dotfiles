@@ -26,7 +26,6 @@ rm -f ~/.gitignore
 ln -s ~/.dotfiles/dotfiles/.gitignore@home ~/.gitignore
 echo "... .gitignore"
 
-
 mkdir -p ~/.config
 touch ~/.config/.gitkeep
 echo "Inside ~/.config folder..."
@@ -50,7 +49,6 @@ echo "... hammerspoon"
 rm -rf ~/.config/nvim
 ln -s ~/.dotfiles/dotfiles/.config/nvim ~/.config/nvim
 echo "... nvim"
-
 
 rm -rf ~/.config/tmux
 ln -s ~/.dotfiles/dotfiles/.config/tmux ~/.config/tmux
