@@ -89,6 +89,7 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
   * Include aws cli command to upload the public key to amazon, and afterwards check the fingerprint is correct
 * Other
   * Create a good setup with `oathtool`. Check lastapss for sumologic
+  * Setup `tsocks` tool for use cases like using `siege` against our private graylog endpoint
 
 #### Shortcuts system
 * Types of shortcuts
