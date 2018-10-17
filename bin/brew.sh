@@ -41,7 +41,7 @@ brew tap caskroom/cask
 brew cask install dash
 brew cask install docker
 brew cask install dropbox
-brew cask install evernote
+#brew cask install evernote
 brew cask install flux
 #brew cask install gog-galaxy
 brew cask install google-chrome
