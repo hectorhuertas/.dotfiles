@@ -1,5 +1,4 @@
 # Ignored Files and Folders
-
 .CFUserTextEncoding
 .Trash
 .aws
@@ -15,6 +14,7 @@ Applications
 Dropbox
 Library
 Music
+xdev
 
 # Ignored configs
 .config/gcloud
