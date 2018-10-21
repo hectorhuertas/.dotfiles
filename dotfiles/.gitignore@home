@@ -1,12 +1,10 @@
 # Ignored Files and Folders
 .CFUserTextEncoding
 .Trash
-.aws
 .cache
 .cockroach
 .dropbox
 .exercism.json
-.gnupg
 .kube
 .lesshst
 .local
@@ -17,6 +15,7 @@ Music
 xdev
 
 # Ignored configs
+.config/aws
 .config/gcloud
 .config/hub
 
@@ -25,6 +24,7 @@ xdev
 .dotfiles
 .config/alacritty
 .config/git
+.config/gnupg
 .config/hammerspoon
 .config/karabiner
 .config/nvim
