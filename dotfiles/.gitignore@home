@@ -16,6 +16,7 @@ xdev
 
 # Ignored configs
 .config/aws
+.config/docker
 .config/gcloud
 .config/hub
 
