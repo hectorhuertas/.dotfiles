@@ -49,6 +49,7 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
 ### To Do
 * Check all the bookmarks
 * Autostart tmux session with same window group
+* Instalar nuevo alacritty (cuando hayan binarios estables, y ojala brew cask)
 * Tmux (`Prefix ?` to show predefined comands)
   * Persistent tmux sessions
   * Nice, useful theme/status bar
