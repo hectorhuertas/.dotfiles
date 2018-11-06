@@ -29,6 +29,7 @@ xdev
 .config/hammerspoon
 .config/karabiner
 .config/nvim
+.config/strongbox
 .config/tmux
 .config/zsh
 .ssh
