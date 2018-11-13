@@ -26,6 +26,10 @@ rm -f ~/.gitignore
 ln -s ~/.dotfiles/dotfiles/.gitignore@home ~/.gitignore
 echo "... .gitignore"
 
+rm -rf ~/.terminfo
+ln -s ~/.dotfiles/dotfiles/.terminfo ~/.terminfo
+echo "... .terminfo"
+
 mkdir -p ~/.config
 touch ~/.config/.gitkeep
 echo "Inside ~/.config folder..."
