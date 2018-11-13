@@ -50,7 +50,9 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
 * Check all the bookmarks
 * Autostart tmux session with same window group
 * Instalar nuevo alacritty (cuando hayan binarios estables, y ojala brew cask). Incluir terminfo.
+  * Install tmux terminfo and change the TERM variable
 * Tmux (`Prefix ?` to show predefined comands)
+  * Install tmux terminfo and change the TERM variable
   * Persistent tmux sessions
   * Nice, useful theme/status bar
   * Keep config when sshing into remote servers
