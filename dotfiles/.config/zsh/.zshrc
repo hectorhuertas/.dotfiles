@@ -1,3 +1,10 @@
+## Shell performance profiling
+##
+## * Measure total shell startup time running `time zsh -i -c exit`
+## * To profile each component time, uncomment the following line and the last
+##   line of this file, and open a new shell
+#zmodload zsh/zprof
+
 ## Locale
 export LANG="en_US.UTF-8"
 
@@ -41,3 +48,6 @@ for module in $ZDOTDIR/modules/*; do
 done
 # Load Zplugins last, to allow syntax highlighter to apply everywhere
 source $ZDOTDIR/.zplug
+
+## Shell performance profiling (see line 1)
+#zprof
