@@ -68,6 +68,9 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
     * Make it super easy to copy the current path (shorcut for `pwd | tr -d '\n' | pbcopy`)
     * A combination of both, maybe running the shorcut command each time I split panes, so I can quickly cd into it if I want
 * Zsh
+  * Reduce startup time by using zprof (instructions in first lines of .zshrc). Consider
+    exploring `zplug times` or dumping zplug for zgen or zim. Also try to reduce
+    compinit times.
   * Explore using CDPATH
   * Basic config to implement quick alias
   * auto-suggestions
