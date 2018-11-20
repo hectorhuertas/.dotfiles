@@ -11,7 +11,7 @@ fi
 ## END - Using zplug from homebrew
 
 ## Zplug theme
-zplug "themes/pygmalion", from:oh-my-zsh
+zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 ## Zplug plugins
 zplug "zsh-users/zsh-autosuggestions"
