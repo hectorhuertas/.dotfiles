@@ -47,6 +47,7 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
 * Use only what I need, KISS
 
 ### To Do
+* vim-go is broken. Dein seems hard to use, vim-plug could be easier and it's more used and supported by plugins
 * Check all the bookmarks
 * Autostart tmux session with same window group
 * Instalar nuevo alacritty (cuando hayan binarios estables, y ojala brew cask). Incluir terminfo.
@@ -67,6 +68,9 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
     * Open panes in the same path (e.g. `bind % split-window -h -c "#{pane_current_path}"`)
     * Make it super easy to copy the current path (shorcut for `pwd | tr -d '\n' | pbcopy`)
     * A combination of both, maybe running the shorcut command each time I split panes, so I can quickly cd into it if I want
+* Shell
+  * Try to move to fish shell, seems much faster than zsh
+  * Implement all shell functions and aliases via go commands, so it can be ported easily between mac and linux and between zsh, fish or bash
 * Zsh
   * Reduce startup time by using zprof (instructions in first lines of .zshrc). Consider
     exploring `zplug times` or dumping zplug for zgen or zim. Also try to reduce
