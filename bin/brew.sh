@@ -12,7 +12,7 @@ brew upgrade
 brew install bat
 brew install colordiff
 brew install diff-so-fancy
-brew install exercism
+#brew install exercism
 #brew install fasd
 brew install fd
 brew install fzf
@@ -24,10 +24,10 @@ brew install neovim
 #brew install nmap
 #brew install node
 brew install ripgrep
-brew install shellcheck
+#brew install shellcheck
 brew install tmux
 brew install trash
-brew install tree
+#brew install tree
 brew install unrar
 brew install watch
 brew install wget
@@ -44,21 +44,21 @@ brew cask install dropbox
 #brew cask install evernote
 brew cask install flux
 #brew cask install gog-galaxy
-brew cask install google-chrome
+#brew cask install google-chrome
 brew cask install hammerspoon
 defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
 #brew cask install intel-power-gadget
-brew cask install iterm2
+#brew cask install iterm2
 brew cask install karabiner-elements
 brew cask install keepingyouawake
-brew cask install keybase
+#brew cask install keybase
 brew cask install macs-fan-control
 #brew cask install qbittorrent
 brew cask install skype
 brew cask install slack
 brew cask install spectacle
 #brew cask install steam
-brew cask install tomighty
+#brew cask install tomighty
 brew cask install vlc
 brew cask install yujitach-menumeters
 
