@@ -9,14 +9,21 @@ brew update
 
 brew upgrade
 
+brew install awscli
 brew install bat
 brew install colordiff
+brew install coreutils
+# Use GNU utils instead of BSD
+# https://stackoverflow.com/questions/3504945/timeout-command-on-mac-os-x
+#PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+#MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 brew install diff-so-fancy
 #brew install exercism
 #brew install fasd
 brew install fd
 brew install fzf
 brew install gnupg
+brew install go
 brew install hub
 brew install icdiff
 brew install jq
