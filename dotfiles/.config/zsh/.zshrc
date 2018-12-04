@@ -1,3 +1,6 @@
+## Locale
+export LANG="en_US.UTF-8"
+
 ## History
 mkdir -p ~/.local/share/zsh
 HISTFILE=$HOME/.local/share/zsh/history
