@@ -52,6 +52,7 @@ brew cask install dropbox
 brew cask install flux
 #brew cask install gog-galaxy
 #brew cask install google-chrome
+#brew cask install google-cloud-sdk
 brew cask install hammerspoon
 defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
 #brew cask install intel-power-gadget
