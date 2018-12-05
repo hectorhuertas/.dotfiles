@@ -17,7 +17,7 @@ SAVEHIST=10000
 ## Set or unset basic options
 setopt noautocd appendhistory nobeep extendedglob globdots histignorealldups
 setopt histignorespace histreduceblanks incappendhistory nomatch notify
-setopt prompt_subst
+setopt promptsubst
 
 ## ZSH "new" completion system
 # Define compinit as zsh function instead of external command (man zshbuiltins)
