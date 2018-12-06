@@ -14,22 +14,21 @@ fi
 zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 ## Zplug plugins
-zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-autosuggestions", at:v0.4.3
+mkdir -p ~/.local/share/z
+_Z_DATA=$HOME/.local/share/z/history
 zplug "rupa/z", use:z.sh
 # Load syntax highlighter after everyting but BEFORE the search
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search"
 
-# Setup plugin's extra configurations
-mkdir -p ~/.local/share/z
-_Z_DATA=$HOME/.local/share/z/history
-
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
+  printf "Install? [y/N]: "
+  if read -q; then
+      echo; zplug install
+  fi
 fi
 
 # Then, source plugins and add commands to $PATH

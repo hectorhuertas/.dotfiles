@@ -77,8 +77,9 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
     compinit times.
   * Explore using CDPATH
   * Basic config to implement quick alias
-  * auto-suggestions
+  * Explore the options of gplugin `zsh-autosuggestions` and check if they fixed the issues with v0.5.0 (https://github.com/zsh-users/zsh-autosuggestions/issues/398)
   * Nice, useful theme
+  * Find out why this is being ingored in plugin zsh-syntax-highlighting: `HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=magenta,fg=white,bold'`. It seems like another plugin is overriding the default behaviour. Or maybe it's some zsh keybinding in vi mode?
   * Reorganize the way elements are sourced (maybe source a folder and put alike things inside? Like an aliases folder and inside different files for different programs?)
   * Check that a program is installed before sourcing/autocompleting related things
   * Make sure zsh history works as intended, as well as `nohup` and `nonotify` options
