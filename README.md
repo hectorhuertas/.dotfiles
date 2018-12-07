@@ -28,7 +28,7 @@ This project involves the management of the dotfiles and the utilities used to i
   * Run `bin/brew.sh` to install basic utilities in macOs
   * Run `bin/setup.sh` to install personal configurations
   * Run `bin/cron.sh` to setup cron jobs
-* Making changes to exiting configs:
+* Making changes to existing configs:
   * Modify the desired file under ~/.dotfiles/dotfiles
   * Commit the changes to the github repository
 * Adding new configurations:
