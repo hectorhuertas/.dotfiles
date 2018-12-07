@@ -1,1 +1,1 @@
-alias e='env | grep'
+alias e='declare -p | rg'
