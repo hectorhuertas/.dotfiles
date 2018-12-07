@@ -9,6 +9,7 @@ brew update
 
 brew upgrade
 
+brew install autossh
 brew install awscli
 brew install bat
 brew install colordiff
@@ -43,12 +44,14 @@ brew install zsh
 
 brew tap caskroom/cask
 
+brew cask install alacritty
 #brew cask install atom
 #brew cask install battle-net
 brew cask install dash
 brew cask install docker
 brew cask install dropbox
 #brew cask install evernote
+brew cask install firefox
 brew cask install flux
 #brew cask install gog-galaxy
 #brew cask install google-chrome
