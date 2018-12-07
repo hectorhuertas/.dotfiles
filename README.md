@@ -50,8 +50,7 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
 * vim-go is broken. Dein seems hard to use, vim-plug could be easier and it's more used and supported by plugins
 * Check all the bookmarks
 * Autostart tmux session with same window group
-* Instalar nuevo alacritty (cuando hayan binarios estables, y ojala brew cask). Incluir terminfo.
-  * Install tmux terminfo and change the TERM variable
+* Install and use tmux custom terminfo
 * Tmux (`Prefix ?` to show predefined comands)
   * Install tmux terminfo and change the TERM variable
   * Persistent tmux sessions
@@ -83,24 +82,36 @@ The ultimate goal is having an amazing, ultra-productive system & workflow
   * Reorganize the way elements are sourced (maybe source a folder and put alike things inside? Like an aliases folder and inside different files for different programs?)
   * Check that a program is installed before sourcing/autocompleting related things
   * Make sure zsh history works as intended, as well as `nohup` and `nonotify` options
-  * Try to implement XDG variables to move most of the configurations to .config folder
-  * Improve the keybindigs, specially for going to the beginning and end of line. Like: `[[ -z "$terminfo[khome]" ]] || bindkey -M emacs "$terminfo[khome]" beginning-of-line`
-* Desired additions
-  * fzf
-  * powerlevel9k theme for zsh?
-* Use hamerspoon scripts to implement spectacle's functionality
-* Git
-  * Create a prompt indication to let me know when I'm in a dirty master
+* Review dotfiles activating lines independently, to make sure I catch all dependencies (and remove the possible ones)
+##### High
+* Disable zsh vi-mode. Improve the keybindigs, specially for going to the beginning and end of line. Like: `[[ -z "$terminfo[khome]" ]] || bindkey -M emacs "$terminfo[khome]" beginning-of-line`
+* Prevent pushing to master and applying to prod
+##### Medium
+* Find a good way to diff things, both git and non-git
+  * Try to ditch `icdiff`, `colordiff`, `diff-so-fancy` and such
   * Explore `git difftool --tool-help`
-* AWS
-  * How to create keypair locally and upload them and get the fingerprints
-  * Create the keypair using `ssh-keygen -t rsa -b 2048 -C "peter@jander.io"`. It's also possible using openssl, but then i need to find which formats the output should be. If using ssh-keygen, explore how to pass all the options (no passphrase and set output files path and names)
-  * Get the AWS fingerprints using `openssl pkey -in /path/to/key -pubout -outform DER | openssl md5 -c`
-  * Check https://serverfault.com/questions/603982/why-does-my-openssh-key-fingerprint-not-match-the-aws-ec2-console-keypair-finger
-  * Include aws cli command to upload the public key to amazon, and afterwards check the fingerprint is correct
-* Other
-  * Create a good setup with `oathtool`. Check lastapss for sumologic
-  * Setup `tsocks` tool for use cases like using `siege` against our private graylog endpoint
+* Shorcut improvements
+  * Better tmux horizontal/vertical panes shorcut
+  * Shorcuts for common folders like xdev, terraform, kube-manifests, dotfiles, .config, ...
+  * Shorcut/aliases to better navigate envs in terraform/kube-manifests
+  * Kubectl shorcuts for context and namespaces
+  * fzf open nvim in a new pane/window (this done well can obsolete nvim file navigation) 
+  * Shorcut for super-noticiable cursor blink for 1 second
+* UI improvements
+  * Change fonts in term and nvim
+  * Add powerlevel9k theme for zsh?
+* Have an utility to list all `unsafe` things on my user: uncommited changes and non-master branches in $HOME and xdev repos
+##### Low
+* If using alacritty terminfo, nvim cannot change cursor properly. nvim 0.3.2 will fix:
+  * https://github.com/jwilm/alacritty/issues/1630#issuecomment-427570121
+  * https://github.com/neovim/neovim/pull/9048
+* Cleanup $HOME
+  * Remove `.lesshst` and `.viminfo`
+  * Set vars to avoid creation of `.bashrc` and `.bash_sessions`
+  * When possible, remove `.kube`
+* Use hamerspoon scripts to implement spectacle's functionality
+* Create a good setup with `oathtool`. Check my lastapss for sumologic
+* Setup `tsocks` tool for use cases like using `siege` against our private graylog endpoint
 
 #### Shortcuts system
 * Types of shortcuts
