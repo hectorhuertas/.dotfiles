@@ -407,3 +407,10 @@ key_bindings:
   - { key: F11,      mods: Command, chars: "\x1b[23;3~"                  }
   - { key: F12,      mods: Command, chars: "\x1b[24;3~"                  }
   - { key: NumpadEnter,             chars: "\n"                          }
+# Tmux shorcuts using `Meta`
+  - { key: H,        mods: Alt    , chars: "\x1bh",                      }
+  - { key: J,        mods: Alt    , chars: "\x1bj",                      }
+  - { key: K,        mods: Alt    , chars: "\x1bk",                      }
+  - { key: L,        mods: Alt    , chars: "\x1bl",                      }
+  - { key: N,        mods: Alt    , chars: "\x1bn",                      }
+  - { key: P,        mods: Alt    , chars: "\x1bp",                      }
