@@ -47,13 +47,12 @@ This project involves setting up an awesome personal system environment by build
 
 ### To Do
 ##### High
-* Prevent pushing to master and applying to prod
+* Prevent pushing to master in important shared repos
 ##### Medium
 * Find a good way to diff things, both git and non-git
   * Try to ditch `icdiff`, `colordiff`, `diff-so-fancy` and such
   * Explore `git difftool --tool-help`
 * Shorcut improvements
-  * Better tmux horizontal/vertical panes shortcut
   * Shorcuts for common folders like xdev, terraform, kube-manifests, dotfiles, .config, etc. Explore using CDPATH
   * Shorcut/aliases to better navigate envs in terraform/kube-manifests
   * Kubectl shortcuts for context and namespaces
@@ -66,10 +65,13 @@ This project involves setting up an awesome personal system environment by build
   * Different background colors for different machines / kube environments, ...
 * Have an utility to list all `unsafe` things on my user: uncommited changes and non-master branches in $HOME and xdev repos
 ##### Low
+* Set EDITOR variable
+* Setup shorctus for moving single char forward and backward, to completely avoid using arrow keys
 * Review dotfiles activating lines independently, to make sure I catch all dependencies (and remove the possible ones). Also star and follow all the things I use.
 * Review dotfiles checking that a program is installed before sourcing/autocompleting related things
 * Learn and understand zsh completions (https://iridakos.com/tutorials/2018/03/01/bash-programmable-completion-tutorial)
-* Reduce zsh startup time by using zprof (instructions in first lines of .zshrc). Considerexploring `zplug times` or dumping zplug for zgen or zim. Also try to reduce compinit times.
+* Run zsh completions and other expensive commands asynchronously
+* Reduce zsh startup time by using zprof (instructions in first lines of .zshrc). Consider exploring `zplug times` or dumping zplug for zgen or zim. Also try to reduce compinit times.
 * Find out why this is being ingored in plugin zsh-syntax-highlighting: `HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=magenta,fg=white,bold'`. It seems like another plugin is overriding the default behaviour. Or maybe it's some zsh keybinding in vi mode?
 * If using alacritty terminfo, nvim cannot change cursor properly. nvim 0.3.2 will fix:
   * https://github.com/jwilm/alacritty/issues/1630#issuecomment-427570121

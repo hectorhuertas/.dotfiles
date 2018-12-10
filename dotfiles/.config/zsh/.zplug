@@ -11,6 +11,7 @@ fi
 ## END - Using zplug from homebrew
 
 ## Zplug theme
+export SPACESHIP_KUBECONTEXT_SHOW=false
 zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 ## Zplug plugins
