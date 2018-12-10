@@ -85,7 +85,7 @@ This project involves setting up an awesome personal system environment by build
   * Persistent tmux sessions
   * Nice, useful theme/status bar
   * Keep config when sshing into remote servers
-  * Find out why selecting with double click or with drag selection acts weird/doesnt work with mouse mode on
+  * Enable working mouse mode: find out why selecting with double click or with drag selection acts weird/doesnt work with mouse mode on
   * Find out when in vi-mode some keys throw a weird output (like C-b or C-t, but not C-r or C-l)
   * Make it easy to open panes in same path
     * Open panes in the same path (e.g. `bind % split-window -h -c "#{pane_current_path}"`)

@@ -27,13 +27,9 @@ mkdir -p ~/.cache/zsh
 compinit -d ~/.cache/zsh/zcompdump
 
 ## Keybindings
-# Set edit mode (e for emacs, v for vim)
-bindkey -v
-# Better keybindings
-bindkey -M viins '^K' history-substring-search-up
-bindkey -M viins '^J' history-substring-search-down
-bindkey -M viins '^L' vi-forward-char
-bindkey -M viins '^C' clear-screen
+bindkey -M main '^K' history-substring-search-up
+bindkey -M main '^J' history-substring-search-down
+bindkey -M main '^L' forward-char
 
 ## Quick reload util
 reload_config() {
