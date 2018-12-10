@@ -29,7 +29,10 @@ compinit -d ~/.cache/zsh/zcompdump
 ## Keybindings
 bindkey -M main '^K' history-substring-search-up
 bindkey -M main '^J' history-substring-search-down
-bindkey -M main '^L' forward-char
+bindkey -M main '^H' backward-kill-word
+bindkey -M main '^L' end-of-line
+bindkey -M main '^B' backward-word
+bindkey -M main '^E' forward-word
 
 ## Quick reload util
 reload_config() {

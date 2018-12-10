@@ -47,7 +47,6 @@ This project involves setting up an awesome personal system environment by build
 
 ### To Do
 ##### High
-* Disable zsh vi-mode. Improve the keybindigs, specially for going to the beginning and end of line. Like: `[[ -z "$terminfo[khome]" ]] || bindkey -M emacs "$terminfo[khome]" beginning-of-line`. Also moving a word back & forth
 * Prevent pushing to master and applying to prod
 ##### Medium
 * Find a good way to diff things, both git and non-git
