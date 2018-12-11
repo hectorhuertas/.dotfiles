@@ -47,7 +47,6 @@ This project involves setting up an awesome personal system environment by build
 
 ### To Do
 ##### High
-* Prevent pushing to master in important shared repos
 ##### Medium
 * Find a good way to diff things, both git and non-git
   * Try to ditch `icdiff`, `colordiff`, `diff-so-fancy` and such
@@ -57,7 +56,6 @@ This project involves setting up an awesome personal system environment by build
   * Shorcut/aliases to better navigate envs in terraform/kube-manifests
   * Kubectl shortcuts for context and namespaces
   * fzf open nvim in a new pane/window (this done well can obsolete nvim file navigation) 
-  * Shorcut for super-noticiable cursor blink for 1 second
 * vim-go is broken in 1.11. Dein seems hard to use, vim-plug could be easier and it's more used and supported by plugins
 * UI improvements
   * Change fonts in terminal and nvim
@@ -99,6 +97,7 @@ This project involves setting up an awesome personal system environment by build
 * Use hamerspoon scripts to implement spectacle's functionality
 * Create a good setup with `oathtool`. Check my lastapss for sumologic
 * Setup `tsocks` tool for use cases like using `siege` against our private graylog endpoint
+* Get a command to momentarily highligh cursor. This needs to be done via Alacritty, since tmux or zsh can't do it well (there is a shell function in zsh/modules/unix.sh, but not very useful). Currently there is no way to do it, this will need opening an issue/PR
 * Check all the bookmarks
 
 ### Shortcut system
