@@ -84,6 +84,7 @@ This project involves setting up an awesome personal system environment by build
 * Tmux (`Prefix ?` to show predefined comands)
   * Install tmux terminfo and change the TERM variable
   * Persistent tmux sessions
+  * Start tmux attached to the existing session, if there is one
   * Nice, useful theme/status bar
   * Keep config when sshing into remote servers
   * Enable working mouse mode: find out why selecting with double click or with drag selection acts weird/doesnt work with mouse mode on
@@ -110,7 +111,7 @@ In order to have a productive environment, efficient shortcuts are essential. He
   * Using OSX `Command` key inside tmux is quite problematic. OSX has a lot of hidden shortcuts that, even when disabled, prevent the key combination to reach applications like Alacritty. To make things worse, tmux only allows `Ctrl` and `Meta` keys as modifier keys. Last but not least, Alacritty currently (0.2.4) does not have a default way of sending `Meta` modifier, requiring the user to set custom keybinding for that
   * To circumvent these issues, `Command` shortcuts inside tmux are defined as follows:
     * In karabiner-elements, use a custom complex modification to capture specific `Command + <key>` combinations and forward them as `Alt + <key>` only in Alacritty. This avoids triggering the OSX shortcuts. The complex modification needs to target specific shortcuts to avoid disabling other global shortcuts implemented with `Command`, like Spectacle or Hammerspoon ones
-    * In Alacritty, enable `Alt + <key>` as `Meta + <key>` for those shortcuts
+    * In Alacritty, enable `Alt + <key>` as `Meta + <key>` for those shortcuts. (https://github.com/jwilm/alacritty/issues/62)
     * In tmux config, use `Meta` as the key modifier for the desired shortcuts
 * Loose list of shortcuts types
   * Desktop and window management (mission control and spectacle)
