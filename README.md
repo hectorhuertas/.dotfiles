@@ -141,3 +141,16 @@ In order to have a productive environment, efficient shortcuts are essential. He
 * Tmux focus navigation  (Cmd + <key>)
   * Pane switching: H,L,K,J
   * Windows switching: N,P
+* Tmux shorcuts (Prefix + key)
+  * Resize pane: H,L,K,J
+  * Create window: c,C
+  * Split pane: |,\,v,-,_,h
+  * Reload settings: r
+* ZSH (Ctrl + <key>)
+  * Vi mode: ESC (no Ctrl)
+  * History search: UP, DOWN
+  * End of line: L
+  * Forward word: E
+  * Backward delete char: H
+  * Backward delete word: W
+  * Kill line: U
