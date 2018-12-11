@@ -19,6 +19,7 @@ brew install coreutils
 #PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 #MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 brew install diff-so-fancy
+brew install exa
 #brew install exercism
 #brew install fasd
 brew install fd
