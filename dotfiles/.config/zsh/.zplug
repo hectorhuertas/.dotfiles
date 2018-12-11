@@ -19,6 +19,7 @@ zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 zplug "zsh-users/zsh-autosuggestions", at:v0.4.3
 mkdir -p ~/.local/share/z
 _Z_DATA=$HOME/.local/share/z/history
+_Z_CMD=zz
 zplug "rupa/z", use:z.sh
 # Load syntax highlighter after everyting but BEFORE the search
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
