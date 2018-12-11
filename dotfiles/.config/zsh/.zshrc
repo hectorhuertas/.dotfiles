@@ -39,6 +39,7 @@ bindkey -M viins '^W' backward-kill-word
 bindkey -M viins '^U' kill-line
 
 ## Change cursor on vi mode
+# https://vt100.net/docs/vt510-rm/DECSCUSR.html
 function zle-line-init zle-keymap-select () {
   if [ $KEYMAP = vicmd ]; then
     printf "\e[2 q" # ▇ Block when vi mode
