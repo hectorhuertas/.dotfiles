@@ -27,12 +27,27 @@ mkdir -p ~/.cache/zsh
 compinit -d ~/.cache/zsh/zcompdump
 
 ## Keybindings
-bindkey -M main '^K' history-substring-search-up
-bindkey -M main '^J' history-substring-search-down
-bindkey -M main '^H' backward-kill-word
-bindkey -M main '^L' end-of-line
-bindkey -M main '^B' backward-word
-bindkey -M main '^E' forward-word
+bindkey -v # vi mode
+bindkey -M viins '^K' history-substring-search-up
+bindkey -M viins '^J' history-substring-search-down
+bindkey -M viins '^L' end-of-line
+bindkey -M viins '^E' forward-word
+# Following bindings change the deleting vi behaviour for the normal one I expect
+bindkey -M viins '^?' backward-delete-char
+bindkey -M viins '^H' backward-delete-char
+bindkey -M viins '^W' backward-kill-word
+bindkey -M viins '^U' kill-line
+
+## Change cursor on vi mode
+function zle-line-init zle-keymap-select () {
+  if [ $KEYMAP = vicmd ]; then
+    printf "\e[2 q" # ▇ Block when vi mode
+  else
+    printf "\e[6 q" # | Beam when insert mode
+  fi
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
 
 ## Quick reload util
 reload_config() {

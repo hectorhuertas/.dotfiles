@@ -12,6 +12,7 @@ fi
 
 ## Zplug theme
 export SPACESHIP_KUBECONTEXT_SHOW=false
+export SPACESHIP_VI_MODE_SHOW=false
 zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 ## Zplug plugins
