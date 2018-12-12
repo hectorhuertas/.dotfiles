@@ -24,6 +24,13 @@ if command -v kubectl > /dev/null; then
     fi
   }
 
+  function kube_rg(){
+    read -r first_line < /dev/stdin
+    echo "$first_line | rg $@"
+    rg "$@" < /dev/stdin
+  }
+
   alias k='kubectl'
+  alias krg='kube_rg'
   alias -g A='--all-namespaces'
 fi
