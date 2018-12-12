@@ -1,0 +1,18 @@
+# Don't use red for matches
+--colors=match:fg:cyan
+
+# Search in ignored files too
+--no-ignore
+
+# Search in hidden files
+--hidden
+
+# Ignore case unless the patter is all uppercase
+--smart-case
+
+# Follow symlinks
+--follow
+
+# Ignored folders:
+--glob=!.terraform/*
+--glob=!.git/*

@@ -54,6 +54,10 @@ rm -rf ~/.config/nvim
 ln -s ~/.dotfiles/dotfiles/.config/nvim ~/.config/nvim
 echo "... nvim"
 
+rm -rf ~/.config/ripgrep
+ln -s ~/.dotfiles/dotfiles/.config/ripgrep ~/.config/ripgrep
+echo "... ripgrep"
+
 rm -rf ~/.config/tmux
 ln -s ~/.dotfiles/dotfiles/.config/tmux ~/.config/tmux
 echo "... tmux"

@@ -1,4 +1,4 @@
-alias e='declare -p | rg --ignore-case'
+alias e='declare -p | rg'
 
 function parse_flag_hh(){
   flag="$1"
