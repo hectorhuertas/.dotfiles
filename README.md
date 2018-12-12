@@ -48,9 +48,6 @@ This project involves setting up an awesome personal system environment by build
 ### To Do
 ##### High
 ##### Medium
-* Find a good way to diff things, both git and non-git
-  * Try to ditch `icdiff`, `colordiff`, `diff-so-fancy` and such
-  * Explore `git difftool --tool-help`
 * Shorcut improvements
   * Shorcuts for common folders like xdev, terraform, kube-manifests, dotfiles, .config, etc. Explore using CDPATH
   * Shorcut/aliases to better navigate envs in terraform/kube-manifests
@@ -96,7 +93,12 @@ This project involves setting up an awesome personal system environment by build
 * Use hamerspoon scripts to implement spectacle's functionality
 * Create a good setup with `oathtool`. Check my lastapss for sumologic
 * Setup `tsocks` tool for use cases like using `siege` against our private graylog endpoint
-* Get a command to momentarily highligh cursor. This needs to be done via Alacritty, since tmux or zsh can't do it well (there is a shell function in zsh/modules/unix.sh, but not very useful). Currently there is no way to do it, this will need opening an issue/PR
+* Review diffing setup
+  * Ideally, using `git diff` for everything will be great, but the `--no-index` option doesn't support `exclude pathspec`, so it's not usable for non-git comparisons
+  * Next best setup would be using `diff-so-fancy` as the diffing tool for both `git` and GNU `diff`. When writing this comment, `diff` support is not good enough. Review the `diff-so-fancy` releases and weight if it's ready to be the only diff highlighting tool
+  * Last option would be using `icdiff` instead of `diff`, and possibly as the `git` diffing tool. The main problems are that `icdiff` doesn't have an `--exclude` option yet and it's git diffing is horrible. Also, it's not as good/pretty as `diff-so-fancy`. Review `icdiff` releases and weight if it's ready to be the only diff highlighting tool
+  * Since there is no silver bullet (yet), I'm keeping a `zsh/modules/diff.sh` with different options
+* Get a command to momentarily highlight cursor. This needs to be done via Alacritty, since tmux or zsh can't do it well (there is a shell function in zsh/modules/unix.sh, but not very useful). Currently there is no way to do it, this will need opening an issue/PR
 * Check all the bookmarks
 
 ### Shortcut system
