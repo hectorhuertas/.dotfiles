@@ -51,13 +51,13 @@ This project involves setting up an awesome personal system environment by build
 * Shorcut improvements
   * Shorcuts for common folders like xdev, terraform, kube-manifests, dotfiles, .config, etc. Explore using CDPATH
   * Shorcut/aliases to better navigate envs in terraform/kube-manifests
-  * Kubectl shortcuts for context and namespaces
   * fzf open nvim in a new pane/window (this done well can obsolete nvim file navigation) 
 * vim-go is broken in 1.11. Dein seems hard to use, vim-plug could be easier and it's more used and supported by plugins
 * UI improvements
   * Change fonts in terminal and nvim
   * Add powerlevel9k theme for zsh?
   * Different background colors for different machines / kube environments, ...
+  * Add custom fg(cluster) and bg(provider) colors highlighting for the kubernetes aliases, to quickly get a hint of where am I executing the command
 * Have an utility to list all `unsafe` things on my user: uncommited changes and non-master branches in $HOME and xdev repos
 ##### Low
 * Set EDITOR variable
