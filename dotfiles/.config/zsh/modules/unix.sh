@@ -1,4 +1,5 @@
 alias e='declare -p | rg'
+alias cpwd="pwd | tr -d '\n' | pbcopy"
 
 function parse_flag_hh(){
   flag="$1"
