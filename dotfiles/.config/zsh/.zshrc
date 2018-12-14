@@ -29,14 +29,24 @@ compinit -d ~/.cache/zsh/zcompdump
 ## Keybindings
 bindkey -v # vi mode
 bindkey -M viins '^K' history-substring-search-up
+bindkey -M vicmd '^K' history-substring-search-up
 bindkey -M viins '^J' history-substring-search-down
+bindkey -M vicmd '^J' history-substring-search-down
 bindkey -M viins '^L' end-of-line
+bindkey -M vicmd '^L' end-of-line
 bindkey -M viins '^E' forward-word
+bindkey -M vicmd '^E' forward-word
+bindkey -M viins '^B' backward-word
+bindkey -M vicmd '^B' backward-word
 # Following bindings change the deleting vi behaviour for the normal one I expect
 bindkey -M viins '^?' backward-delete-char
+bindkey -M vicmd '^?' backward-delete-char
 bindkey -M viins '^H' backward-delete-char
+bindkey -M vicmd '^H' backward-delete-char
 bindkey -M viins '^W' backward-kill-word
+bindkey -M vicmd '^W' backward-kill-word
 bindkey -M viins '^U' kill-line
+bindkey -M vicmd '^U' kill-line
 
 ## Change cursor on vi mode
 # https://vt100.net/docs/vt510-rm/DECSCUSR.html
