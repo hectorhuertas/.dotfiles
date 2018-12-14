@@ -30,6 +30,7 @@ xdev
 .config/hammerspoon
 .config/karabiner
 .config/nvim
+.config/ripgrep
 .config/tmux
 .config/zsh
 .ssh
