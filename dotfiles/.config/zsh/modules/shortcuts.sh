@@ -64,6 +64,6 @@ _aliases=(
 )
 
 for _alias _dir in ${(kv)_aliases}; do
-  alias "$_alias=cd $HOME/$_dir"
+  alias "$_alias=c $HOME/$_dir"
   alias -g "c$_alias=$HOME/$_dir"
 done
