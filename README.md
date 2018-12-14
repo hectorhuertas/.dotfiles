@@ -49,10 +49,8 @@ This project involves setting up an awesome personal system environment by build
 ##### High
 ##### Medium
 * Shorcut improvements
-  * Shorcuts for common folders like xdev, terraform, kube-manifests, dotfiles, .config, etc. Explore using CDPATH
-  * Shorcut/aliases to better navigate envs in terraform/kube-manifests
   * fzf open nvim in a new pane/window (this done well can obsolete nvim file navigation) 
-  * Add most usefult emacs commands to viins. Also add autosuggestion completions to vicmd
+  * Execute `pwd | tr -d '\n' | pbcopy` on pane split/window creation
 * vim-go is broken in 1.11. Dein seems hard to use, vim-plug could be easier and it's more used and supported by plugins
 * UI improvements
   * Change fonts in terminal and nvim
