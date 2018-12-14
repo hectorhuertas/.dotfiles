@@ -58,7 +58,6 @@ This project involves setting up an awesome personal system environment by build
   * Add custom fg(cluster) and bg(provider) colors highlighting for the kubernetes aliases, to quickly get a hint of where am I executing the command
 * Have an utility to list all `unsafe` things on my user: uncommited changes and non-master branches in $HOME and xdev repos
 ##### Low
-* Set EDITOR variable
 * Review dotfiles activating lines independently, to make sure I catch all dependencies (and remove the possible ones). Also star and follow all the things I use.
 * Review dotfiles checking that a program is installed before sourcing/autocompleting related things
 * Learn and understand zsh completions (https://iridakos.com/tutorials/2018/03/01/bash-programmable-completion-tutorial)

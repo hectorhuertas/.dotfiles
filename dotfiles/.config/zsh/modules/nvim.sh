@@ -1,4 +1,6 @@
 if command -v nvim > /dev/null; then
+  export EDITOR=nvim
+
   my_nvim() {
     if [ "$1" != "" ]
     then
