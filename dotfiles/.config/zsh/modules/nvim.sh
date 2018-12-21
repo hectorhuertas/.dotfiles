@@ -6,7 +6,8 @@ if command -v nvim > /dev/null; then
     then
       nvim $1
     else
-      nvim .
+      # __fsel defined in navigation.sh
+      nvim $(__fsel)
     fi
   }
 

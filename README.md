@@ -50,6 +50,15 @@ This project involves setting up an awesome personal system environment by build
 ##### Medium
 * Shorcut improvements
   * fzf open nvim in a new pane/window (this done well can obsolete nvim file navigation) 
+  * fzf shorcuts
+    * Inspiration: https://github.com/junegunn/fzf/wiki/examples
+    * https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html
+    * the feeding command to fzf should detect if im inside an important folder (repo root?) and show all items inside the important command, not inside the folder where fzf is run
+    * Shorcuts:
+      `c`: cd into folder
+      `v`: open file with editor
+      `^P`: insert file into command line
+      `^O`: insert folder into command line
 * vim-go is broken in 1.11. Dein seems hard to use, vim-plug could be easier and it's more used and supported by plugins
 * UI improvements
   * Change fonts in terminal and nvim
@@ -76,6 +85,7 @@ This project involves setting up an awesome personal system environment by build
   * Install tmux terminfo and change the TERM variable
   * Persistent tmux sessions
   * Start tmux attached to the existing session, if there is one
+  * Duplicate tmux window
   * Nice, useful theme/status bar
   * Keep config when sshing into remote servers
   * Enable working mouse mode: find out why selecting with double click or with drag selection acts weird/doesnt work with mouse mode on

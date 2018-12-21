@@ -67,3 +67,57 @@ for _alias _dir in ${(kv)_aliases}; do
   alias "$_alias=c $HOME/$_dir"
   alias -g "c$_alias=$HOME/$_dir"
 done
+
+## FZF utitlity from https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh
+
+# Global fzf utils
+__fzf_use_tmux__() {
+  [ -n "$TMUX_PANE" ] && [ "${FZF_TMUX:-0}" != 0 ] && [ ${LINES:-40} -gt 15 ]
+}
+
+__fzfcmd() {
+  __fzf_use_tmux__ &&
+    echo "fzf-tmux -d${FZF_TMUX_HEIGHT:-40%}" || echo "fzf"
+}
+
+# Paste the selected dir path(s) into the command line
+__fosel() {
+  local cmd="fd --type d . --color=never"
+  setopt localoptions pipefail 2> /dev/null
+  eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%}" $(__fzfcmd) -m "$@" | while read item; do
+    echo -n "${(q)item} "
+  done
+  local ret=$?
+  echo
+  return $ret
+}
+
+fzf-folder-widget() {
+  LBUFFER="${LBUFFER}$(__fosel)"
+  local ret=$?
+  zle reset-prompt
+  return $ret
+}
+zle     -N   fzf-folder-widget
+bindkey '^T' fzf-folder-widget
+
+# Paste the selected file path(s) into the command line
+__fsel() {
+  local cmd="fd --type f --color=never"
+  setopt localoptions pipefail 2> /dev/null
+  eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%}" $(__fzfcmd) -m "$@" | while read item; do
+    echo -n "${(q)item} "
+  done
+  local ret=$?
+  echo
+  return $ret
+}
+
+fzf-file-widget() {
+  LBUFFER="${LBUFFER}$(__fsel)"
+  local ret=$?
+  zle reset-prompt
+  return $ret
+}
+zle     -N   fzf-file-widget
+bindkey '^E' fzf-file-widget
