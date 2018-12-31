@@ -34,9 +34,9 @@ brew install neovim
 #brew install node
 brew install ripgrep
 #brew install shellcheck
+brew install terraform
 brew install tmux
 brew install trash
-#brew install tree
 brew install unrar
 brew install watch
 brew install wget

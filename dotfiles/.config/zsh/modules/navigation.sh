@@ -3,7 +3,6 @@ _aliases=(
   x xdev
   dt .dotfiles
   dc .dotfiles/dotfiles/.config
-  t xdev/terraform
   tpa xdev/terraform/aws/prod
   tpac xdev/terraform/aws/prod/core
   tpak xdev/terraform/aws/prod/k8s
