@@ -1,9 +1,6 @@
 # Don't use red for matches
 --colors=match:fg:cyan
 
-# Search in ignored files too
---no-ignore
-
 # Search in hidden files
 --hidden
 
@@ -12,7 +9,3 @@
 
 # Follow symlinks
 --follow
-
-# Ignored folders:
---glob=!.terraform/*
---glob=!.git/*
