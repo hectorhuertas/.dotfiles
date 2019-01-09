@@ -1,3 +1,15 @@
+# Use GNU utils instead of BSD
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
+PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
+PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+MANPATH="/usr/local/opt/grep/libexec/gnuman:$MANPATH"
+PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+MANPATH="/usr/local/opt/make/libexec/gnuman:$MANPATH"
+
 alias e='declare -p | rg'
 alias cpwd="pwd | tr -d '\n' | pbcopy"
 

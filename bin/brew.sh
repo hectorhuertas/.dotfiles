@@ -9,26 +9,31 @@ brew update
 
 brew upgrade
 
+# Some of the utils need $PATH edition, set in zsh/modules/unix.sh
 brew install autossh
 brew install awscli
 brew install bat
 brew install coreutils
-# Use GNU utils instead of BSD
-# https://stackoverflow.com/questions/3504945/timeout-command-on-mac-os-x
-#PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-#MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 brew install diff-so-fancy
 brew install diffutils
 brew install exa
 #brew install exercism
 #brew install fasd
 brew install fd
+brew install findutils
 brew install fzf
+brew install git
+brew install gnu-sed
 brew install gnupg
 brew install go
+brew install grep
+brew install gzip
 brew install hub
 brew install icdiff
 brew install jq
+brew install kubernetes-cli
+brew install less
+brew install make
 brew install neovim
 #brew install nmap
 #brew install node
