@@ -1,5 +1,10 @@
 function cd_list {
-  cd $1 && list
+  if [ "$1" != "" ]; then
+    cd $1 && list
+  else
+    # __fosel defined in navigation.sh
+    cd $(__fosel)
+  fi
 }
 alias c=cd_list
 

@@ -98,7 +98,7 @@ fzf-folder-widget() {
   return $ret
 }
 zle     -N   fzf-folder-widget
-bindkey '^T' fzf-folder-widget
+bindkey '^O' fzf-folder-widget
 
 # Paste the selected file path(s) into the command line
 __fsel() {
@@ -119,4 +119,4 @@ fzf-file-widget() {
   return $ret
 }
 zle     -N   fzf-file-widget
-bindkey '^E' fzf-file-widget
+bindkey '^P' fzf-file-widget
