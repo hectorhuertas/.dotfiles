@@ -48,25 +48,19 @@ This project involves setting up an awesome personal system environment by build
 ### To Do
 ##### High
 ##### Medium
-* Shorcut improvements
-  * fzf open nvim in a new pane/window (this done well can obsolete nvim file navigation) 
-  * fzf shorcuts
-    * Inspiration: https://github.com/junegunn/fzf/wiki/examples
-    * https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html
-    * the feeding command to fzf should detect if im inside an important folder (repo root?) and show all items inside the important command, not inside the folder where fzf is run
-    * Shorcuts:
-      `c`: cd into folder
-      `v`: open file with editor
-      `^P`: insert file into command line
-      `^O`: insert folder into command line
 * vim-go is broken in 1.11. Dein seems hard to use, vim-plug could be easier and it's more used and supported by plugins
 * UI improvements
   * Change fonts in terminal and nvim
   * Add powerlevel9k theme for zsh?
   * Different background colors for different machines / kube environments, ...
   * Add custom fg(cluster) and bg(provider) colors highlighting for the kubernetes aliases, to quickly get a hint of where am I executing the command
-* Have an utility to list all `unsafe` things on my user: uncommited changes and non-master branches in $HOME and xdev repos
 ##### Low
+* Have an utility to list all `unsafe` things on my user: uncommited changes and non-master branches in $HOME and xdev repos
+* Review fzf cool usecases
+  * Git utils at the bottom of: https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html
+  * https://github.com/junegunn/fzf/wiki/examples
+  * fzf open nvim in a new pane/window (this done well can obsolete nvim file navigation)
+  * the feeding command to fzf should detect if im inside an important folder (repo root?) and show all items inside the important command, not inside the folder where fzf is run
 * Review dotfiles activating lines independently, to make sure I catch all dependencies (and remove the possible ones). Also star and follow all the things I use.
 * Review dotfiles checking that a program is installed before sourcing/autocompleting related things
 * Learn and understand zsh completions (https://iridakos.com/tutorials/2018/03/01/bash-programmable-completion-tutorial)
@@ -163,3 +157,5 @@ In order to have a productive environment, efficient shortcuts are essential. He
   * Backward delete char: H
   * Backward delete word: W
   * Kill line: U
+  * Insert fzf file into command line: P
+  * Insert fzf folder into command line: O
