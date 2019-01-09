@@ -42,7 +42,7 @@ if command -v kubectl > /dev/null; then
   clusters=(dev exp-1 exp-2)
   clusters_aliases=(d o t)
   namespaces=(kube-system sys-ingress-priv sys-ingress-pub sys-log sys-mon sys-prom)
-  namespaces_aliases=(sys priv pub log mon prom)
+  namespaces_aliases=(s priv pub l m p)
   
   for i in {1..$#clusters}; do
     for j in {1..$#providers}; do

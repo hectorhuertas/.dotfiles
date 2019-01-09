@@ -2,8 +2,7 @@ if command -v nvim > /dev/null; then
   export EDITOR=nvim
 
   my_nvim() {
-    if [ "$1" != "" ]
-    then
+    if [ "$1" != "" ]; then
       nvim $1
     else
       # __fsel defined in navigation.sh
