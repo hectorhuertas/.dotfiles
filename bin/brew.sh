@@ -39,6 +39,7 @@ brew install neovim
 #brew install node
 brew install ripgrep
 #brew install shellcheck
+brew install stern
 brew install terraform
 brew install tmux
 brew install trash

@@ -43,7 +43,7 @@ if command -v kubectl > /dev/null; then
   clusters_aliases=(d o t)
   namespaces=(kube-system sys-ingress-priv sys-ingress-pub sys-log sys-mon sys-prom)
   namespaces_aliases=(s priv pub l m p)
-  
+
   for i in {1..$#clusters}; do
     for j in {1..$#providers}; do
       _alias="k${clusters_aliases[i]}${providers_aliases[j]}"
@@ -53,6 +53,30 @@ if command -v kubectl > /dev/null; then
       for k in {1..$#namespaces}; do
         _alias="k${clusters_aliases[i]}${providers_aliases[j]}${namespaces_aliases[k]}"
         _command="kubectl --context ${clusters[i]}-${providers[j]} -n ${namespaces[k]}"
+        alias "$_alias"="$_command"
+      done
+    done
+  done
+fi
+
+if command -v stern > /dev/null; then
+  # Generated aliases
+  providers=(aws gcp)
+  providers_aliases=(a g)
+  clusters=(dev exp-1 exp-2)
+  clusters_aliases=(d o t)
+  namespaces=(kube-system sys-ingress-priv sys-ingress-pub sys-log sys-mon sys-prom)
+  namespaces_aliases=(s priv pub l m p)
+
+  for i in {1..$#clusters}; do
+    for j in {1..$#providers}; do
+      _alias="s${clusters_aliases[i]}${providers_aliases[j]}"
+      _command="stern --context ${clusters[i]}-${providers[j]}"
+      alias "$_alias"="$_command"
+
+      for k in {1..$#namespaces}; do
+        _alias="s${clusters_aliases[i]}${providers_aliases[j]}${namespaces_aliases[k]}"
+        _command="stern --context ${clusters[i]}-${providers[j]} -n ${namespaces[k]}"
         alias "$_alias"="$_command"
       done
     done

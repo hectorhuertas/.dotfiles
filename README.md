@@ -94,6 +94,7 @@ This project involves setting up an awesome personal system environment by build
 * Use hamerspoon scripts to implement spectacle's functionality
 * Create a good setup with `oathtool`. Check my lastapss for sumologic
 * Setup `tsocks` tool for use cases like using `siege` against our private graylog endpoint
+* Fix broken stern autocomplete
 * Review diffing setup
   * Ideally, using `git diff` for everything will be great, but the `--no-index` option doesn't support `exclude pathspec`, so it's not usable for non-git comparisons
   * Next best setup would be using `diff-so-fancy` as the diffing tool for both `git` and GNU `diff`. When writing this comment, `diff` support is not good enough. Review the `diff-so-fancy` releases and weight if it's ready to be the only diff highlighting tool
