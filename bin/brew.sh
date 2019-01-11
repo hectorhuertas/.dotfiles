@@ -9,6 +9,7 @@ brew update
 
 brew upgrade
 
+
 # Some of the utils need $PATH edition, set in zsh/modules/unix.sh
 brew install autossh
 brew install awscli
@@ -79,5 +80,10 @@ brew cask install spectacle
 #brew cask install tomighty
 brew cask install vlc
 brew cask install yujitach-menumeters
+
+brew tap caskroom/fonts
+
+brew cask install font-hack
+brew cask install font-monoid
 
 brew cleanup

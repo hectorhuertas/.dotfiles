@@ -50,7 +50,7 @@ This project involves setting up an awesome personal system environment by build
 ##### Medium
 * vim-go is broken in 1.11. Dein seems hard to use, vim-plug could be easier and it's more used and supported by plugins
 * UI improvements
-  * Change fonts in terminal and nvim
+  * Fix italics and use them in syntax highlighting
   * Add powerlevel9k theme for zsh?
   * Different background colors for different machines / kube environments, ...
   * Add custom fg(cluster) and bg(provider) colors highlighting for the kubernetes aliases, to quickly get a hint of where am I executing the command
