@@ -9,7 +9,6 @@ brew update
 
 brew upgrade
 
-
 # Some of the utils need $PATH edition, set in zsh/modules/unix.sh
 brew install autossh
 brew install awscli
