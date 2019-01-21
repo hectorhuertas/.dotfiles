@@ -73,5 +73,6 @@ mkdir -p ${dein_home}
 git clone https://github.com/Shougo/dein.vim.git ${dein_home} --quiet
 echo "... installed!"
 echo "Do not forget to install the plugins inside (n)vim with ':call dein#install()'"
+echo "And to setup vim-go with ':GoInstallBinaries'"
 
 echo "DONE!!"

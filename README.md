@@ -48,7 +48,6 @@ This project involves setting up an awesome personal system environment by build
 ### To Do
 ##### High
 ##### Medium
-* vim-go is broken in 1.11. Dein seems hard to use, vim-plug could be easier and it's more used and supported by plugins
 ##### Low
 * UI improvements
   * Fix italics and use them in syntax highlighting. Consider paid fonts
@@ -63,6 +62,7 @@ This project involves setting up an awesome personal system environment by build
 * Run zsh completions and other expensive commands asynchronously
 * Reduce zsh startup time by using zprof (instructions in first lines of .zshrc). Consider exploring `zplug times` or dumping zplug for zgen or zim. Also try to reduce compinit times.
 * Find out why this is being ingored in plugin zsh-syntax-highlighting: `HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=magenta,fg=white,bold'`. It seems like another plugin is overriding the default behaviour. Or maybe it's some zsh keybinding in vi mode?
+* dein.vim seems hard to use, vim-plug could be easier and it's more used and supported by plugins
 * If using alacritty terminfo, nvim cannot change cursor properly. nvim 0.3.2 will fix:
   * https://github.com/jwilm/alacritty/issues/1630#issuecomment-427570121
   * https://github.com/neovim/neovim/pull/9048
