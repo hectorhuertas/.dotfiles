@@ -1,13 +1,14 @@
 # Ignored Files and Folders
-.CFUserTextEncoding
-.Trash
+.aws
 .cache
+.CFUserTextEncoding
 .cockroach
 .dropbox
 .exercism.json
 .kube
-.lesshst
 .local
+.terraform.d
+.Trash
 Applications
 Dropbox
 Library
@@ -15,7 +16,6 @@ Music
 xdev
 
 # Ignored configs
-.config/aws
 .config/docker
 .config/gcloud
 .config/gnupg
