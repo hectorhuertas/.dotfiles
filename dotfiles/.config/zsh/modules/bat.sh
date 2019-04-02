@@ -1,1 +1,1 @@
-alias cat="bat --style=header,grid"
+alias bat="bat --style=header,grid"
