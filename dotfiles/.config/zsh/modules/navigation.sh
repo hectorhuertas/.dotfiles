@@ -5,16 +5,20 @@ _aliases=(
   dc .dotfiles/dotfiles/.config
   tpa xdev/terraform/aws/prod
   tpac xdev/terraform/aws/prod/core
+  tpab xdev/terraform/aws/prod/sys-iam-boundaries
   tpak xdev/terraform/aws/prod/k8s
   tpal xdev/terraform/aws/prod/sys-log
+  tpar xdev/terraform/aws/prod/sys-iam-roles
   tda xdev/terraform/aws/dev
   tdac xdev/terraform/aws/dev/core
+  tdab xdev/terraform/aws/dev/sys-iam-boundaries
   tdak xdev/terraform/aws/dev/k8s
   tdao xdev/terraform/aws/dev/k8s-exp-1
   tda1 xdev/terraform/aws/dev/k8s-exp-1
   tdat xdev/terraform/aws/dev/k8s-exp-2
   tda2 xdev/terraform/aws/dev/k8s-exp-2
   tdal xdev/terraform/aws/dev/sys-log
+  tdar xdev/terraform/aws/dev/sys-iam-roles
   tpg xdev/terraform/gcp/prod
   tpgc xdev/terraform/gcp/prod/core
   tpgk xdev/terraform/gcp/prod/k8s
