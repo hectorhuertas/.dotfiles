@@ -66,13 +66,15 @@ rm -rf ~/.config/zsh
 ln -s ~/.dotfiles/dotfiles/.config/zsh ~/.config/zsh
 echo "... zsh"
 
-echo "Setting up dein for (n)vim package management..."
-dein_home="$HOME/.cache/vim/dein/repos/github.com/Shougo/dein.vim"
-rm -rf ${dein_home}
-mkdir -p ${dein_home}
-git clone https://github.com/Shougo/dein.vim.git ${dein_home} --quiet
+echo "Setting up vim-plug for (n)vim package management..."
+plug_home="$HOME/.local/share/nvim/site/autoload"
+rm -rf ${plug_home}/plug.vim && mkdir -p ${plug_home}
+wget -qO ${plug_home}/plug.vim \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+echo "... installing plugins and binaries in an nvim window..."
+echo "... it may take some time, let it run..."
+sleep 2
+nvim -c "PlugUpdate" -c quit -c quit
 echo "... installed!"
-echo "Do not forget to install the plugins inside (n)vim with ':call dein#install()'"
-echo "And to setup vim-go with ':GoInstallBinaries'"
 
 echo "DONE!!"
