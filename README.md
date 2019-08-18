@@ -53,7 +53,7 @@ This project involves setting up a personal system environment by building aweso
   * usar kubectl --no-headers (en lugar de cortar la primera linea)
   * change `unsafeKube` for a better name
   * kubectl ... -ojsonpath --template={.status.podIP}
-* Improve go coding
+* Improve go coding (some experiments in coc branch)
   * gopls + https://github.com/neoclide/coc.nvim or deoplete
   * autocomplete on tab (go,kubernetes? bash? dockerfile?)
   * snippets shortcuts for expand and jump with tab/s-tab
