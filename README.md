@@ -33,12 +33,12 @@ This project involves the management of the dotfiles and the utilities used to i
   * Modify the desired file under ~/.dotfiles/dotfiles
   * Commit the changes to the github repository
 * Adding new configurations:
-  * Copy the new configuration file/s into ~/.dotfiles/dotfiles
-  * Update setup.sh with the installation process
+  * Create the new configuration file/s inside ~/.dotfiles/dotfiles
+  * Update setup.sh with the installation process for the new file
 
 ## #2 Personal configurations for utilities
 
-This project involves setting up an awesome personal system environment by building awesome configurations for awesome UNIX utilities. The ultimate goal is having an amazing, ultra-productive system & workflow.
+This project involves setting up a personal system environment by building awesome configurations for awesome UNIX utilities. The ultimate goal is having a productive system & workflow.
 
 ### Philosophy
 * Focus on improving productivity
@@ -48,6 +48,28 @@ This project involves setting up an awesome personal system environment by build
 ### To Do
 ##### High
 ##### Medium
+* kubectl
+  * have a "raw" kubectl without shorcuts or protection, and without cutting the first lines
+  * usar kubectl --no-headers (en lugar de cortar la primera linea)
+  * change `unsafeKube` for a better name
+  * kubectl ... -ojsonpath --template={.status.podIP}
+* Improve go coding
+  * gopls + https://github.com/neoclide/coc.nvim or deoplete
+  * autocomplete on tab (go,kubernetes? bash? dockerfile?)
+  * snippets shortcuts for expand and jump with tab/s-tab
+  * linting and fmt on save (go,json,yaml,kubernetes?,bash?,dockerfile?)
+  * code coverage on file via shorcut
+  * better color setup
+  * command for running tests (* Add `fswatch -o . -l 0.3 | xargs -n1 -I{} go test` somewhere)
+  * create a list of tactics to learn
+    * navigation (go to declarations with fzf?)
+    * multicursor
+    * autocomplete
+    * snippets (printf for debugging!!)
+    * use --short flag to avoid integration tests
+* Colors
+  * Just need to play with alacritty colors. Changing them already affects neovim
+  * May want to change nvim syntax highlighting for the files I'm not happy with
 ##### Low
 * UI improvements
   * Fix italics and use them in syntax highlighting. Consider paid fonts
@@ -62,7 +84,6 @@ This project involves setting up an awesome personal system environment by build
 * Run zsh completions and other expensive commands asynchronously
 * Reduce zsh startup time by using zprof (instructions in first lines of .zshrc). Consider exploring `zplug times` or dumping zplug for zgen or zim. Also try to reduce compinit times.
 * Find out why this is being ingored in plugin zsh-syntax-highlighting: `HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=magenta,fg=white,bold'`. It seems like another plugin is overriding the default behaviour. Or maybe it's some zsh keybinding in vi mode?
-* dein.vim seems hard to use, vim-plug could be easier and it's more used and supported by plugins
 * If using alacritty terminfo, nvim cannot change cursor properly. nvim 0.3.2 will fix:
   * https://github.com/jwilm/alacritty/issues/1630#issuecomment-427570121
   * https://github.com/neovim/neovim/pull/9048
@@ -98,19 +119,19 @@ This project involves setting up an awesome personal system environment by build
   * Since there is no silver bullet (yet), I'm keeping a `zsh/modules/diff.sh` with different options
 * Get a command to momentarily highlight cursor. This needs to be done via Alacritty, since tmux or zsh can't do it well (there is a shell function in zsh/modules/unix.sh, but not very useful). Currently there is no way to do it, this will need opening an issue/PR
 * Check all the bookmarks
-
-### Shortcut system
-In order to have a productive environment, efficient shortcuts are essential. Here are a few cosiderations about the shortcut system, a list of shortcuts living outside of this dotfiles and the global list of shortcuts.
-
-#### Shorcut considerations
-* Discouraged combinations
-  * To avoid uncomfortable hand movements, avoid shortcuts using the option/alt key or the Ctrl+Shift combination
-* OSX `Command` key in tmux
+* #osx-command-shortcuts-issue
   * Using OSX `Command` key inside tmux is quite problematic. OSX has a lot of hidden shortcuts that, even when disabled, prevent the key combination to reach applications like Alacritty. To make things worse, tmux only allows `Ctrl` and `Meta` keys as modifier keys. Last but not least, Alacritty currently (0.2.4) does not have a default way of sending `Meta` modifier, requiring the user to set custom keybinding for that
   * To circumvent these issues, `Command` shortcuts inside tmux are defined as follows:
     * In karabiner-elements, use a custom complex modification to capture specific `Command + <key>` combinations and forward them as `Alt + <key>` only in Alacritty. This avoids triggering the OSX shortcuts. The complex modification needs to target specific shortcuts to avoid disabling other global shortcuts implemented with `Command`, like Spectacle or Hammerspoon ones
     * In Alacritty, enable `Alt + <key>` as `Meta + <key>` for those shortcuts. (https://github.com/jwilm/alacritty/issues/62)
     * In tmux config, use `Meta` as the key modifier for the desired shortcuts
+
+### Shortcuts system
+In order to have a productive environment, efficient shortcuts are essential. Here are a few cosiderations about the shortcut system, a list of shortcuts living outside of this dotfiles and the global list of shortcuts.
+
+#### Shorcuts considerations
+* Avoid uncomfortable shortcuts using the option/alt key or the Ctrl+Shift combination
+* check #osx-command-shorctus-issue task in To Do
 * Loose list of shortcuts types
   * Desktop and window management (mission control and spectacle)
   * Global shortcuts (copy, paste, select all, undo...)
@@ -120,19 +141,19 @@ In order to have a productive environment, efficient shortcuts are essential. He
   * Graphical application shortcuts
   * Terminal applications shortcuts
 
-#### Implemented shortcuts outside of this dotfiles
+#### Shortcuts implemented outside of this dotfiles
 * MacOs:
   * Show Desktop: Cmd+Ctrl+D
   * Focus next window of the same program: Cmd + `
-  * Select next keyboard input source/language: Cmd + Space
-  * Screenshots: Check mac shortcuts
+  * Select next keyboard input source/language: Ctrl + Option + Space
+  * Screenshots: check mac shortcuts
   * Spotlight launcher: Cmd + Space
 * Spectacle: (Cmd + Ctrl)
   * Vim keys: resize to proper side
   * F: Fullscreen
   * C: Center (has weird side effect, press ESC to exit it)
 
-#### Dotfiles global shortcut list
+#### Dotfiles global shortcuts list
 * Switch application (Cmd + <key>)
   * Itunes: I
   * Chrome: ;
