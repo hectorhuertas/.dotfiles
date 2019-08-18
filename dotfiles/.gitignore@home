@@ -20,6 +20,7 @@ xdev
 .config/gcloud
 .config/gnupg
 .config/hub
+.config/qBittorrent/
 .config/strongbox
 
 # Files tracked in .dotfiles
