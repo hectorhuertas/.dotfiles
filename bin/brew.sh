@@ -5,6 +5,9 @@ if ! command -v brew > /dev/null; then
   exit
 fi
 
+# Set custom screenshot location
+defaults write com.apple.screencapture location ~/Dropbox/temp
+
 brew update
 
 brew upgrade
