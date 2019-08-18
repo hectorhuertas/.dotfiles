@@ -1,0 +1,17 @@
+{
+	// my comment, because this is jsonc, not json
+	"json.enable":true ,
+	  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    }
+  },
+
+"snippets.ultisnips.directories": [
+  "UltiSnips",
+  "gosnippets/UltiSnips"
+]
+
+}

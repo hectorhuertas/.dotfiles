@@ -49,6 +49,7 @@ brew install trash
 brew install unrar
 brew install watch
 brew install wget
+brew install yarn # needed for nvim's coc.vim
 brew install zplug
 brew install zsh
 
