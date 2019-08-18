@@ -38,6 +38,9 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'hashivim/vim-terraform'
 call plug#end()
 
+" Parse comments in jsonc files
+autocmd FileType json syntax match Comment +\/\/.\+$+
+
 " Uses the system clipboard instead of the default '""' one
 set clipboard^=unnamed
 " Remap x to yank to the _ register instead of the default one
