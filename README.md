@@ -48,6 +48,7 @@ This project involves setting up a personal system environment by building aweso
 ### To Do
 ##### High
 ##### Medium
+* ripgrep shorcuts for hidden/unhidden/ follow/nofollow, ignore/not ignore??
 * kubectl
   * have a "raw" kubectl without shorcuts or protection, and without cutting the first lines
   * usar kubectl --no-headers (en lugar de cortar la primera linea)
@@ -70,6 +71,7 @@ This project involves setting up a personal system environment by building aweso
 * Colors
   * Just need to play with alacritty colors. Changing them already affects neovim
   * May want to change nvim syntax highlighting for the files I'm not happy with
+  * There are color testing utilities in `bin`
 ##### Low
 * UI improvements
   * Fix italics and use them in syntax highlighting. Consider paid fonts
@@ -125,6 +127,13 @@ This project involves setting up a personal system environment by building aweso
     * In karabiner-elements, use a custom complex modification to capture specific `Command + <key>` combinations and forward them as `Alt + <key>` only in Alacritty. This avoids triggering the OSX shortcuts. The complex modification needs to target specific shortcuts to avoid disabling other global shortcuts implemented with `Command`, like Spectacle or Hammerspoon ones
     * In Alacritty, enable `Alt + <key>` as `Meta + <key>` for those shortcuts. (https://github.com/jwilm/alacritty/issues/62)
     * In tmux config, use `Meta` as the key modifier for the desired shortcuts
+* consider adding `let g:terraform_align=1` to nvim.init
+* make a list of available commands?? (r/reload_config in .zshrc + everything under `modules`)
+* add running `:%!jq .` on nvim save when file is json (https://stackoverflow.com/questions/26214156/how-to-auto-format-json-on-save-in-vim)
+* Review shorcuts in general, but specially in zsh prompt
+* create an utility to count how many times a function is used (to figure out what I use and don't)
+* check how cfssl does to install several binaries at the same time, and use that to create small go binaries for utilities, to substitute zsh/modules
+* Insert dotfiles shortcuts and utilities into anki (from README and from modules)
 
 ### Shortcuts system
 In order to have a productive environment, efficient shortcuts are essential. Here are a few cosiderations about the shortcut system, a list of shortcuts living outside of this dotfiles and the global list of shortcuts.
@@ -169,11 +178,11 @@ In order to have a productive environment, efficient shortcuts are essential. He
   * Reload settings: r
 * ZSH (Ctrl + <key>)
   * Vi mode: ESC (no Ctrl)
-  * History search: UP, DOWN
+  * History search: UP, DOWN, K, J
   * End of line: L
   * Forward word: E
   * Backward delete char: H
   * Backward delete word: W
   * Kill line: U
-  * Insert fzf file into command line: P
-  * Insert fzf folder into command line: O
+  * Insert fzf file into command line: P (still valid? defined where?)
+  * Insert fzf folder into command line: O (still valid? defined where?)
