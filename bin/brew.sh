@@ -14,9 +14,13 @@ brew upgrade
 
 # Some of the utils need $PATH edition, set in zsh/modules/unix.sh
 brew install autossh
+brew install fullscreen/tap/aws-rotate-key
 brew install awscli
+brew install bash
 brew install bat
+brew install cmus
 brew install coreutils
+brew install curl
 brew install diff-so-fancy
 brew install diffutils
 brew install exa
@@ -29,21 +33,29 @@ brew install git
 brew install gnu-sed
 brew install gnupg
 brew install go
+brew install graphviz
 brew install grep
-brew install gzip
 brew install hub
 brew install icdiff
 brew install jq
 brew install kubernetes-cli
+brew install kustomize
+brew install ldns
 brew install less
 brew install make
+brew install monolith
 brew install neovim
-#brew install nmap
+brew install nmap
 #brew install node
+brew install ntfs-3g
+brew install oath-toolkit
+brew install pwgen
+brew install rclone
 brew install ripgrep
-#brew install shellcheck
+brew install sd
+brew install shellcheck
 brew install stern
-brew install terraform
+#brew install terraform
 brew install tmux
 brew install trash
 brew install unrar
