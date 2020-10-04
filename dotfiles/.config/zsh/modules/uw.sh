@@ -9,4 +9,12 @@ function start_ssh_tunnels() {
 }
 alias tunnels=start_ssh_tunnels
 
+
+function kube_applier_status() {
+  unsafeKube --context=$1 get ns -o json \
+    | jq -r '.items[] | "\(.metadata.name) \(.metadata.annotations."kube-applier.io/enabled") \(.metadata.annotations."kube-applier.io/dry-run")"' \
+    | column -t -N NAMESPACE,ENABLED,DRY-RUN
+}
+alias ka_status=kube_applier_status
+
 alias uw='cd ~/Dropbox/info/uw'
