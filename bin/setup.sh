@@ -78,3 +78,11 @@ nvim -c "PlugUpdate" -c quit -c quit
 echo "... installed!"
 
 echo "DONE!!"
+
+echo "Installing utilities..."
+
+rm -rf /usr/local/bin/code_backup
+ln -s ~/.dotfiles/dotfiles/bin/code_backup.bash /usr/local/bin/code_backup
+echo "... code_backup"
+
+echo "DONE!!"
