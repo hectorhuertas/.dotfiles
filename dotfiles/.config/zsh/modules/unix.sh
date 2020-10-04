@@ -9,6 +9,7 @@ PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/grep/libexec/gnuman:$MANPATH"
 PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/make/libexec/gnuman:$MANPATH"
+PATH="/usr/local/opt/util-linux/bin:$PATH"
 
 alias e='declare -p | rg'
 alias cpwd="pwd | tr -d '\n' | pbcopy"

@@ -59,6 +59,7 @@ brew install stern
 brew install tmux
 brew install trash
 brew install unrar
+brew install util-linux
 brew install watch
 brew install wget
 brew install zplug
