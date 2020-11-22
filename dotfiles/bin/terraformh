@@ -1,0 +1,29 @@
+#!/bin/bash
+set -Eeuxo pipefail
+
+# Input variables
+tf_ver="${TF_VER:-0.13.5}" # terraform version to use
+workdir="${PWD}" # directory of the terraform module
+
+# Define statedir
+module="$(basename ${workdir})"
+statedir="${HOME}/Dropbox/data/systems_tf_state/${module}"
+
+# Define cachedir
+cachedir="${HOME}/.cache/terraform/plugin-cache"
+
+# Run terraform from a docker container
+#
+# Mount the workdir where the terraform files are located
+# Mount the statedir where the terraform state is located. Modules must set the local value to this dir.
+# Mount the cachedir where plugin cache is located
+# Set the env var for the cachedir location
+# Set the docker workdir
+# Run terraform with the proper version and passing all the arguments
+docker run --rm -ti \
+  --volume "${workdir}":/workdir \
+  --volume "${statedir}":/state \
+  --volume "${cachedir}":/plugin-cache \
+  --env TF_PLUGIN_CACHE_DIR=/plugin-cache \
+  --workdir /workdir \
+  hashicorp/terraform:${tf_ver} "$@"
