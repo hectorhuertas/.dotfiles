@@ -29,6 +29,12 @@ _aliases=(
   tdgo xdev/terraform/gcp/dev/k8s-exp-1
   tdg1 xdev/terraform/gcp/dev/k8s-exp-1
   tdgl xdev/terraform/gcp/dev/sys-log
+  tpm xdev/terraform/merit/prod
+  tpmk xdev/terraform/merit/prod/k8s
+  tdm xdev/terraform/merit/dev
+  tdmk xdev/terraform/merit/dev/k8s
+  tpc xdev/terraform/cloudflare/system-prod
+  tdc xdev/terraform/cloudflare/system-dev
   mpa xdev/kubernetes-manifests/prod-aws
   mpas xdev/kubernetes-manifests/prod-aws/kube-system
   mpal xdev/kubernetes-manifests/prod-aws/sys-log
@@ -64,6 +70,16 @@ _aliases=(
   mogl xdev/kubernetes-manifests/exp-1-gcp/sys-log
   mogm xdev/kubernetes-manifests/exp-1-gcp/sys-mon
   mogp xdev/kubernetes-manifests/exp-1-gcp/sys-prom
+  mpm xdev/kubernetes-manifests/prod-merit
+  mpms xdev/kubernetes-manifests/prod-merit/kube-system
+  mpml xdev/kubernetes-manifests/prod-merit/sys-log
+  mpmm xdev/kubernetes-manifests/prod-merit/sys-mon
+  mpmp xdev/kubernetes-manifests/prod-merit/sys-prom
+  mdm xdev/kubernetes-manifests/dev-merit
+  mdms xdev/kubernetes-manifests/dev-merit/kube-system
+  mdml xdev/kubernetes-manifests/dev-merit/sys-log
+  mdmm xdev/kubernetes-manifests/dev-merit/sys-mon
+  mdmp xdev/kubernetes-manifests/dev-merit/sys-prom
 )
 
 for _alias _dir in ${(kv)_aliases}; do

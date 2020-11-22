@@ -37,8 +37,8 @@ if command -v kubectl > /dev/null; then
   alias -g A='--all-namespaces'
 
   # Generated aliases
-  providers=(aws gcp)
-  providers_aliases=(a g)
+  providers=(aws gcp merit)
+  providers_aliases=(a g m)
   clusters=(dev exp-1 exp-2)
   clusters_aliases=(d o t)
   namespaces=(kube-system sys-ingress-priv sys-ingress-pub sys-log sys-mon sys-prom)
