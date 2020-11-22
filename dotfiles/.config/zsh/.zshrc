@@ -67,6 +67,9 @@ reload_config() {
 }
 alias r='reload_config'
 
+## Add my own binaries to the path
+PATH="$HOME/.dotfiles/dotfiles/bin:$PATH"
+
 ## Load custom modules and Zplugins
 # Load all custom modules
 for module in $ZDOTDIR/modules/*; do
