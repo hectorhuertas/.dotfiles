@@ -1,8 +1,10 @@
 # Prefixing `_` because aliases is a zsh variable
 _aliases=(
   x xdev
+  dx Dropbox
   dt .dotfiles
   dc .dotfiles/dotfiles/.config
+
   tpa xdev/terraform/aws/prod
   tpac xdev/terraform/aws/prod/core
   tpab xdev/terraform/aws/prod/sys-iam-boundaries
@@ -35,6 +37,7 @@ _aliases=(
   tdmk xdev/terraform/merit/dev/k8s
   tpc xdev/terraform/cloudflare/system-prod
   tdc xdev/terraform/cloudflare/system-dev
+
   mpa xdev/kubernetes-manifests/prod-aws
   mpas xdev/kubernetes-manifests/prod-aws/kube-system
   mpal xdev/kubernetes-manifests/prod-aws/sys-log
