@@ -68,6 +68,7 @@ brew install zsh
 brew tap caskroom/cask
 
 brew cask install alacritty
+tic -xe alacritty,alacritty-direct ~/.config/alacritty/alacritty.info # install alacritty terminfo
 #brew cask install atom
 #brew cask install battle-net
 brew cask install dash
