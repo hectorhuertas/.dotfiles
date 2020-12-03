@@ -39,7 +39,9 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plug 'hashivim/vim-terraform'
   Plug 'mzlogin/vim-markdown-toc'
+  Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
+colorscheme dracula
 
 " Parse comments in jsonc files
 autocmd FileType json syntax match Comment +\/\/.\+$+

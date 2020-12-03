@@ -1,6 +1,6 @@
 # Once it is released, use the ~/... import style
 import:
-  - /Users/hh/.dotfiles/dotfiles/.config/alacritty/colors/hector.yml
+  - /Users/hh/.dotfiles/dotfiles/.config/alacritty/colors/dracula.yml
 
 window:
   padding:
