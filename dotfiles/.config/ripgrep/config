@@ -9,3 +9,6 @@
 
 # Follow symlinks
 --follow
+
+# Ignore html (to avoid monolith files on Dropbox)
+--type-not=html
