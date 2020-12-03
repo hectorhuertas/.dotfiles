@@ -2,6 +2,8 @@ set number
 set nolist " waiting for a proper color theme to set to 'list'
 set listchars=tab:>·,eol:¬
 
+set termguicolors
+
 " Default indentation
 set expandtab
 set shiftwidth=2
@@ -45,3 +47,12 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 set clipboard^=unnamed
 " Remap x to yank to the _ register instead of the default one
 noremap x "_x
+
+" Use italic for comments
+"
+" In vim the line would look like: `highlight Comment cterm=italic`
+" but neovim needs `gui` instead of `cterm` when termguicolors is enabled
+" https://github.com/neovim/neovim/issues/13188
+"
+" Also, putting it at the bottom to override themes
+highlight Comment gui=italic
