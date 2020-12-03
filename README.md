@@ -48,12 +48,6 @@ This project involves setting up a personal system environment by building aweso
 ### To Do
 ##### High
 ##### Medium
-* ripgrep shorcuts for hidden/unhidden/ follow/nofollow, ignore/not ignore??
-* kubectl
-  * have a "raw" kubectl without shorcuts or protection, and without cutting the first lines
-  * usar kubectl --no-headers (en lugar de cortar la primera linea)
-  * change `unsafeKube` for a better name
-  * kubectl ... -ojsonpath --template={.status.podIP}
 * Improve go coding (some experiments in coc branch)
   * gopls + https://github.com/neoclide/coc.nvim or deoplete
   * autocomplete on tab (go,kubernetes? bash? dockerfile?)
@@ -61,7 +55,8 @@ This project involves setting up a personal system environment by building aweso
   * linting and fmt on save (go,json,yaml,kubernetes?,bash?,dockerfile?)
   * code coverage on file via shorcut
   * better color setup
-  * command for running tests (* Add `fswatch -o . -l 0.3 | xargs -n1 -I{} go test` somewhere)
+  * command for running tests (Add `fswatch -o . -l 0.3 | xargs -n1 -I{} go test` somewhere)
+    * or try Tasker runner
   * create a list of tactics to learn
     * navigation (go to declarations with fzf?)
     * multicursor
@@ -69,9 +64,7 @@ This project involves setting up a personal system environment by building aweso
     * snippets (printf for debugging!!)
     * use --short flag to avoid integration tests
 * Colors
-  * Just need to play with alacritty colors. Changing them already affects neovim
   * May want to change nvim syntax highlighting for the files I'm not happy with
-  * There are color testing utilities in `bin`
 ##### Low
 * UI improvements
   * Consider paid fonts
@@ -95,10 +88,8 @@ This project involves setting up a personal system environment by building aweso
   * Set vars to avoid creation of `.bashrc` and `.bash_sessions`
   * When possible, remove `.kube`
 * Tmux (`Prefix ?` to show predefined comands)
-  * Install tmux terminfo and change the TERM variable
   * Persistent tmux sessions
   * Start tmux attached to the existing session, if there is one
-  * Duplicate tmux window
   * Nice, useful theme/status bar
   * Keep config when sshing into remote servers
   * Enable working mouse mode: find out why selecting with double click or with drag selection acts weird/doesnt work with mouse mode on
