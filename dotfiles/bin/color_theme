@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Usage: `colortheme <name_of_theme>`
+
+# Input parsing
+chosen_theme="$1"
+
+# Defaults
+alacritty_themes_dir="${HOME}/.dotfiles/dotfiles/.config/alacritty/colors"
+alacritty_themes_current="${HOME}/.dotfiles/dotfiles/.config/alacritty/colors/current.yml"
+alacritty_config="${HOME}/.dotfiles/dotfiles/.config/alacritty/alacritty.yml"
+
+# Choose a random theme
+function set_alacritty_theme () {
+  cp "${alacritty_themes_dir}/${chosen_theme}.yml" "${alacritty_themes_current}"
+  touch "${alacritty_config}"
+}
+
+set_alacritty_theme

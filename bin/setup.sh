@@ -36,6 +36,7 @@ echo "... karabiner"
 
 rm -rf ~/.config/alacritty
 ln -s ~/.dotfiles/dotfiles/.config/alacritty ~/.config/alacritty
+touch ~/.config/alacritty/colors/current.yml # Create empty color theme
 echo "... alacritty"
 
 rm -rf ~/.config/git

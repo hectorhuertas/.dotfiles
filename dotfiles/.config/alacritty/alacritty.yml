@@ -1,6 +1,9 @@
 # Once it is released, use the ~/... import style
+
+# Using imports to enable themes, set by `which color_theme`
 import:
-  - /Users/hh/.dotfiles/dotfiles/.config/alacritty/colors/dracula.yml
+  - /Users/hh/.dotfiles/dotfiles/.config/alacritty/colors/hector.yml # default color scheme
+  - /Users/hh/.dotfiles/dotfiles/.config/alacritty/colors/current.yml # current color sheme
 
 window:
   padding:
