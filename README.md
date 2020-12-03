@@ -74,7 +74,7 @@ This project involves setting up a personal system environment by building aweso
   * There are color testing utilities in `bin`
 ##### Low
 * UI improvements
-  * Fix italics and use them in syntax highlighting. Consider paid fonts
+  * Consider paid fonts
   * Setup useful widgets for shell prompt and tmux bar. Inspiration: powerlevel9k, spaceshipt-prompt, gbt...
   * Add context-aware color highlighting. Change tmux/alacritty colors based on folder, env vars, git branch... Useful to detect production environments, pushing to master...
 * Have an utility to list all `unsafe` things on my user: uncommited changes and non-master branches in $HOME and xdev repos
@@ -138,6 +138,12 @@ This project involves setting up a personal system environment by building aweso
 ### Shortcuts system
 In order to have a productive environment, efficient shortcuts are essential. Here are a few cosiderations about the shortcut system, a list of shortcuts living outside of this dotfiles and the global list of shortcuts.
 
+#### Shortcut ToDo
+* osx has some `Command` options that can't be disabled (like Cmd+H to hide an app). In order to use `Command` for shortcuts, i need to use karabiner-elements to capture `Command` strokes and transform them into another key (Alt/Option) and then set the shorcuts using the (Alt/Option) modifier for now, I'm only using this technique for alacritty, so i use a custom "complex modification" (that btw i think breaks somethign and many times writes `~` when using some unknown commands)
+* alacritty needs to explitily enable any key combinations so need to explicitely add any shortcuts that need to be passed to tmux???
+* should I have default mouse movement and scroll while on chrome/slack/firefox? and then have some weird layer where I can actually input text? maybe besides search function?)
+
+
 #### Shorcuts considerations
 * Avoid uncomfortable shortcuts using the option/alt key or the Ctrl+Shift combination
 * check #osx-command-shorctus-issue task in To Do
@@ -186,3 +192,9 @@ In order to have a productive environment, efficient shortcuts are essential. He
   * Kill line: U
   * Insert fzf file into command line: P (still valid? defined where?)
   * Insert fzf folder into command line: O (still valid? defined where?)
+* Mouse movement (Enable with something like `right_.`)
+  * Movement: e,s,d,f
+  * left, middle, right buttons: j,k,l
+  * slow down: `left_.`?
+  * speed up: `;`?
+  * maybe `right_..` and `right_...` could be scroll up/down in chrome?
