@@ -46,6 +46,9 @@ colorscheme dracula
 " Parse comments in jsonc files
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
+set foldmethod=syntax
+set foldlevel=99
+
 " Treat .yaml.tmpl files as yaml (used in prometheus)
 autocmd BufRead *.yaml.tmpl set syntax=yaml
 
