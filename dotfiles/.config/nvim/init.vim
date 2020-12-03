@@ -46,6 +46,9 @@ colorscheme dracula
 " Parse comments in jsonc files
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
+" Treat .yaml.tmpl files as yaml (used in prometheus)
+autocmd BufRead *.yaml.tmpl set syntax=yaml
+
 " Uses the system clipboard instead of the default '""' one
 set clipboard^=unnamed
 " Remap x to yank to the _ register instead of the default one
