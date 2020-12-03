@@ -8,6 +8,7 @@ window:
     y: 2
   decorations: none
   startup_mode: Maximized
+  dynamic_padding: true
 
 scrolling:
   history: 0
