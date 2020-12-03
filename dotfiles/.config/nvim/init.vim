@@ -38,6 +38,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   " Make sure you use single quotes
   Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plug 'hashivim/vim-terraform'
+  Plug 'mzlogin/vim-markdown-toc'
 call plug#end()
 
 " Parse comments in jsonc files
