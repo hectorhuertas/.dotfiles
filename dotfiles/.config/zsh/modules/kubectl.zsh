@@ -33,8 +33,9 @@ if command -v kubectl > /dev/null; then
   }
 
   alias k='kubectl'
-  alias krg='kube_rg'
+  alias rawKube='unsafeKube'
   alias -g A='--all-namespaces'
+  alias rgk='kube_rg'
 
   # Generated aliases
   providers=(aws gcp merit)
