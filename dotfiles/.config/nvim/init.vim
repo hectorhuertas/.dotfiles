@@ -30,6 +30,11 @@ let g:go_fmt_command = "goimports"
 " Vim-Terraform settings
 let g:terraform_fmt_on_save = 1
 
+" Vim-Prettier settings
+let g:prettier#exec_cmd_async = 1
+let g:prettier#autoformat_require_pragma = 0
+let g:prettier#autoformat_config_present = 1
+
 " Location of explorer history
 let g:netrw_home="~/.cache/vim"
 
@@ -38,6 +43,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   " Make sure you use single quotes
   Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plug 'hashivim/vim-terraform'
+  Plug 'prettier/vim-prettier',
   Plug 'mzlogin/vim-markdown-toc'
   Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
