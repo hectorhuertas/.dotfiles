@@ -70,8 +70,8 @@ echo "... installed"
 
 echo "Setting up vim-plug for (n)vim package management..."
 plug_home="$HOME/.local/share/nvim/site/autoload"
-rm -rf ${plug_home}/plug.vim && mkdir -p ${plug_home}
-wget -qO ${plug_home}/plug.vim \
+rm -rf "${plug_home}/plug.vim" && mkdir -p "${plug_home}"
+wget -qO "${plug_home}/plug.vim" \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo "... installing plugins and binaries in an nvim window..."
 echo "... it may take some time, let it run..."
