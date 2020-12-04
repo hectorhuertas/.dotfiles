@@ -43,9 +43,10 @@ call plug#begin('~/.local/share/nvim/plugged')
   " Make sure you use single quotes
   Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plug 'hashivim/vim-terraform'
-  Plug 'prettier/vim-prettier',
+  Plug 'prettier/vim-prettier'
   Plug 'mzlogin/vim-markdown-toc'
   Plug 'dracula/vim', { 'as': 'dracula' }
+  Plug 'tpope/vim-commentary' "alternative: 'preservim/nerdcommenter'
 call plug#end()
 colorscheme dracula
 
