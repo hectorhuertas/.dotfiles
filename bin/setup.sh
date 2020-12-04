@@ -63,6 +63,11 @@ rm -rf ~/.config/zsh
 ln -s ~/.dotfiles/dotfiles/.config/zsh ~/.config/zsh
 echo "... zsh"
 
+echo "Setting up node..."
+n_prefix="$HOME/.local/share/n"
+mkdir -p "${n_prefix}" && N_PREFIX="${n_prefix}" n lts
+echo "... installed"
+
 echo "Setting up vim-plug for (n)vim package management..."
 plug_home="$HOME/.local/share/nvim/site/autoload"
 rm -rf ${plug_home}/plug.vim && mkdir -p ${plug_home}

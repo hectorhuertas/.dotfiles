@@ -45,8 +45,8 @@ brew install less
 brew install make
 brew install monolith
 brew install neovim
+brew install n
 brew install nmap
-#brew install node
 brew install ntfs-3g
 brew install oath-toolkit
 brew install pwgen
