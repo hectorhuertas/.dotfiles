@@ -66,6 +66,7 @@ This project involves setting up a personal system environment by building aweso
 * Colors
   * May want to change nvim syntax highlighting for the files I'm not happy with
 ##### Low
+* move yamllint and ansible to docker images, to avoid the python mess
 * UI improvements
   * Consider paid fonts
   * Setup useful widgets for shell prompt and tmux bar. Inspiration: powerlevel9k, spaceshipt-prompt, gbt...
