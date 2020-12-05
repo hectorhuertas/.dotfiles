@@ -1,29 +1,38 @@
 # Ignored Files and Folders
-.aws
-.cache
+.ansible/
+.aws/
+.cache/
+.cargo/
 .CFUserTextEncoding
-.cockroach
-.dropbox
+.cockroach/
+.dropbox/
 .exercism.json
-.kube
-.local
-.terraform.d
-.Trash
-Applications
-Dropbox
-Library
-Music
-xdev
-# Temporal ignores
-Downloads/datos-para-alquiler
+.gsutil/
+.kube/
+.local/
+.npm/
+.pcloud/
+.saml2aws
+.terminfo/
+.terraform.d/
+.Trash/
+.wget-hsts
+Applications/
+Dropbox/
+Library/
+Music/
+xdev/
 
 # Ignored configs
-.config/docker
-.config/gcloud
-.config/gnupg
+.config/cloudflare/
+.config/cmus/
+.config/docker/
+.config/gcloud/
+.config/gnupg/
 .config/hub
 .config/qBittorrent/
-.config/strongbox
+.config/rclone/
+.config/strongbox/
 
 # Files tracked in .dotfiles
 .gitignore
@@ -37,6 +46,5 @@ Downloads/datos-para-alquiler
 .config/tmux
 .config/yamllint
 .config/zsh
-.ssh
-.terminfo
+.ssh/
 .zshenv
