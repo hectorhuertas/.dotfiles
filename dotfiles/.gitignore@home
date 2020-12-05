@@ -32,6 +32,7 @@ xdev/
 .config/hub
 .config/qBittorrent/
 .config/rclone/
+.config/scw/
 .config/strongbox/
 
 # Files tracked in .dotfiles
