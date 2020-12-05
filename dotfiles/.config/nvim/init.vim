@@ -27,13 +27,28 @@ let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
 let g:go_fmt_command = "goimports"
 
-" Vim-Terraform settings
-let g:terraform_fmt_on_save = 1
-
-" Vim-Prettier settings
-let g:prettier#exec_cmd_async = 1
-let g:prettier#autoformat_require_pragma = 0
-let g:prettier#autoformat_config_present = 1
+" ALE settings
+"
+" terraform linters didn't worked well
+let g:ale_fix_on_save = 1
+let g:ale_disable_lsp = 1
+let g:ale_completion_enabled = 0
+let g:ale_lint_delay = 1000
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '~'
+let g:ale_linters = {
+\   'json': ['jsonlint'],
+\   'terraform': [''],
+\   'sh': ['shellcheck'],
+\   'yaml': ['yamllint'],
+\}
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'json': ['prettier'],
+\   'terraform': ['terraform'],
+\   'sh': ['shfmt'],
+\   'yaml': ['prettier'],
+\}
 
 " Location of explorer history
 let g:netrw_home="~/.cache/vim"
@@ -43,21 +58,25 @@ call plug#begin('~/.local/share/nvim/plugged')
   " Make sure you use single quotes
   Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plug 'hashivim/vim-terraform'
-  Plug 'prettier/vim-prettier'
   Plug 'mzlogin/vim-markdown-toc'
   Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'tpope/vim-commentary' "alternative: 'preservim/nerdcommenter'
+  Plug 'dense-analysis/ale'
 call plug#end()
 colorscheme dracula
 
 " Parse comments in jsonc files
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
+" Enable fold with syntax, but disable by default
 set foldmethod=syntax
 set foldlevel=99
 
 " Treat .yaml.tmpl files as yaml (used in prometheus)
 autocmd BufRead *.yaml.tmpl set syntax=yaml
+
+" Always show the sign column, to avoid annoyance on showing/hiding
+set signcolumn=yes
 
 " Uses the system clipboard instead of the default '""' one
 set clipboard^=unnamed

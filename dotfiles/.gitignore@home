@@ -35,6 +35,7 @@ Downloads/datos-para-alquiler
 .config/nvim
 .config/ripgrep
 .config/tmux
+.config/yamllint
 .config/zsh
 .ssh
 .terminfo

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if ! command -v brew > /dev/null; then
+if ! command -v brew >/dev/null; then
   echo "ERROR: This script requires having 'Homebrew' installed"
   exit
 fi
@@ -55,13 +55,14 @@ brew install ripgrep
 brew install sd
 brew install shellcheck
 brew install stern
-#brew install terraform
+brew install terraform
 brew install tmux
 brew install trash
 brew install unrar
 brew install util-linux
 brew install watch
 brew install wget
+brew install yamllint
 brew install zplug
 brew install zsh
 

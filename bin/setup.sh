@@ -59,6 +59,10 @@ rm -rf ~/.config/tmux
 ln -s ~/.dotfiles/dotfiles/.config/tmux ~/.config/tmux
 echo "... tmux"
 
+rm -rf ~/.config/yamllint
+ln -s ~/.dotfiles/dotfiles/.config/yamllint ~/.config/yamllint
+echo "... yamllint"
+
 rm -rf ~/.config/zsh
 ln -s ~/.dotfiles/dotfiles/.config/zsh ~/.config/zsh
 echo "... zsh"
@@ -72,6 +76,14 @@ echo "Setting up node packages..."
 
 npm install --global prettier
 echo "... prettier"
+
+npm install --global jsonlint
+echo "... jsonlint"
+
+echo "Setting up go tools..."
+
+GO111MODULE=on go get mvdan.cc/sh/v3/cmd/shfmt
+echo "... shfmt"
 
 echo "Setting up vim-plug for (n)vim package management..."
 plug_home="$HOME/.local/share/nvim/site/autoload"
