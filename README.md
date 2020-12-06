@@ -47,6 +47,7 @@ This project involves setting up a personal system environment by building aweso
 
 ### To Do
 ##### High
+* once Neovim 5 is out, use `set signcolumn=number`
 ##### Medium
 * Improve go coding (some experiments in coc branch)
   * gopls + https://github.com/neoclide/coc.nvim or deoplete
@@ -88,7 +89,7 @@ This project involves setting up a personal system environment by building aweso
   * Remove `.lesshst` and `.viminfo`
   * Set vars to avoid creation of `.bashrc` and `.bash_sessions`
   * When possible, remove `.kube`
-* Tmux (`Prefix ?` to show predefined comands)
+* Tmux (`Prefix ?` to show predefined commands)
   * Persistent tmux sessions
   * Start tmux attached to the existing session, if there is one
   * Nice, useful theme/status bar

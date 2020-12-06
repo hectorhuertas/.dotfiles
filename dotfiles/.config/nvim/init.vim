@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 set number
 set nolist " waiting for a proper color theme to set to 'list'
 set listchars=tab:>·,eol:¬
@@ -64,6 +66,8 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'tpope/vim-commentary' "alternative: 'preservim/nerdcommenter'
   Plug 'dense-analysis/ale'
+  Plug 'vim-airline/vim-airline'
+  Plug 'airblade/vim-gitgutter'
 call plug#end()
 colorscheme dracula
 
@@ -78,7 +82,7 @@ set foldlevel=99
 autocmd BufRead *.yaml.tmpl set syntax=yaml
 
 " Always show the sign column, to avoid annoyance on showing/hiding
-set signcolumn=yes
+set signcolumn=yes:1
 
 " Uses the system clipboard instead of the default '""' one
 set clipboard^=unnamed
