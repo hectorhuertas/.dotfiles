@@ -1,0 +1,8 @@
+[aA]lacritty
+[aA]nsible
+config
+[gG]raylog
+[hH]ammerspoon
+[nN]eovim
+[tT]mux
+zsh

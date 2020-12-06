@@ -106,6 +106,8 @@ echo "... installed!"
 echo "Setting up vale styles..."
 styles_home="$HOME/.local/share/vale/styles"
 rm -rf "${styles_home}" && mkdir -p "${styles_home}"
+ln -s ~/.dotfiles/dotfiles/.config/vale/styles/Vocab "${styles_home}"
+
 get_style() {
   style="$1"
   wget --quiet --output-document=- "api.github.com/repos/errata-ai/${style}/releases/latest" |
