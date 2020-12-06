@@ -26,6 +26,10 @@ rm -f ~/.gitignore
 ln -s ~/.dotfiles/dotfiles/.gitignore@home ~/.gitignore
 echo "... .gitignore"
 
+rm -f ~/.vale.ini
+ln -s ~/.dotfiles/dotfiles/.vale.ini ~/.vale.ini
+echo "... .vale.ini"
+
 mkdir -p ~/.config
 touch ~/.config/.gitkeep
 echo "Inside ~/.config folder..."
@@ -74,11 +78,14 @@ echo "... installed"
 
 echo "Setting up node packages..."
 
-npm install --global prettier
-echo "... prettier"
+npm install --global alex
+echo "... alex"
 
 npm install --global jsonlint
 echo "... jsonlint"
+
+npm install --global prettier
+echo "... prettier"
 
 echo "Setting up go tools..."
 
@@ -94,6 +101,22 @@ echo "... installing plugins and binaries in an nvim window..."
 echo "... it may take some time, let it run..."
 sleep 2
 nvim -c "PlugUpdate" -c quit -c quit
+echo "... installed!"
+
+echo "Setting up vale styles..."
+styles_home="$HOME/.local/share/vale/styles"
+rm -rf "${styles_home}" && mkdir -p "${styles_home}"
+get_style() {
+  style="$1"
+  wget --quiet --output-document=- "api.github.com/repos/errata-ai/${style}/releases/latest" |
+    jq --raw-output '.assets[0].browser_download_url' | wget --quiet --input-file=-
+  unzip "${style}.zip" -d "${styles_home}" && rm -rf "${style}.zip"
+}
+get_style Google
+get_style Joblint
+get_style Microsoft
+get_style proselint
+get_style write-good
 echo "... installed!"
 
 echo "DONE!!"

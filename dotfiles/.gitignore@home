@@ -48,4 +48,5 @@ xdev/
 .config/yamllint
 .config/zsh
 .ssh/
+.vale.ini
 .zshenv

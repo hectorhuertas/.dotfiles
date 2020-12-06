@@ -60,6 +60,7 @@ brew install tmux
 brew install trash
 brew install unrar
 brew install util-linux
+brew install vale
 brew install vint
 brew install watch
 brew install wget
