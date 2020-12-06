@@ -40,6 +40,7 @@ let g:ale_linters = {
 \   'json': ['jsonlint'],
 \   'terraform': [''],
 \   'sh': ['shellcheck'],
+\   'vim': ['vint','ale_custom_linting_rules'],
 \   'yaml': ['yamllint'],
 \}
 let g:ale_fixers = {
@@ -47,6 +48,7 @@ let g:ale_fixers = {
 \   'json': ['prettier'],
 \   'terraform': ['terraform'],
 \   'sh': ['shfmt'],
+\   'vim': [''],
 \   'yaml': ['prettier'],
 \}
 
