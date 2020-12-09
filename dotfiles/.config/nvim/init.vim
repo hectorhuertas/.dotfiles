@@ -12,11 +12,16 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 
+" Create an augroup for my autocommmands
+augroup hector
+    autocmd!
+augroup
+
 " Go files
-autocmd FileType go set noexpandtab
-autocmd FileType go set shiftwidth=4
-autocmd FileType go set softtabstop=4
-autocmd FileType go set tabstop=4
+autocmd hector FileType go set noexpandtab
+autocmd hector FileType go set shiftwidth=4
+autocmd hector FileType go set softtabstop=4
+autocmd hector FileType go set tabstop=4
 
 " Vim-Go settings
 let g:go_highlight_build_constraints = 1
@@ -72,14 +77,14 @@ call plug#end()
 colorscheme dracula
 
 " Parse comments in jsonc files
-autocmd FileType json syntax match Comment +\/\/.\+$+
+autocmd hector FileType json syntax match Comment +\/\/.\+$+
 
 " Enable fold with syntax, but disable by default
 set foldmethod=syntax
 set foldlevel=99
 
 " Treat .yaml.tmpl files as yaml (used in prometheus)
-autocmd BufRead *.yaml.tmpl set syntax=yaml
+autocmd hector BufRead *.yaml.tmpl set syntax=yaml
 
 " Always show the sign column, to avoid annoyance on showing/hiding
 set signcolumn=yes:1
