@@ -1,0 +1,9 @@
+{
+  "coc.source.around.enable": false,
+  "suggest.noselect": false,
+  "snippets.userSnippetsDirectory": "~/.config/snippets/ultisnips",
+  "yaml.schemas": {
+    "kubernetes": "kubernetes-manifests*.yaml"
+  },
+  "diagnostic.displayByAle": true
+}

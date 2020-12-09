@@ -59,6 +59,10 @@ rm -rf ~/.config/ripgrep
 ln -s ~/.dotfiles/dotfiles/.config/ripgrep ~/.config/ripgrep
 echo "... ripgrep"
 
+rm -rf ~/.config/snippets
+ln -s ~/.dotfiles/dotfiles/.config/snippets ~/.config/snippets
+echo "... snippets"
+
 rm -rf ~/.config/tmux
 ln -s ~/.dotfiles/dotfiles/.config/tmux ~/.config/tmux
 echo "... tmux"

@@ -3,7 +3,6 @@ scriptencoding utf-8
 set number
 set nolist " waiting for a proper color theme to set to 'list'
 set listchars=tab:>·,eol:¬
-
 set termguicolors
 
 " Default indentation
@@ -32,7 +31,7 @@ let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
-let g:go_fmt_command = "goimports"
+let g:go_fmt_command = 'goimports'
 
 " ALE settings
 "
@@ -42,7 +41,7 @@ let g:ale_disable_lsp = 1
 let g:ale_completion_enabled = 0
 let g:ale_lint_delay = 1000
 let g:ale_sign_error = '●'
-let g:ale_sign_warning = '~'
+let g:ale_sign_warning = '.'
 let g:ale_linters = {
 \   'json': ['jsonlint'],
 \   'terraform': [''],
@@ -60,7 +59,26 @@ let g:ale_fixers = {
 \}
 
 " Location of explorer history
-let g:netrw_home="~/.cache/vim"
+let g:netrw_home='~/.cache/vim'
+
+" CoC settings
+set hidden "recommended by CoC
+let g:coc_global_extensions = [
+\   'coc-json',
+\   'coc-snippets',
+\   'coc-yaml',
+\]
+
+" Completion Key mappings
+"
+" Use <Tab> to trigger completion
+inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
+" Use <C-j> & <C-k> to navigate completions
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+" Use <C-l> & <C-h> to navigate snippet placeholders
+let g:coc_snippet_next = '<c-l>'
+let g:coc_snippet_prev = '<c-h>'
 
 " Vim-plug plugin manager setup
 call plug#begin('~/.local/share/nvim/plugged')
@@ -73,6 +91,8 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'dense-analysis/ale'
   Plug 'vim-airline/vim-airline'
   Plug 'airblade/vim-gitgutter'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'honza/vim-snippets'
 call plug#end()
 colorscheme dracula
 
