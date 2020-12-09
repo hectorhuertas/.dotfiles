@@ -1,8 +1,15 @@
 [aA]lacritty
 [aA]nsible
+coc
 config
+[dD]ocker(file)?
 [gG]raylog
 [hH]ammerspoon
-[nN]eovim
+https?
+json
+[kK]ubernetes
+[nN](eo)?vim
 [tT]mux
+[uU]ltrasnips
+yaml
 zsh
