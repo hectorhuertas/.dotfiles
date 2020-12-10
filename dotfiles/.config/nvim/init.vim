@@ -3,6 +3,9 @@ scriptencoding utf-8
 set number
 set nolist " waiting for a proper color theme to set to 'list'
 set listchars=tab:>·,eol:¬
+
+
+
 set termguicolors
 
 " Default indentation
@@ -40,6 +43,8 @@ imap <C-x> <Nop>
 imap <C-y> <Nop>
 " <C-z> is disabled by default
 imap <C-Space> <Nop>
+imap <C-Enter> <Nop>
+imap <S-Enter> <Nop>
 
 " Keep used default mappings
 "
