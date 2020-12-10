@@ -56,6 +56,18 @@ imap <S-Enter> <Nop>
 " <C-w> delete word before cursor
 " All the rest of Ctrl + Symbol, since I don't plan on using them
 
+" Custom mappings
+"
+" Go to beginning of next line in insert mode
+imap <C-Enter> <C-o>o
+" Disable command history
+nnoremap q: <Nop>
+" Disable search history
+nnoremap q/ <Nop>
+nnoremap q? <Nop>
+" Disable Ex mode
+nnoremap Q <Nop>
+
 " Go files
 autocmd hector FileType go set noexpandtab
 autocmd hector FileType go set shiftwidth=4
