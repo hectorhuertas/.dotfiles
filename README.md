@@ -6,6 +6,29 @@ There are two projects in one: the management of the dotfiles themselves and the
 
 **NOTE:** This project must be cloned so this README lives at ~/.dotfiles/README.md
 
+
+<!-- vim-markdown-toc GFM -->
+
+* [#1 Dotfiles management](#1-dotfiles-management)
+  * [Goals](#goals)
+  * [Prerequisites](#prerequisites)
+  * [Usage](#usage)
+* [#2 Personal configurations for utilities](#2-personal-configurations-for-utilities)
+  * [Philosophy](#philosophy)
+  * [To Do](#to-do)
+      * [High](#high)
+      * [Medium](#medium)
+      * [Low](#low)
+  * [Known issues](#known-issues)
+  * [Alt-issue](#alt-issue)
+  * [Shortcuts system](#shortcuts-system)
+    * [Shortcut ToDo](#shortcut-todo)
+    * [Shorcuts considerations](#shorcuts-considerations)
+    * [Shortcuts implemented outside of this dotfiles](#shortcuts-implemented-outside-of-this-dotfiles)
+    * [Dotfiles global shortcuts list](#dotfiles-global-shortcuts-list)
+
+<!-- vim-markdown-toc -->
+
 ## #1 Dotfiles management
 
 This project involves the management of the dotfiles and the utilities used to install and keep them in sync.
@@ -49,12 +72,16 @@ This project involves setting up a personal system environment by building aweso
 ### To Do
 ##### High
 * once Neovim 5 is out, use `set signcolumn=number`
+* shorcuts/mappings
+  * better corrections: better backspace?(re-enable C-h?) , kill a word, kill a piece of the word?
 ##### Medium
 * coc
   * terraform!
   * potentially learn about snippet sessions and figure out when those should end (https://github.com/neoclide/coc-snippets/issues/161)
   * wish: find an ultrasnips alternative that doesn't require python and integrates with coc-snippets
   * note: kubernetes schemas are outdated and the source seems abandoned (https://github.com/instrumenta/kubernetes-json-schema/issues/26) (https://github.com/redhat-developer/yaml-language-server/issues/211)
+* snippets
+  * create one for mdl header
 * Improve go coding (some experiments in coc branch)
   * gopls + https://github.com/neoclide/coc.nvim or deoplete
   * autocomplete on tab (go,kubernetes? bash? dockerfile?)
@@ -127,7 +154,14 @@ This project involves setting up a personal system environment by building aweso
 * create an utility to count how many times a function is used (to figure out what I use and don't)
 * check how cfssl does to install several binaries at the same time, and use that to create small go binaries for utilities, to substitute zsh/modules
 * Insert dotfiles shortcuts and utilities into anki (from README and from modules)
-* Once the "alt-issue" is fixed, change "Command+<key> => Fn" bindings for "Command+<key> => Alt+<key>". Issues in bookmarks as "#dotfiles #alacritty #alt-issue"
+
+### Known issues
+Long standing problems that are not actionable now
+
+### Alt-issue
+Alacritty does not process option/alt/meta key properly, thus making it unusable for shortcuts. Issues in bookmarks as "#dotfiles #alacritty #alt-issue"
+
+Once fixed, I should change "Command+<key> => Fn" bindings for "Command+<key> => Alt+<key>"
 
 ### Shortcuts system
 In order to have a productive environment, efficient shortcuts are essential. Here are a few cosiderations about the shortcut system, a list of shortcuts living outside of this dotfiles and the global list of shortcuts.
