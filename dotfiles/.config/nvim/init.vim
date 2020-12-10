@@ -145,6 +145,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'honza/vim-snippets'
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
 colorscheme dracula
 
