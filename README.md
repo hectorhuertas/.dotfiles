@@ -121,12 +121,6 @@ This project involves setting up a personal system environment by building aweso
   * Since there is no silver bullet (yet), I'm keeping a `zsh/modules/diff.sh` with different options
 * Get a command to momentarily highlight cursor. This needs to be done via Alacritty, since tmux or zsh can't do it well (there is a shell function in zsh/modules/unix.sh, but not very useful). Currently there is no way to do it, this will need opening an issue/PR
 * Check all the bookmarks
-* #osx-command-shortcuts-issue
-  * Using OSX `Command` key inside tmux is quite problematic. OSX has a lot of hidden shortcuts that, even when disabled, prevent the key combination to reach applications like Alacritty. To make things worse, tmux only allows `Ctrl` and `Meta` keys as modifier keys. Last but not least, Alacritty currently (0.2.4) does not have a default way of sending `Meta` modifier, requiring the user to set custom keybinding for that
-  * To circumvent these issues, `Command` shortcuts inside tmux are defined as follows:
-    * In karabiner-elements, use a custom complex modification to capture specific `Command + <key>` combinations and forward them as `Alt + <key>` only in Alacritty. This avoids triggering the OSX shortcuts. The complex modification needs to target specific shortcuts to avoid disabling other global shortcuts implemented with `Command`, like Spectacle or Hammerspoon ones
-    * In Alacritty, enable `Alt + <key>` as `Meta + <key>` for those shortcuts. (https://github.com/jwilm/alacritty/issues/62)
-    * In tmux config, use `Meta` as the key modifier for the desired shortcuts
 * consider adding `let g:terraform_align=1` to nvim.init
 * make a list of available commands?? (r/reload_config in .zshrc + everything under `modules`)
 * add running `:%!jq .` on nvim save when file is json (https://stackoverflow.com/questions/26214156/how-to-auto-format-json-on-save-in-vim)
@@ -134,13 +128,12 @@ This project involves setting up a personal system environment by building aweso
 * create an utility to count how many times a function is used (to figure out what I use and don't)
 * check how cfssl does to install several binaries at the same time, and use that to create small go binaries for utilities, to substitute zsh/modules
 * Insert dotfiles shortcuts and utilities into anki (from README and from modules)
+* Once the "alt-issue" is fixed, change "Command+<key> => Fn" bindings for "Command+<key> => Alt+<key>". Issues in bookmarks as "#dotfiles #alacritty #alt-issue"
 
 ### Shortcuts system
 In order to have a productive environment, efficient shortcuts are essential. Here are a few cosiderations about the shortcut system, a list of shortcuts living outside of this dotfiles and the global list of shortcuts.
 
 #### Shortcut ToDo
-* osx has some `Command` options that can't be disabled (like Cmd+H to hide an app). In order to use `Command` for shortcuts, i need to use karabiner-elements to capture `Command` strokes and transform them into another key (Alt/Option) and then set the shorcuts using the (Alt/Option) modifier for now, I'm only using this technique for alacritty, so i use a custom "complex modification" (that btw i think breaks somethign and many times writes `~` when using some unknown commands)
-* alacritty needs to explitily enable any key combinations so need to explicitely add any shortcuts that need to be passed to tmux???
 * should I have default mouse movement and scroll while on chrome/slack/firefox? and then have some weird layer where I can actually input text? maybe besides search function?)
 
 
