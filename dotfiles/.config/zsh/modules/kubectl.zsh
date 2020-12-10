@@ -32,7 +32,14 @@ if command -v kubectl > /dev/null; then
     rg "$@" < /dev/stdin
   }
 
+  function kube_force_delete_pods(){
+    cluster="$1"
+    node="$2"
+    kubectl --context="$cluster" get pod --all-namespaces -owide | rg "$node" | awk '{print "kubectl --context='"$cluster"' -n "$1" delete pod --grace-period=0 --force "$2}'
+  }
+
   alias k='kubectl'
+  alias kbd='kube_force_delete_pods'
   alias rawKube='unsafeKube'
   alias -g A='--all-namespaces'
   alias rgk='kube_rg'
