@@ -33,3 +33,6 @@ shell:
   program: /usr/local/bin/zsh
   args:
     - --login
+
+key_bindings:
+  - { key: Space, mods: Control, chars: "\x00" }

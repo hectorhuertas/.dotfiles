@@ -52,7 +52,6 @@ This project involves setting up a personal system environment by building aweso
 ##### Medium
 * coc
   * terraform!
-  * setup <C-space> for triggering autocompletion? (probably not, <Tab> works great)
   * potentially learn about snippet sessions and figure out when those should end (https://github.com/neoclide/coc-snippets/issues/161)
   * wish: find an ultrasnips alternative that doesn't require python and integrates with coc-snippets
   * note: kubernetes schemas are outdated and the source seems abandoned (https://github.com/instrumenta/kubernetes-json-schema/issues/26) (https://github.com/redhat-developer/yaml-language-server/issues/211)

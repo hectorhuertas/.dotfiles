@@ -39,6 +39,7 @@ imap <C-t> <Nop>
 imap <C-x> <Nop>
 imap <C-y> <Nop>
 " <C-z> is disabled by default
+imap <C-Space> <Nop>
 
 " Keep used default mappings
 "
@@ -111,8 +112,8 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 " Use <C-l> & <C-h> to navigate snippet placeholders
-let g:coc_snippet_next = '<c-l>'
-let g:coc_snippet_prev = '<c-h>'
+let g:coc_snippet_next = '<C-l>'
+let g:coc_snippet_prev = '<C-h>'
 
 " Vim-plug plugin manager setup
 call plug#begin('~/.local/share/nvim/plugged')
