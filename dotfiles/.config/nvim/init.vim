@@ -16,6 +16,40 @@ augroup hector
     autocmd!
 augroup
 
+" Disable unused default mappings
+"
+" default mappings can be checked at `:help index`
+imap <C-a> <Nop>
+" <C-b> doesn't seem to exist
+imap <C-c> <Nop>
+imap <C-d> <Nop>
+imap <C-e> <Nop>
+" <C-f> is disabled by default
+imap <C-g> <Nop>
+imap <C-h> <Nop>
+imap <C-i> <Nop>
+imap <C-j> <Nop>
+imap <C-k> <Nop>
+" <C-l> is disabled by default
+imap <C-n> <Nop>
+imap <C-p> <Nop>
+imap <C-q> <Nop>
+" <C-s> is reserved for terminal control flow
+imap <C-t> <Nop>
+imap <C-x> <Nop>
+imap <C-y> <Nop>
+" <C-z> is disabled by default
+
+" Keep used default mappings
+"
+" <C-m> this is the same as <Enter>/<CR>
+" <C-o> execute a command and return to insert mode
+" <C-r> used for registers operations
+" <C-u> delete all chars before cursor
+" <C-v> literal insert mode(https://unix.stackexchange.com/questions/366869/what-does-ctrlv-do-in-vim)
+" <C-w> delete word before cursor
+" All the rest of Ctrl + Symbol, since I don't plan on using them
+
 " Go files
 autocmd hector FileType go set noexpandtab
 autocmd hector FileType go set shiftwidth=4
