@@ -74,6 +74,9 @@ This project involves setting up a personal system environment by building aweso
 * once Neovim 5 is out, use `set signcolumn=number`
 * shorcuts/mappings
   * better corrections: better backspace?(re-enable C-h?) , kill a word, kill a piece of the word?
+* profiling startup times
+  * #dotfiles #zplug #startup
+  * https://github.com/neoclide/coc.nvim/wiki/F.A.Q#how-could-i-profile-vim
 ##### Medium
 * coc
   * terraform!
@@ -82,6 +85,7 @@ This project involves setting up a personal system environment by building aweso
   * note: kubernetes schemas are outdated and the source seems abandoned (https://github.com/instrumenta/kubernetes-json-schema/issues/26) (https://github.com/redhat-developer/yaml-language-server/issues/211)
 * snippets
   * create one for mdl header
+* extend color_theme to also change tmux and nvim color schemes (https://shuheikagawa.com/blog/2020/02/14/switching-colorschemes-of-vim-and-alacritty/)
 * Improve go coding (some experiments in coc branch)
   * gopls + https://github.com/neoclide/coc.nvim or deoplete
   * autocomplete on tab (go,kubernetes? bash? dockerfile?)
@@ -104,6 +108,7 @@ This project involves setting up a personal system environment by building aweso
 * UI improvements
   * Consider paid fonts
   * Setup useful widgets for shell prompt and tmux bar. Inspiration: powerlevel9k, spaceshipt-prompt, gbt...
+  * tmux plugins...
   * Add context-aware color highlighting. Change tmux/alacritty colors based on folder, env vars, git branch... Useful to detect production environments, pushing to master...
 * Have an utility to list all `unsafe` things on my user: uncommited changes and non-master branches in $HOME and xdev repos
 * fzf git explorer: bottom of https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html and https://github.com/junegunn/fzf/wiki/examples
