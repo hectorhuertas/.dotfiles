@@ -75,12 +75,11 @@ rm -rf ~/.config/zsh
 ln -s ~/.dotfiles/dotfiles/.config/zsh ~/.config/zsh
 echo "... zsh"
 
-echo "Setting up node..."
+echo "Setting up node and packages..."
+
 n_prefix="$HOME/.local/share/n"
 mkdir -p "${n_prefix}" && N_PREFIX="${n_prefix}" n lts
-echo "... installed"
-
-echo "Setting up node packages..."
+echo "... n manager and LTS node version"
 
 npm install --global alex
 echo "... alex"
