@@ -107,6 +107,10 @@ sleep 2
 nvim -c "PlugUpdate" -c quit -c quit
 echo "... installed!"
 
+echo "Setting up pynvim..." # To allow nvim plugins access to python
+pip3 install pynvim
+echo "... installed!"
+
 echo "Setting up vale styles..."
 styles_home="$HOME/.local/share/vale/styles"
 rm -rf "${styles_home}" && mkdir -p "${styles_home}"

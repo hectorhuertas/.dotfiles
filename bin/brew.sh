@@ -50,6 +50,7 @@ brew install nmap
 brew install ntfs-3g
 brew install oath-toolkit
 brew install pwgen
+brew install python
 brew install rclone
 brew install ripgrep
 brew install sd
