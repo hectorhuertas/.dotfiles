@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+~/.local/share/vim-profiler/vim-profiler.py nvim

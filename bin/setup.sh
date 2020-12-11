@@ -128,4 +128,8 @@ get_style proselint
 get_style write-good
 echo "... installed!"
 
+echo "Setting vim-profiler"
+git clone https://github.com/bchretien/vim-profiler.git "$HOME/.local/share/vim-profiler"
+echo "... installed!"
+
 echo "DONE!!"
