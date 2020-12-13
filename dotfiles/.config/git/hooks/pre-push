@@ -1,22 +1,20 @@
 #!/bin/sh
 
-remote="$1"
 url="$2"
 
 contains() {
-    string="$1"
-    substring="$2"
-    if test "${string#*$substring}" != "$string"
-    then
-        return 0    # $substring is in $string
-    else
-        return 1    # $substring is not in $string
-    fi
+  string="$1"
+  substring="$2"
+  if test "${string#*$substring}" != "$string"; then
+    return 0 # $substring is in $string
+  else
+    return 1 # $substring is not in $string
+  fi
 }
 
 branch=$(git symbolic-ref --short HEAD)
 [ "$branch" != "master" ] && exit 0
-if contains $url "terraform" || contains $url "kubernetes-manifests" ; then
+if contains "$url" "terraform" || contains "$url" "kubernetes-manifests"; then
   echo "\033[0;31mERROR: Pushing to master in a protected repo!\033[0m"
   echo "Add the '--no-verify' option to skip this check"
   exit 1
