@@ -1,8 +1,6 @@
 #!/bin/zsh
 
 if command -v kubectl > /dev/null; then
-  source <(command kubectl completion zsh)
-
   function is_dangerous_apply() {
     args="$@"
     [[ "$args" != *' apply '* ]] && return 1
@@ -17,6 +15,13 @@ if command -v kubectl > /dev/null; then
   }
 
   function kubectl() {
+    # I'm lazy loading autocompletion because sourcing it at shell startup takes 1s
+    #
+    # If autocompletion function is not found, load kubectl autocompletion
+    if ! type __start_kubectl >/dev/null 2>&1; then
+        source <(command kubectl completion zsh)
+    fi
+
     if is_dangerous_apply "$@"; then
       echo "\033[0;31mERROR: Applying to prod from a dev environment!\033[0m"
       echo "Use 'unsafeKube' instead of 'kubectl' to skip this check"
