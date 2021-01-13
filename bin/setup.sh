@@ -95,6 +95,12 @@ echo "Setting up go tools..."
 GO111MODULE=on go get mvdan.cc/sh/v3/cmd/shfmt
 echo "... shfmt"
 
+echo "Setting up zinit for zsh plugins..."
+zinit_home="$HOME/.local/share/zinit"
+rm -rf "${zinit_home}" && mkdir -p "${zinit_home}"
+git clone https://github.com/zdharma/zinit.git "${zinit_home}/bin"
+echo "... installed!"
+
 echo "Setting up vim-plug for (n)vim package management..."
 plug_home="$HOME/.local/share/nvim/site/autoload"
 rm -rf "${plug_home}/plug.vim" && mkdir -p "${plug_home}"

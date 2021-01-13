@@ -1,0 +1,17 @@
+# Notes about how to load plugins:
+# * `light` is `load` without profiling, use always
+# * `wait` is for parallel loading. hard to get right. not needed for now
+
+# Load zinit
+declare -A ZINIT # initialize ZINIT config array
+ZINIT[HOME_DIR]=~/.local/share/zinit
+source ~/.local/share/zinit/bin/zinit.zsh
+
+# theme
+zinit ice compile"(pure|async).zsh" pick"async.zsh" src"pure.zsh"
+zinit light sindresorhus/pure
+
+# plugins
+zinit light zsh-users/zsh-autosuggestions
+zinit light zdharma/fast-syntax-highlighting # syntax must load second to last
+zinit light zsh-users/zsh-history-substring-search # search must load last
