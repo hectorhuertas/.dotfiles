@@ -254,7 +254,7 @@ After trying tmux-resurrect & tmux-continuum, I'm not happy with them, and I've 
   * denysdovhan/spaceship-prompt: pure feels snappier with async git
 
 ### nvim plugins
-* vale linter: it's such a pain, fires way too much and needs too much setup
+* markdown linters(vale+alex): it's such a pain, fires way too much and needs too much setup.
 
 ## Shortcuts
 * Avoid uncomfortable shortcuts using the option/alt key or the Ctrl+Shift combination

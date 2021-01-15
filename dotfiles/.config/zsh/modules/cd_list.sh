@@ -12,5 +12,3 @@ function z_list {
   _z $1 2>&1 && list
 }
 alias z=z_list
-
-

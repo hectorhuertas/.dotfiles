@@ -77,9 +77,6 @@ n_prefix="$HOME/.local/share/n"
 mkdir -p "${n_prefix}" && N_PREFIX="${n_prefix}" n lts
 echo "... n manager and LTS node version"
 
-npm install --global alex
-echo "... alex"
-
 npm install --global jsonlint
 echo "... jsonlint"
 
