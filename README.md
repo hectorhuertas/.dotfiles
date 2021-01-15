@@ -19,6 +19,8 @@ There are two projects in one: the management of the dotfiles themselves and the
     * [Better navigation/shortcuts](#better-navigationshortcuts)
     * [Better development](#better-development)
     * [Better UI](#better-ui)
+      * [Prompt info](#prompt-info)
+      * [Nvim info](#nvim-info)
       * [Tmux info](#tmux-info)
       * [Tmux navigation](#tmux-navigation)
     * [Better performance](#better-performance)
@@ -34,7 +36,8 @@ There are two projects in one: the management of the dotfiles themselves and the
     * [ZSH performance](#zsh-performance)
       * [kubectl completion](#kubectl-completion)
   * [Discarded](#discarded)
-    * [Persistent tmux sessions](#persistent-tmux-sessions)
+    * [Tmux: persistent sessions](#tmux-persistent-sessions)
+    * [Tmux info display](#tmux-info-display)
     * [zsh plugins](#zsh-plugins)
     * [nvim plugins](#nvim-plugins)
   * [Shortcuts](#shortcuts)
@@ -103,6 +106,9 @@ This project involves setting up a personal system environment by building aweso
   * consider zdharma/history-search-multi-word
 * Enable tmux working mouse mode: find out why selecting with double click or with drag selection acts weird/doesnt work with mouse mode on
 * should I have default mouse movement and scroll while on chrome/slack/firefox? and then have some weird layer where I can actually input text? maybe besides search function?)
+* combine vim/tmux navigation by using the same shorctus
+  * https://github.com/christoomey/vim-tmux-navigator
+  * https://gist.github.com/mislav/5189704
 * Review shorcuts in general, but specially in zsh prompt
   * Shortcut(OS: macOS): Mouse-locator: Ctrl-Space???
   * Shortcut(OS: macOS): Mouse movement: Karabiner (Enable with something like `right_.`)
@@ -145,22 +151,20 @@ This project involves setting up a personal system environment by building aweso
   * Consider paid fonts
   * context-aware coloring (change colors based on kube env, git branch, dev/prod folder...)
 * reconsider `zinit light denysdovhan/spaceship-prompt`
-* figure out how to run background scripts to figure out the info I want to show async in prompt and/or tmux
+* load info on the prompt async from background jobs
+* Visually show if I'm on a "prod" folder. Can't use pane background or tmux bar, so I need to figure out a good cue on the prompt (probably some red color while in a prod dir)
+
+#### Prompt info
+* git info?
+
+#### Nvim info
+* file name
+* mode
+* git info?
 
 #### Tmux info
 https://github.com/gpakosz/.tmux
-* Is prefix enabled? (https://github.com/tmux-plugins/tmux-prefix-highlight)
-* Battery level (https://github.com/tmux-plugins/tmux-battery)
-* cpu? memory? (https://github.com/tmux-plugins/tmux-cpu) loadavg?
-* under ssh? different color, show username, show hostname?
-* session name??
-* mail counter??future todo?
-* network bandwith? (https://github.com/xamut/tmux-network-bandwidth)
-* git?? should this live be in prompt??(https://github.com/kristijanhusak/tmux-simple-git-status)
-* which window is active?
-* date???
-* is the command prompt enabled?
-* coloring based on being ssh or not, being prod or not...
+* which pane is active? (faded color in inactive panes)
 
 #### Tmux navigation
 https://github.com/gpakosz/.tmux
@@ -230,8 +234,15 @@ Learning zsh completion and debugging and fixing the issue is not worth it vs la
 
 ## Discarded
 
-### Persistent tmux sessions
+### Tmux: persistent sessions
 After trying tmux-resurrect & tmux-continuum, I'm not happy with them, and I've realized that I do not need the feature. Instead, I should rely on scripts to open predefined tmux setups/sessions.
+
+### Tmux info display
+* Change zoomed display `Z` for `🔍`: `Z` is enough, and changes to `window-status-format` really slow down tmux since they are called once by window
+* cpu, loadavg, memory, networking: complex to implement and not that useful, since I got those on the OS bar.
+* session name: I don't use sessions for now
+* git: too heavy for the tmux bar. this should live at an async prompt
+* red color for "prod" panes. Not possible, can't color a specific pane, just the "active" one. And to dinamically re-style the active pane I'd need a way for a command to be run on each pane selection, and there's none. Also, running re-style commands on each status bar update produces a very noticeable blip on the screen & cursor
 
 ### zsh plugins
 * Syntax highlighting:

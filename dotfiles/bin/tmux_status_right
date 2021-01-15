@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+pane_id="$1"
+output=""
+
+# Style defaults
+style_date="#[fg=colour136,none,bg=colour235]"
+style_ssh_host="#[fg=green,bold,dim,bg=colour235]"
+style_low_battery="#[fg=red,bold,dim,bg=colour235]"
+
+# Date
+date="$(date +'%a %d-%b %H:%M:%S')"
+output="${output}${style_date}${date}"
+
+# SSH host
+ssh_host_with_varname=$(tmux show-environment -g "TMUX_${pane_id}_ssh_host")
+if [[ ${ssh_host_with_varname} != "" ]]; then
+  ssh_host=${ssh_host_with_varname#*=}
+  ssh_host_output="${style_ssh_host}${ssh_host}"
+  output="${ssh_host_output} ${output}"
+fi
+
+# Low battery warning
+battery_charge=$(battery_charge)
+low_battery_output="${style_low_battery}LOW BATTERY ${battery_charge}%"
+# 100% will show up as 00, so adding "battery_charge > 0" to avoid firing at 100%
+if ((battery_charge <= 15 && battery_charge > 0)); then
+  output="${low_battery_output} ${output}"
+fi
+
+# Output
+echo "${output}"

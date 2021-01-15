@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Show battery charge as two digits, 00 meaning 100
+pmset -g batt | rg --only-matching '[0-9][0-9]%' | cut -c '1-2'

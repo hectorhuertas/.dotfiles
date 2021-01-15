@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+pane_path="$1"
+prefix_on="$2"
+output=""
+
+# Style defaults
+style_repo_name="#[fg=colour136,bold,italics,blink,bg=colour235]"
+style_repo_subpath="#[fg=colour136,none,bg=colour235]"
+style_prefix_on="#[fg=green,bold,dim,bg=colour235]"
+style_low_battery="#[fg=red,bold,dim,bg=colour235]"
+
+# Repo & path
+repo_path=$(git -C "${pane_path}" rev-parse --show-toplevel)
+repo_name=$(basename "${repo_path}")
+local_path="${pane_path#${repo_path}}" # substract the repo_path to the pane_path
+output="${style_repo_name}${repo_name}${style_repo_subpath}${local_path}"
+
+# Prefix on
+prefix_output="${style_prefix_on}PREFIX ON"
+if [[ "${prefix_on}" == "1" ]]; then
+  output="${output} ${prefix_output}"
+fi
+
+# Low battery warning
+battery_charge=$(battery_charge)
+low_battery_output="${style_low_battery}LOW BATTERY ${battery_charge}%"
+# 100% will show up as 00, so adding "battery_charge > 0" to avoid firing at 100%
+if ((battery_charge <= 15 && battery_charge > 0)); then
+  output="${output} ${low_battery_output}"
+fi
+
+# Output
+echo "${output}"
