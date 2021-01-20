@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+theme="$1"
+
+# Exit if theme is already set
+current_theme="tmux show-options -v @theme_current"
+if [[ "${current_theme}" == "${theme}" ]]; then
+  exit
+fi
+
+# Source the color theme
+source "${HOME}/.config/tmux/colors/${theme}.sh"
+# Themes must define the following vars:
+: "${theme_color_main:?}"
+: "${theme_color_text:?}"
+: "${theme_color_text_inactive:?}"
+: "${theme_color_background:?}"
+: "${theme_color_background_inactive:?}"
+
+# Set color of the status bar
+tmux set-option -g status-style "bg=${theme_color_background_inactive}"
+
+# Set color of messages of the status bar
+tmux set-option -g message-style "fg=${theme_color_main},bg=${theme_color_background_inactive}"
+
+# Set color of the center part of the status bar (the window list)
+tmux set-window-option -g window-status-current-style "fg=${theme_color_main},bold"
+tmux set-window-option -g window-status-style "fg=${theme_color_text}"
+
+# Set color of the panes/windows
+tmux set-window-option -g window-active-style "fg=${theme_color_text},bg=${theme_color_background}"
+tmux set-window-option -g window-style "fg=${theme_color_text_inactive},bg=${theme_color_background_inactive}"
+
+# Set color of pane borders
+tmux set-window-option -g pane-active-border-style "fg=${theme_color_main},bg=${theme_color_background_inactive}"
+tmux set-window-option -g pane-border-style "fg=${theme_color_text_inactive},bg=${theme_color_background_inactive}"
+
+# Set tmux globals
+tmux set-option @theme_color_main "${theme_color_main}"
+tmux set-option @theme_current "${theme}"

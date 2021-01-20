@@ -5,10 +5,12 @@ prefix_on="$2"
 output=""
 
 # Style defaults
-style_repo_name="#[fg=colour136,bold,italics,blink,bg=colour235]"
-style_repo_subpath="#[fg=colour136,none,bg=colour235]"
-style_prefix_on="#[fg=green,bold,dim,bg=colour235]"
-style_low_battery="#[fg=red,bold,dim,bg=colour235]"
+color_main=$(tmux show-options -v @theme_color_main)
+
+style_repo_name="#[fg=${color_main},bold,italics]"
+style_repo_subpath="#[fg=${color_main},none]"
+style_prefix_on="#[fg=green,bold,dim]"
+style_low_battery="#[fg=red,bold,dim]"
 
 # Repo & path
 repo_path=$(git -C "${pane_path}" rev-parse --show-toplevel)

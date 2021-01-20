@@ -1,0 +1,5 @@
+theme_color_main="colour136"
+theme_color_text="colour255"
+theme_color_text_inactive="colour244"
+theme_color_background="colour233"
+theme_color_background_inactive="colour235"

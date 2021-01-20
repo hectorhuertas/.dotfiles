@@ -4,9 +4,11 @@ pane_id="$1"
 output=""
 
 # Style defaults
-style_date="#[fg=colour136,none,bg=colour235]"
-style_ssh_host="#[fg=green,bold,dim,bg=colour235]"
-style_low_battery="#[fg=red,bold,dim,bg=colour235]"
+color_main=$(tmux show-options -v @theme_color_main)
+
+style_date="#[fg=${color_main},none]"
+style_ssh_host="#[fg=green,bold,dim]"
+style_low_battery="#[fg=red,bold,dim]"
 
 # Date
 date="$(date +'%a %d-%b %H:%M:%S')"

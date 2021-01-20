@@ -19,9 +19,9 @@ There are two projects in one: the management of the dotfiles themselves and the
     * [Better navigation/shortcuts](#better-navigationshortcuts)
     * [Better development](#better-development)
     * [Better UI](#better-ui)
+      * [Color themes](#color-themes)
       * [Prompt info](#prompt-info)
       * [Nvim info](#nvim-info)
-      * [Tmux info](#tmux-info)
       * [Tmux navigation](#tmux-navigation)
     * [Better performance](#better-performance)
     * [SSH QoL](#ssh-qol)
@@ -145,6 +145,7 @@ This project involves setting up a personal system environment by building aweso
 * inspiration: powerlevel10k, spaceshipt-prompt, gbt...)
 * what information to display? (tmux,system bar, nvim bar, zsh...)
   * Create tmux widget to show if my ssh tunnels are up
+  * https://github.com/gpakosz/.tmux (check features)
 * how/where to display it? (colors, arrangement...)
   * extend color_theme to also change tmux and nvim color schemes (https://shuheikagawa.com/blog/2020/02/14/switching-colorschemes-of-vim-and-alacritty/)
   * syntax highlighting: custom rules? semantic rules?
@@ -154,6 +155,15 @@ This project involves setting up a personal system environment by building aweso
 * load info on the prompt async from background jobs
 * Visually show if I'm on a "prod" folder. Can't use pane background or tmux bar, so I need to figure out a good cue on the prompt (probably some red color while in a prod dir)
 
+#### Color themes
+* Need to sync alacritty, tmux, and nvim to the same theme. zsh styling should come from alacritty theme but some tweaks may be needed, like specific colors in prompt or in the plugins.
+* Want to use base16 as template for all the themes, and some script to apply those colors everywhere needed
+* Notable themes
+  * solarized
+  * gruvbox
+  * nord
+  * dracula
+
 #### Prompt info
 * git info?
 
@@ -161,10 +171,6 @@ This project involves setting up a personal system environment by building aweso
 * file name
 * mode
 * git info?
-
-#### Tmux info
-https://github.com/gpakosz/.tmux
-* which pane is active? (faded color in inactive panes)
 
 #### Tmux navigation
 https://github.com/gpakosz/.tmux

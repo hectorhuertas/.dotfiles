@@ -48,6 +48,14 @@ alias r='reload_config'
 ## Add my own binaries to the path
 PATH="$HOME/.dotfiles/dotfiles/bin:$PATH"
 
+## Set tmux theme if not set
+if [[ "${TMUX}" != "" ]]; then
+  current_theme="$(tmux show-options -v @theme_current)"
+  if [[ "${current_theme}" == "" ]]; then
+    tmux_set_theme "dracula"
+  fi
+fi
+
 ## Load custom modules and Zplugins
 # Load all custom modules
 for module in $ZDOTDIR/modules/*; do
