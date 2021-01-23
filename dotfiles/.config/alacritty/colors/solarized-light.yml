@@ -1,0 +1,26 @@
+# https://github.com/alacritty/alacritty/wiki/Color-schemes#solarized
+
+colors:
+  primary:
+    background: '#fdf6e3' # base3
+    foreground: '#657b83' # base00
+
+  normal:
+    black:   '#073642' # base02
+    red:     '#dc322f' # red
+    green:   '#859900' # green
+    yellow:  '#b58900' # yellow
+    blue:    '#268bd2' # blue
+    magenta: '#d33682' # magenta
+    cyan:    '#2aa198' # cyan
+    white:   '#eee8d5' # base2
+
+  bright:
+    black:   '#93a1a1' # zsh-autosuggestions (base1)
+    red:     '#dc322f' # red
+    green:   '#859900' # green
+    yellow:  '#b58900' # yellow
+    blue:    '#268bd2' # blue
+    magenta: '#d33682' # magenta
+    cyan:    '#2aa198' # cyan
+    white:   '#0000ff' # pure blue placeholder, to detect usage

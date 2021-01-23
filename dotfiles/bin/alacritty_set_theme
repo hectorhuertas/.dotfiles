@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Usage: `alacritty_set_theme <name_of_theme>`
+
+# Input parsing
+theme="$1"
+
+# Defaults
+alacritty_themes_dir="${HOME}/.dotfiles/dotfiles/.config/alacritty/colors"
+alacritty_themes_current="${HOME}/.dotfiles/dotfiles/.config/alacritty/colors/current.yml"
+alacritty_config="${HOME}/.dotfiles/dotfiles/.config/alacritty/alacritty.yml"
+
+# Set the theme
+cp "${alacritty_themes_dir}/${theme}.yml" "${alacritty_themes_current}"
+touch "${alacritty_config}" # to trigger alacritty to re-evaluate the config

@@ -156,13 +156,26 @@ This project involves setting up a personal system environment by building aweso
 * Visually show if I'm on a "prod" folder. Can't use pane background or tmux bar, so I need to figure out a good cue on the prompt (probably some red color while in a prod dir)
 
 #### Color themes
-* Need to sync alacritty, tmux, and nvim to the same theme. zsh styling should come from alacritty theme but some tweaks may be needed, like specific colors in prompt or in the plugins.
-* Want to use base16 as template for all the themes, and some script to apply those colors everywhere needed
+* Need to sync everything to the same theme, via a script that changes colors for everything at once
+* Probably want to use base16 as template for all the themes, and some script to apply those colors everywhere needed
+* For styles that come from env variables, use 0-15 indexed colors, so they change automatically with the alacritty theme (because I can't update all shell variables from a script)
+* Things to style
+  * alacritty theme
+  * shell
+    * pure-promt: uses colors from alacritty
+    * autosuggestions color: env var (https://github.com/zsh-users/zsh-autosuggestions#suggestion-highlight-style)
+    * zdharma/fast-syntax-highlighting: custom config and commands (https://github.com/zdharma/fast-syntax-highlighting/blob/master/THEME_GUIDE.md)
+    * zsh-users/zsh-history-substring-search: 2 env vars (https://github.com/zsh-users/zsh-history-substring-search#configuration)
+  * tmux theme
+  * nvim theme
+  * delta (diffing)
+  * cmus
 * Notable themes
   * solarized
   * gruvbox
   * nord
   * dracula
+  * tokio night
 
 #### Prompt info
 * git info?
