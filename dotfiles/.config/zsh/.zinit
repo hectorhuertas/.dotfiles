@@ -15,3 +15,7 @@ zinit light sindresorhus/pure
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting # syntax must load second to last
 zinit light zsh-users/zsh-history-substring-search # search must load last
+
+# plugin options
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="standout" # standout in zshzle means inverted cell colors
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="fg=red,standout"
