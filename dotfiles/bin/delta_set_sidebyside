@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# Usage: `delta_set_sidebyside <true|false>`
+# If no argument is passed, swap current value
+
+# Input parsing
+sidebyside="$1"
+
+# Defaults
+config_path="${HOME}/.config/git/delta/side-by-side"
+
+# If no argument is passed, swap the current value
+if [[ "${sidebyside}" == "" ]]; then
+  sidebyside_current=$(cat ${config_path} | rg --only-matching 'true|false')
+  if [[ "${sidebyside_current}" == "true" ]]; then
+    sidebyside="false"
+  else
+    sidebyside="true"
+  fi
+fi
+
+# Set the theme
+cat <<EOF >"${config_path}"
+[delta]
+	side-by-side = ${sidebyside}
+EOF
