@@ -52,7 +52,7 @@ PATH="$HOME/.dotfiles/dotfiles/bin:$PATH"
 if [[ "${TMUX}" != "" ]]; then
   current_theme="$(tmux show-options -v @theme_current)"
   if [[ "${current_theme}" == "" ]]; then
-    tmux_set_theme "dracula"
+    tmux_set_theme "solarized-dark"
   fi
 fi
 
