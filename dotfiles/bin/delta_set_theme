@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Usage: `delta_set_theme <name_of_theme>`
+
+# Input parsing
+theme="$1"
+
+# Translate theme name to the delta version
+if [[ "${theme}" == "solarized-dark" ]]; then
+  theme="Solarized (dark)"
+fi
+if [[ "${theme}" == "solarized-light" ]]; then
+  theme="Solarized (light)"
+fi
+
+# Set the theme
+cat <<EOF >"${HOME}/.config/git/delta/theme"
+[delta]
+  syntax-theme = "${theme}"
+EOF

@@ -7,3 +7,4 @@ theme="$1"
 
 alacritty_set_theme ${theme}
 tmux_set_theme ${theme}
+delta_set_theme ${theme}

@@ -13,9 +13,6 @@
 [interactive]
 	diffFilter = delta --color-only
 
-[delta]
-	side-by-side = true
-
 # Strongbox integration for UW
 [diff "strongbox"]
 	textconv = strongbox -diff
@@ -24,3 +21,8 @@
 	clean = strongbox -clean %f
 	smudge = strongbox -smudge %f
 	required = true
+
+# Externalized configuration to easily change programatically
+[include]
+  path = ./delta/theme
+  path = ./delta/side-by-side
