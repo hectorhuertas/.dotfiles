@@ -36,7 +36,7 @@ echo "... karabiner"
 
 rm -rf ~/.config/alacritty
 ln -s ~/.dotfiles/dotfiles/.config/alacritty ~/.config/alacritty
-touch ~/.config/alacritty/colors/current.yml # Create empty color theme
+cp ~/.config/alacritty/colors/solarized-dark.yml ~/.config/alacritty/colors/current.yml # default theme
 echo "... alacritty"
 
 rm -rf ~/.config/git
@@ -49,6 +49,7 @@ echo "... hammerspoon"
 
 rm -rf ~/.config/nvim
 ln -s ~/.dotfiles/dotfiles/.config/nvim ~/.config/nvim
+echo "colorscheme flattened_dark" >"${HOME}/.config/nvim/current-theme.vim" # default theme
 echo "... nvim"
 
 rm -rf ~/.config/ripgrep
@@ -105,9 +106,12 @@ sleep 2
 nvim -c "PlugUpdate" -c quit -c quit
 echo "... installed!"
 
-echo "Setting up pynvim..." # To allow nvim plugins access to python
+echo "Installing python modules"
 pip3 install pynvim
-echo "... installed!"
+echo "...pynvim" # To allow nvim plugins access to python
+
+pip3 install neovim-remote
+echo "... nvr" # To control neovim servers from the command line
 
 echo "Setting vim-profiler"
 git clone https://github.com/bchretien/vim-profiler.git "$HOME/.local/share/vim-profiler"

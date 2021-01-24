@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Usage: `nvim_set_theme <name_of_theme>`
+
+# Input parsing
+theme="$1"
+
+# Swap solarized for flattened, the neovim compatible version
+if [[ "${theme}" == "solarized-dark" ]]; then
+  theme="flattened_dark"
+fi
+if [[ "${theme}" == "solarized-light" ]]; then
+  theme="flattened_light"
+fi
+
+# Set theme for existing instances of neovim
+nvr --serverlist | xargs -I '{}' -- nvr --servername '{}' --remote-send ":colorscheme ${theme} <Enter>"
+
+# Set theme for new instances of neovim
+echo "colorscheme ${theme}" >"${HOME}/.config/nvim/current-theme.vim"

@@ -74,6 +74,9 @@ autocmd hector FileType go set shiftwidth=4
 autocmd hector FileType go set softtabstop=4
 autocmd hector FileType go set tabstop=4
 
+" Transparent backgrounds so tmux "inactive panes" are noticeable
+autocmd hector ColorScheme * hi Normal ctermbg=None guibg=None
+
 " Vim-Go settings
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_extra_types = 1
@@ -95,18 +98,20 @@ let g:ale_lint_delay = 1000
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '.'
 let g:ale_linters = {
+\   'markdown': [],
 \   'json': ['jsonlint'],
-\   'terraform': [''],
+\   'terraform': [],
 \   'sh': ['shellcheck'],
 \   'vim': ['vint','ale_custom_linting_rules'],
 \   'yaml': ['yamllint'],
 \}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'markdown': [],
 \   'json': ['prettier'],
 \   'terraform': ['terraform'],
 \   'sh': ['shfmt'],
-\   'vim': [''],
+\   'vim': [],
 \   'yaml': ['prettier'],
 \}
 
@@ -139,6 +144,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'hashivim/vim-terraform'
   Plug 'mzlogin/vim-markdown-toc'
   Plug 'dracula/vim', { 'as': 'dracula' }
+  Plug 'romainl/flattened'
   Plug 'tpope/vim-commentary' "alternative: 'preservim/nerdcommenter'
   Plug 'dense-analysis/ale'
   Plug 'vim-airline/vim-airline'
@@ -147,7 +153,6 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'honza/vim-snippets'
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
-colorscheme dracula
 
 " Parse comments in jsonc files
 autocmd hector FileType json syntax match Comment +\/\/.\+$+
@@ -166,6 +171,9 @@ set signcolumn=yes:1
 set clipboard^=unnamed
 " Remap x to yank to the _ register instead of the default one
 noremap x "_x
+
+"Set the theme
+runtime current-theme.vim
 
 " Use italic for comments
 "
