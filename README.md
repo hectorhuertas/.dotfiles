@@ -93,6 +93,8 @@ This project involves setting up a personal system environment by building aweso
 
 ## To Do
 
+* create an nvim shortcut for saving and quitting? I've realised that `:` is pretty annoying when quickly opening/closing files for inspection
+
 ### Features & utils
 * Create a good setup with `oathtool`. Check my lastapss for sumologic
 

@@ -17,10 +17,12 @@
 .terraform.d/
 .Trash/
 .wget-hsts
+_deleteme/
 Applications/
 Dropbox/
 Library/
 Music/
+pCloud Drive/
 xdev/
 
 # Ignored configs

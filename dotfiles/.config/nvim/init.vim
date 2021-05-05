@@ -99,6 +99,7 @@ let g:ale_sign_error = '●'
 let g:ale_sign_warning = '.'
 let g:ale_linters = {
 \   'markdown': [],
+\   'javascript': ['eslint'],
 \   'json': ['jsonlint'],
 \   'terraform': [],
 \   'sh': ['shellcheck'],
@@ -108,6 +109,7 @@ let g:ale_linters = {
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'markdown': [],
+\   'javascript': ['eslint'],
 \   'json': ['prettier'],
 \   'terraform': ['terraform'],
 \   'sh': ['shfmt'],
@@ -121,8 +123,14 @@ let g:netrw_home='~/.cache/vim'
 " CoC settings
 set hidden "recommended by CoC
 let g:coc_global_extensions = [
+\   'coc-emmet',
+\   'coc-eslint',
+\   'coc-highlight',
 \   'coc-json',
+\   'coc-pairs',
+\   'coc-prettier',
 \   'coc-snippets',
+\   'coc-tsserver',
 \   'coc-yaml',
 \]
 
@@ -152,6 +160,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'honza/vim-snippets'
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+  Plug 'mattn/emmet-vim'
 call plug#end()
 
 " Parse comments in jsonc files
