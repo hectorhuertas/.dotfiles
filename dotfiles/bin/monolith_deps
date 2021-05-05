@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Usage: `monolith_deps <url>`
+
+# Inputs
+url="$1"
+
+monolith --isolate --no-metadata --no-video --no-audio --no-frames -o mono-1-basic.html "${url}"
+monolith --isolate --no-metadata --no-video --no-audio --no-frames --no-fonts -o mono-2-no-fonts.html "${url}"
+monolith --isolate --no-metadata --no-video --no-audio --no-frames --no-fonts --no-js -o mono-3-no-js.html "${url}"
+monolith --isolate --no-metadata --no-video --no-audio --no-frames --no-fonts --no-js --no-images -o mono-4-no-images.html "${url}"
+monolith --isolate --no-metadata --no-video --no-audio --no-frames --no-fonts --no-js --no-images --no-css -o mono-5-no-css.html "${url}"
