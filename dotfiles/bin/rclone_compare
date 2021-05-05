@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Usage: `rclone_compare <src> <dst> [dir]`
+# Ommiting [dir] would compare all dirs within <src>
+# Example: `rclone_compare ~/dir\ with\ spaces "other dir with spaces" dirname`
+
+# Inputs
+src="$1"
+dst="$2"
+dir="$3"
+
+if [[ "${dir}" == "" ]]; then
+  IFS=$'\n' # split only on newline, instead of on all whitespace
+  for dir in $(fd --type directory --max-depth 1 --base-directory "${src}"); do
+    echo ""
+    echo "====== ${dir} ======"
+    rclone check --combined "rclone-diff-${dir}.md" "${src}/${dir}/" "${dst}/${dir}"
+  done
+else
+  rclone check --combined "deleteme.md" "${src}/${dir}/" "${dst}/${dir}"
+fi
