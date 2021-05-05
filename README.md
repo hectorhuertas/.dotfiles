@@ -73,7 +73,8 @@ This project involves the management of the dotfiles and the utilities used to i
 ## Usage
 * Installing or updating configs:
   * Run `bin/brew.sh` to install basic utilities in macOs
-  * Run `bin/setup.sh` to install personal configurations. Ideally this should be OS agnostic (not currently)
+  * Run `bin/setup.sh` to install personal configurations. This will error halfway on the first run, since PATH won't be set yet. Ideally this should be OS agnostic (not currently)
+  * Open Alacritty and run `bin/setup.sh` to install the rest of the personal configurations
   * Run `bin/cron.sh` to setup cron jobs
 * Making changes to existing configs:
   * Modify the desired file under ~/.dotfiles/dotfiles
