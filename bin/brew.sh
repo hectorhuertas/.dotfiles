@@ -70,36 +70,36 @@ brew install zsh
 
 brew tap caskroom/cask
 
-brew cask install alacritty
+brew install --cask alacritty
 tic -xe alacritty,alacritty-direct ~/.config/alacritty/alacritty.info # install alacritty terminfo
-#brew cask install battle-net
-brew cask install dash
-brew cask install docker
-brew cask install dropbox
-brew cask install firefox
-brew cask install flux
-#brew cask install gog-galaxy
-#brew cask install google-chrome
-#brew cask install google-cloud-sdk
-brew cask install hammerspoon
+#brew install --cask battle-net
+brew install --cask dash
+brew install --cask docker
+brew install --cask dropbox
+brew install --cask firefox
+brew install --cask flux
+#brew install --cask gog-galaxy
+#brew install --cask google-chrome
+#brew install --cask google-cloud-sdk
+brew install --cask hammerspoon
 defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
-#brew cask install intel-power-gadget
-brew cask install karabiner-elements
-brew cask install keepingyouawake
-#brew cask install keybase
-brew cask install macs-fan-control
-#brew cask install qbittorrent
-brew cask install skype
-brew cask install slack
-brew cask install spectacle
-#brew cask install steam
-#brew cask install tomighty
-brew cask install vlc
-brew cask install yujitach-menumeters
+#brew install --cask intel-power-gadget
+brew install --cask karabiner-elements
+brew install --cask keepingyouawake
+#brew install --cask keybase
+brew install --cask macs-fan-control
+#brew install --cask qbittorrent
+brew install --cask skype
+brew install --cask slack
+brew install --cask spectacle
+#brew install --cask steam
+#brew install --cask tomighty
+brew install --cask vlc
+brew install --cask yujitach-menumeters
 
 brew tap caskroom/fonts
 
-brew cask install font-hack
-brew cask install font-monoid
+brew install --cask font-hack
+brew install --cask font-monoid
 
 brew cleanup
