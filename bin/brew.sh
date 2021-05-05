@@ -71,7 +71,7 @@ brew install zsh
 brew tap caskroom/cask
 
 brew install --cask alacritty
-tic -xe alacritty,alacritty-direct ~/.config/alacritty/alacritty.info # install alacritty terminfo
+sudo tic -xe alacritty,alacritty-direct ~/.config/alacritty/alacritty.info # install alacritty terminfo
 #brew install --cask battle-net
 brew install --cask dash
 brew install --cask docker
