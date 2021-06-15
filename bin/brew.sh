@@ -12,9 +12,12 @@ brew update
 
 brew upgrade
 
+# Remove compinit insecure directories warning (https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh)
+chmod -R go-w "$(brew --prefix)/share"
+
 # Some of the utils need $PATH edition, set in zsh/modules/unix.sh
 brew install autossh
-brew install fullscreen/tap/aws-rotate-key
+brew install aws-rotate-key
 brew install awscli
 brew install bash
 brew install bat
@@ -59,7 +62,7 @@ brew install stern
 brew install terraform
 brew install tmux
 brew install trash
-brew install unrar
+brew install rar
 brew install util-linux
 brew install vint
 brew install watch
@@ -68,12 +71,12 @@ brew install yamllint
 brew install zplug
 brew install zsh
 
-brew tap caskroom/cask
+brew tap homebrew/cask
 
 brew install --cask alacritty
 sudo tic -xe alacritty,alacritty-direct ~/.config/alacritty/alacritty.info # install alacritty terminfo
 #brew install --cask battle-net
-brew install --cask dash
+#brew install --cask dash
 brew install --cask docker
 brew install --cask dropbox
 brew install --cask firefox
@@ -88,16 +91,17 @@ brew install --cask karabiner-elements
 brew install --cask keepingyouawake
 #brew install --cask keybase
 brew install --cask macs-fan-control
+brew install --cask menumeters
 #brew install --cask qbittorrent
 brew install --cask skype
 brew install --cask slack
 brew install --cask spectacle
+brew install --cask stats
 #brew install --cask steam
 #brew install --cask tomighty
 brew install --cask vlc
-brew install --cask yujitach-menumeters
 
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 
 brew install --cask font-hack
 brew install --cask font-monoid
