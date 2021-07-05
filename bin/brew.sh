@@ -33,6 +33,7 @@ brew install fd
 brew install findutils
 brew install fzf
 brew install git
+brew install git-delta
 brew install gnu-sed
 brew install gnupg
 brew install go
@@ -47,8 +48,9 @@ brew install ldns
 brew install less
 brew install make
 brew install monolith
-brew install neovim
 brew install n
+brew install ncdu
+brew install neovim
 brew install nmap
 brew install ntfs-3g
 brew install oath-toolkit
