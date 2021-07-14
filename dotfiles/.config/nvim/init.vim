@@ -192,3 +192,13 @@ runtime current-theme.vim
 "
 " Also, putting it at the bottom to override themes
 highlight Comment gui=italic
+
+" Experiment to transparently edit age encrypted files
+"
+" http://www.softpanorama.org/Editors/Vimorama/vim_piping.shtml
+" https://vi.stackexchange.com/questions/22675/how-to-chain-shell-command-with-vim-ex-command
+" For now allow swp files, since I only care about encrypted at the cloud, but
+" should be an option maybe, if I make this into a proper plugin
+autocmd hector BufReadPost,FileReadPost *.age %!age -d -i ~/.config/age/keys.txt
+autocmd hector BufWritePre,FileWritePre *.age %!age --encrypt --armor -R ~/.config/age/recipients.txt
+autocmd hector BufWritePost,FileWritePost *.age %!age -d -i ~/.config/age/keys.txt
