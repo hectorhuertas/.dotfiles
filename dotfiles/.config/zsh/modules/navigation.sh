@@ -36,6 +36,7 @@ _aliases=(
   tpmk xdev/uw/terraform/merit/prod/k8s
   tdm xdev/uw/terraform/merit/dev
   tdmk xdev/uw/terraform/merit/dev/k8s
+  tdmo xdev/uw/terraform/merit/dev/k8s-exp-1
   tpc xdev/uw/terraform/cloudflare/system-prod
   tdc xdev/uw/terraform/cloudflare/system-dev
 
@@ -84,6 +85,11 @@ _aliases=(
   mdml xdev/uw/kubernetes-manifests/dev-merit/sys-log
   mdmm xdev/uw/kubernetes-manifests/dev-merit/sys-mon
   mdmp xdev/uw/kubernetes-manifests/dev-merit/sys-prom
+  mom xdev/uw/kubernetes-manifests/exp-1-merit
+  moms xdev/uw/kubernetes-manifests/exp-1-merit/kube-system
+  moml xdev/uw/kubernetes-manifests/exp-1-merit/sys-log
+  momm xdev/uw/kubernetes-manifests/exp-1-merit/sys-mon
+  momp xdev/uw/kubernetes-manifests/exp-1-merit/sys-prom
 )
 
 for _alias _dir in ${(kv)_aliases}; do
