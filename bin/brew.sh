@@ -26,6 +26,7 @@ brew install coreutils
 brew install curl
 brew install diff-so-fancy
 brew install diffutils
+brew install drone-cli
 brew install exa
 #brew install exercism
 #brew install fasd
@@ -37,6 +38,7 @@ brew install git-delta
 brew install gnu-sed
 brew install gnupg
 brew install go
+brew install go-task/tap/go-task
 brew install graphviz
 brew install grep
 brew install hub
@@ -44,7 +46,7 @@ brew install icdiff
 brew install jq
 brew install kubernetes-cli
 brew install kustomize
-brew install ldns
+brew install ldns # includes `drill` binary
 brew install less
 brew install make
 brew install monolith
@@ -58,6 +60,7 @@ brew install pwgen
 brew install python
 brew install rclone
 brew install ripgrep
+brew install scw
 brew install sd
 brew install shellcheck
 brew install stern
